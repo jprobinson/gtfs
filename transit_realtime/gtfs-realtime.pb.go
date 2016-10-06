@@ -24,8 +24,11 @@ It has these top-level messages:
 */
 package transit_realtime
 
-import proto "code.google.com/p/goprotobuf/proto"
-import math "math"
+import (
+	math "math"
+
+	"github.com/golang/protobuf/proto"
+)
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal

@@ -16,9 +16,12 @@ It has these top-level messages:
 */
 package nyct_subway_proto
 
-import proto "code.google.com/p/goprotobuf/proto"
-import math "math"
-import "github.com/jprobinson/gtfs/transit_realtime"
+import (
+	math "math"
+
+	"github.com/golang/protobuf/proto"
+	"github.com/jprobinson/gtfs/transit_realtime"
+)
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
