@@ -24,15 +24,20 @@ It has these top-level messages:
 */
 package transit_realtime
 
-import (
-	math "math"
-
-	"github.com/golang/protobuf/proto"
-)
+import proto "github.com/golang/protobuf/proto"
+import fmt "fmt"
+import math "math"
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
+var _ = fmt.Errorf
 var _ = math.Inf
+
+// This is a compile-time assertion to ensure that this generated file
+// is compatible with the proto package it is being compiled against.
+// A compilation error at this line likely means your copy of the
+// proto package needs to be updated.
+const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 // Determines whether the current fetch is incremental.  Currently,
 // DIFFERENTIAL mode is unsupported and behavior is unspecified for feeds
@@ -71,6 +76,7 @@ func (x *FeedHeader_Incrementality) UnmarshalJSON(data []byte) error {
 	*x = FeedHeader_Incrementality(value)
 	return nil
 }
+func (FeedHeader_Incrementality) EnumDescriptor() ([]byte, []int) { return fileDescriptor0, []int{1, 0} }
 
 // The relation between this StopTime and the static schedule.
 type TripUpdate_StopTimeUpdate_ScheduleRelationship int32
@@ -120,6 +126,9 @@ func (x *TripUpdate_StopTimeUpdate_ScheduleRelationship) UnmarshalJSON(data []by
 	*x = TripUpdate_StopTimeUpdate_ScheduleRelationship(value)
 	return nil
 }
+func (TripUpdate_StopTimeUpdate_ScheduleRelationship) EnumDescriptor() ([]byte, []int) {
+	return fileDescriptor0, []int{3, 1, 0}
+}
 
 type VehiclePosition_VehicleStopStatus int32
 
@@ -159,6 +168,9 @@ func (x *VehiclePosition_VehicleStopStatus) UnmarshalJSON(data []byte) error {
 	}
 	*x = VehiclePosition_VehicleStopStatus(value)
 	return nil
+}
+func (VehiclePosition_VehicleStopStatus) EnumDescriptor() ([]byte, []int) {
+	return fileDescriptor0, []int{4, 0}
 }
 
 // Congestion level that is affecting this vehicle.
@@ -202,6 +214,79 @@ func (x *VehiclePosition_CongestionLevel) UnmarshalJSON(data []byte) error {
 	}
 	*x = VehiclePosition_CongestionLevel(value)
 	return nil
+}
+func (VehiclePosition_CongestionLevel) EnumDescriptor() ([]byte, []int) {
+	return fileDescriptor0, []int{4, 1}
+}
+
+// The degree of passenger occupancy of the vehicle. This field is still
+// experimental, and subject to change. It may be formally adopted in the
+// future.
+type VehiclePosition_OccupancyStatus int32
+
+const (
+	// The vehicle is considered empty by most measures, and has few or no
+	// passengers onboard, but is still accepting passengers.
+	VehiclePosition_EMPTY VehiclePosition_OccupancyStatus = 0
+	// The vehicle has a relatively large percentage of seats available.
+	// What percentage of free seats out of the total seats available is to be
+	// considered large enough to fall into this category is determined at the
+	// discretion of the producer.
+	VehiclePosition_MANY_SEATS_AVAILABLE VehiclePosition_OccupancyStatus = 1
+	// The vehicle has a relatively small percentage of seats available.
+	// What percentage of free seats out of the total seats available is to be
+	// considered small enough to fall into this category is determined at the
+	// discretion of the feed producer.
+	VehiclePosition_FEW_SEATS_AVAILABLE VehiclePosition_OccupancyStatus = 2
+	// The vehicle can currently accommodate only standing passengers.
+	VehiclePosition_STANDING_ROOM_ONLY VehiclePosition_OccupancyStatus = 3
+	// The vehicle can currently accommodate only standing passengers
+	// and has limited space for them.
+	VehiclePosition_CRUSHED_STANDING_ROOM_ONLY VehiclePosition_OccupancyStatus = 4
+	// The vehicle is considered full by most measures, but may still be
+	// allowing passengers to board.
+	VehiclePosition_FULL VehiclePosition_OccupancyStatus = 5
+	// The vehicle is not accepting additional passengers.
+	VehiclePosition_NOT_ACCEPTING_PASSENGERS VehiclePosition_OccupancyStatus = 6
+)
+
+var VehiclePosition_OccupancyStatus_name = map[int32]string{
+	0: "EMPTY",
+	1: "MANY_SEATS_AVAILABLE",
+	2: "FEW_SEATS_AVAILABLE",
+	3: "STANDING_ROOM_ONLY",
+	4: "CRUSHED_STANDING_ROOM_ONLY",
+	5: "FULL",
+	6: "NOT_ACCEPTING_PASSENGERS",
+}
+var VehiclePosition_OccupancyStatus_value = map[string]int32{
+	"EMPTY":                      0,
+	"MANY_SEATS_AVAILABLE":       1,
+	"FEW_SEATS_AVAILABLE":        2,
+	"STANDING_ROOM_ONLY":         3,
+	"CRUSHED_STANDING_ROOM_ONLY": 4,
+	"FULL": 5,
+	"NOT_ACCEPTING_PASSENGERS": 6,
+}
+
+func (x VehiclePosition_OccupancyStatus) Enum() *VehiclePosition_OccupancyStatus {
+	p := new(VehiclePosition_OccupancyStatus)
+	*p = x
+	return p
+}
+func (x VehiclePosition_OccupancyStatus) String() string {
+	return proto.EnumName(VehiclePosition_OccupancyStatus_name, int32(x))
+}
+func (x *VehiclePosition_OccupancyStatus) UnmarshalJSON(data []byte) error {
+	value, err := proto.UnmarshalJSONEnum(VehiclePosition_OccupancyStatus_value, data, "VehiclePosition_OccupancyStatus")
+	if err != nil {
+		return err
+	}
+	*x = VehiclePosition_OccupancyStatus(value)
+	return nil
+}
+func (VehiclePosition_OccupancyStatus) EnumDescriptor() ([]byte, []int) {
+	return fileDescriptor0, []int{4, 2}
 }
 
 // Cause of this alert.
@@ -267,6 +352,7 @@ func (x *Alert_Cause) UnmarshalJSON(data []byte) error {
 	*x = Alert_Cause(value)
 	return nil
 }
+func (Alert_Cause) EnumDescriptor() ([]byte, []int) { return fileDescriptor0, []int{5, 0} }
 
 // What is the effect of this problem on the affected entity.
 type Alert_Effect int32
@@ -325,6 +411,7 @@ func (x *Alert_Effect) UnmarshalJSON(data []byte) error {
 	*x = Alert_Effect(value)
 	return nil
 }
+func (Alert_Effect) EnumDescriptor() ([]byte, []int) { return fileDescriptor0, []int{5, 1} }
 
 // The relation between this trip and the static schedule. If a trip is done
 // in accordance with temporary schedule, not reflected in GTFS, then it
@@ -375,6 +462,9 @@ func (x *TripDescriptor_ScheduleRelationship) UnmarshalJSON(data []byte) error {
 	*x = TripDescriptor_ScheduleRelationship(value)
 	return nil
 }
+func (TripDescriptor_ScheduleRelationship) EnumDescriptor() ([]byte, []int) {
+	return fileDescriptor0, []int{8, 0}
+}
 
 // The contents of a feed message.
 // A feed is a continuous stream of feed messages. Each message in the stream is
@@ -391,13 +481,23 @@ type FeedMessage struct {
 	// Metadata about this feed and feed message.
 	Header *FeedHeader `protobuf:"bytes,1,req,name=header" json:"header,omitempty"`
 	// Contents of the feed.
-	Entity           []*FeedEntity `protobuf:"bytes,2,rep,name=entity" json:"entity,omitempty"`
-	XXX_unrecognized []byte        `json:"-"`
+	Entity                       []*FeedEntity `protobuf:"bytes,2,rep,name=entity" json:"entity,omitempty"`
+	proto.XXX_InternalExtensions `json:"-"`
+	XXX_unrecognized             []byte `json:"-"`
 }
 
-func (m *FeedMessage) Reset()         { *m = FeedMessage{} }
-func (m *FeedMessage) String() string { return proto.CompactTextString(m) }
-func (*FeedMessage) ProtoMessage()    {}
+func (m *FeedMessage) Reset()                    { *m = FeedMessage{} }
+func (m *FeedMessage) String() string            { return proto.CompactTextString(m) }
+func (*FeedMessage) ProtoMessage()               {}
+func (*FeedMessage) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{0} }
+
+var extRange_FeedMessage = []proto.ExtensionRange{
+	{1000, 1999},
+}
+
+func (*FeedMessage) ExtensionRangeArray() []proto.ExtensionRange {
+	return extRange_FeedMessage
+}
 
 func (m *FeedMessage) GetHeader() *FeedHeader {
 	if m != nil {
@@ -417,19 +517,20 @@ func (m *FeedMessage) GetEntity() []*FeedEntity {
 type FeedHeader struct {
 	// Version of the feed specification.
 	// The current version is 1.0.
-	GtfsRealtimeVersion *string                    `protobuf:"bytes,1,req,name=gtfs_realtime_version" json:"gtfs_realtime_version,omitempty"`
+	GtfsRealtimeVersion *string                    `protobuf:"bytes,1,req,name=gtfs_realtime_version,json=gtfsRealtimeVersion" json:"gtfs_realtime_version,omitempty"`
 	Incrementality      *FeedHeader_Incrementality `protobuf:"varint,2,opt,name=incrementality,enum=transit_realtime.FeedHeader_Incrementality,def=0" json:"incrementality,omitempty"`
 	// This timestamp identifies the moment when the content of this feed has been
 	// created (in server time). In POSIX time (i.e., number of seconds since
 	// January 1st 1970 00:00:00 UTC).
-	Timestamp        *uint64                   `protobuf:"varint,3,opt,name=timestamp" json:"timestamp,omitempty"`
-	XXX_extensions   map[int32]proto.Extension `json:"-"`
-	XXX_unrecognized []byte                    `json:"-"`
+	Timestamp                    *uint64 `protobuf:"varint,3,opt,name=timestamp" json:"timestamp,omitempty"`
+	proto.XXX_InternalExtensions `json:"-"`
+	XXX_unrecognized             []byte `json:"-"`
 }
 
-func (m *FeedHeader) Reset()         { *m = FeedHeader{} }
-func (m *FeedHeader) String() string { return proto.CompactTextString(m) }
-func (*FeedHeader) ProtoMessage()    {}
+func (m *FeedHeader) Reset()                    { *m = FeedHeader{} }
+func (m *FeedHeader) String() string            { return proto.CompactTextString(m) }
+func (*FeedHeader) ProtoMessage()               {}
+func (*FeedHeader) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{1} }
 
 var extRange_FeedHeader = []proto.ExtensionRange{
 	{1000, 1999},
@@ -437,12 +538,6 @@ var extRange_FeedHeader = []proto.ExtensionRange{
 
 func (*FeedHeader) ExtensionRangeArray() []proto.ExtensionRange {
 	return extRange_FeedHeader
-}
-func (m *FeedHeader) ExtensionMap() map[int32]proto.Extension {
-	if m.XXX_extensions == nil {
-		m.XXX_extensions = make(map[int32]proto.Extension)
-	}
-	return m.XXX_extensions
 }
 
 const Default_FeedHeader_Incrementality FeedHeader_Incrementality = FeedHeader_FULL_DATASET
@@ -481,18 +576,28 @@ type FeedEntity struct {
 	Id *string `protobuf:"bytes,1,req,name=id" json:"id,omitempty"`
 	// Whether this entity is to be deleted. Relevant only for incremental
 	// fetches.
-	IsDeleted *bool `protobuf:"varint,2,opt,name=is_deleted,def=0" json:"is_deleted,omitempty"`
+	IsDeleted *bool `protobuf:"varint,2,opt,name=is_deleted,json=isDeleted,def=0" json:"is_deleted,omitempty"`
 	// Data about the entity itself. Exactly one of the following fields must be
 	// present (unless the entity is being deleted).
-	TripUpdate       *TripUpdate      `protobuf:"bytes,3,opt,name=trip_update" json:"trip_update,omitempty"`
-	Vehicle          *VehiclePosition `protobuf:"bytes,4,opt,name=vehicle" json:"vehicle,omitempty"`
-	Alert            *Alert           `protobuf:"bytes,5,opt,name=alert" json:"alert,omitempty"`
-	XXX_unrecognized []byte           `json:"-"`
+	TripUpdate                   *TripUpdate      `protobuf:"bytes,3,opt,name=trip_update,json=tripUpdate" json:"trip_update,omitempty"`
+	Vehicle                      *VehiclePosition `protobuf:"bytes,4,opt,name=vehicle" json:"vehicle,omitempty"`
+	Alert                        *Alert           `protobuf:"bytes,5,opt,name=alert" json:"alert,omitempty"`
+	proto.XXX_InternalExtensions `json:"-"`
+	XXX_unrecognized             []byte `json:"-"`
 }
 
-func (m *FeedEntity) Reset()         { *m = FeedEntity{} }
-func (m *FeedEntity) String() string { return proto.CompactTextString(m) }
-func (*FeedEntity) ProtoMessage()    {}
+func (m *FeedEntity) Reset()                    { *m = FeedEntity{} }
+func (m *FeedEntity) String() string            { return proto.CompactTextString(m) }
+func (*FeedEntity) ProtoMessage()               {}
+func (*FeedEntity) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{2} }
+
+var extRange_FeedEntity = []proto.ExtensionRange{
+	{1000, 1999},
+}
+
+func (*FeedEntity) ExtensionRangeArray() []proto.ExtensionRange {
+	return extRange_FeedEntity
+}
 
 const Default_FeedEntity_IsDeleted bool = false
 
@@ -584,17 +689,37 @@ type TripUpdate struct {
 	// - stop_sequences 3,4,5,6,7 have delay of 5 min.
 	// - stop_sequences 8,9 have delay of 1 min.
 	// - stop_sequences 10,... have unknown delay.
-	StopTimeUpdate []*TripUpdate_StopTimeUpdate `protobuf:"bytes,2,rep,name=stop_time_update" json:"stop_time_update,omitempty"`
+	StopTimeUpdate []*TripUpdate_StopTimeUpdate `protobuf:"bytes,2,rep,name=stop_time_update,json=stopTimeUpdate" json:"stop_time_update,omitempty"`
 	// Moment at which the vehicle's real-time progress was measured. In POSIX
 	// time (i.e., the number of seconds since January 1st 1970 00:00:00 UTC).
-	Timestamp        *uint64                   `protobuf:"varint,4,opt,name=timestamp" json:"timestamp,omitempty"`
-	XXX_extensions   map[int32]proto.Extension `json:"-"`
-	XXX_unrecognized []byte                    `json:"-"`
+	Timestamp *uint64 `protobuf:"varint,4,opt,name=timestamp" json:"timestamp,omitempty"`
+	// The current schedule deviation for the trip.  Delay should only be
+	// specified when the prediction is given relative to some existing schedule
+	// in GTFS.
+	//
+	// Delay (in seconds) can be positive (meaning that the vehicle is late) or
+	// negative (meaning that the vehicle is ahead of schedule). Delay of 0
+	// means that the vehicle is exactly on time.
+	//
+	// Delay information in StopTimeUpdates take precedent of trip-level delay
+	// information, such that trip-level delay is only propagated until the next
+	// stop along the trip with a StopTimeUpdate delay value specified.
+	//
+	// Feed providers are strongly encouraged to provide a TripUpdate.timestamp
+	// value indicating when the delay value was last updated, in order to
+	// evaluate the freshness of the data.
+	//
+	// NOTE: This field is still experimental, and subject to change. It may be
+	// formally adopted in the future.
+	Delay                        *int32 `protobuf:"varint,5,opt,name=delay" json:"delay,omitempty"`
+	proto.XXX_InternalExtensions `json:"-"`
+	XXX_unrecognized             []byte `json:"-"`
 }
 
-func (m *TripUpdate) Reset()         { *m = TripUpdate{} }
-func (m *TripUpdate) String() string { return proto.CompactTextString(m) }
-func (*TripUpdate) ProtoMessage()    {}
+func (m *TripUpdate) Reset()                    { *m = TripUpdate{} }
+func (m *TripUpdate) String() string            { return proto.CompactTextString(m) }
+func (*TripUpdate) ProtoMessage()               {}
+func (*TripUpdate) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{3} }
 
 var extRange_TripUpdate = []proto.ExtensionRange{
 	{1000, 1999},
@@ -602,12 +727,6 @@ var extRange_TripUpdate = []proto.ExtensionRange{
 
 func (*TripUpdate) ExtensionRangeArray() []proto.ExtensionRange {
 	return extRange_TripUpdate
-}
-func (m *TripUpdate) ExtensionMap() map[int32]proto.Extension {
-	if m.XXX_extensions == nil {
-		m.XXX_extensions = make(map[int32]proto.Extension)
-	}
-	return m.XXX_extensions
 }
 
 func (m *TripUpdate) GetTrip() *TripDescriptor {
@@ -634,6 +753,13 @@ func (m *TripUpdate) GetStopTimeUpdate() []*TripUpdate_StopTimeUpdate {
 func (m *TripUpdate) GetTimestamp() uint64 {
 	if m != nil && m.Timestamp != nil {
 		return *m.Timestamp
+	}
+	return 0
+}
+
+func (m *TripUpdate) GetDelay() int32 {
+	if m != nil && m.Delay != nil {
+		return *m.Delay
 	}
 	return 0
 }
@@ -666,14 +792,15 @@ type TripUpdate_StopTimeEvent struct {
 	// If the prediction is unknown or too uncertain, the delay (or time) field
 	// should be empty. In such case, the uncertainty field is ignored.
 	// To specify a completely certain prediction, set its uncertainty to 0.
-	Uncertainty      *int32                    `protobuf:"varint,3,opt,name=uncertainty" json:"uncertainty,omitempty"`
-	XXX_extensions   map[int32]proto.Extension `json:"-"`
-	XXX_unrecognized []byte                    `json:"-"`
+	Uncertainty                  *int32 `protobuf:"varint,3,opt,name=uncertainty" json:"uncertainty,omitempty"`
+	proto.XXX_InternalExtensions `json:"-"`
+	XXX_unrecognized             []byte `json:"-"`
 }
 
-func (m *TripUpdate_StopTimeEvent) Reset()         { *m = TripUpdate_StopTimeEvent{} }
-func (m *TripUpdate_StopTimeEvent) String() string { return proto.CompactTextString(m) }
-func (*TripUpdate_StopTimeEvent) ProtoMessage()    {}
+func (m *TripUpdate_StopTimeEvent) Reset()                    { *m = TripUpdate_StopTimeEvent{} }
+func (m *TripUpdate_StopTimeEvent) String() string            { return proto.CompactTextString(m) }
+func (*TripUpdate_StopTimeEvent) ProtoMessage()               {}
+func (*TripUpdate_StopTimeEvent) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{3, 0} }
 
 var extRange_TripUpdate_StopTimeEvent = []proto.ExtensionRange{
 	{1000, 1999},
@@ -681,12 +808,6 @@ var extRange_TripUpdate_StopTimeEvent = []proto.ExtensionRange{
 
 func (*TripUpdate_StopTimeEvent) ExtensionRangeArray() []proto.ExtensionRange {
 	return extRange_TripUpdate_StopTimeEvent
-}
-func (m *TripUpdate_StopTimeEvent) ExtensionMap() map[int32]proto.Extension {
-	if m.XXX_extensions == nil {
-		m.XXX_extensions = make(map[int32]proto.Extension)
-	}
-	return m.XXX_extensions
 }
 
 func (m *TripUpdate_StopTimeEvent) GetDelay() int32 {
@@ -715,19 +836,20 @@ func (m *TripUpdate_StopTimeEvent) GetUncertainty() int32 {
 // The producer is allowed, although not required, to drop past events.
 type TripUpdate_StopTimeUpdate struct {
 	// Must be the same as in stop_times.txt in the corresponding GTFS feed.
-	StopSequence *uint32 `protobuf:"varint,1,opt,name=stop_sequence" json:"stop_sequence,omitempty"`
+	StopSequence *uint32 `protobuf:"varint,1,opt,name=stop_sequence,json=stopSequence" json:"stop_sequence,omitempty"`
 	// Must be the same as in stops.txt in the corresponding GTFS feed.
-	StopId               *string                                         `protobuf:"bytes,4,opt,name=stop_id" json:"stop_id,omitempty"`
-	Arrival              *TripUpdate_StopTimeEvent                       `protobuf:"bytes,2,opt,name=arrival" json:"arrival,omitempty"`
-	Departure            *TripUpdate_StopTimeEvent                       `protobuf:"bytes,3,opt,name=departure" json:"departure,omitempty"`
-	ScheduleRelationship *TripUpdate_StopTimeUpdate_ScheduleRelationship `protobuf:"varint,5,opt,name=schedule_relationship,enum=transit_realtime.TripUpdate_StopTimeUpdate_ScheduleRelationship,def=0" json:"schedule_relationship,omitempty"`
-	XXX_extensions       map[int32]proto.Extension                       `json:"-"`
-	XXX_unrecognized     []byte                                          `json:"-"`
+	StopId                       *string                                         `protobuf:"bytes,4,opt,name=stop_id,json=stopId" json:"stop_id,omitempty"`
+	Arrival                      *TripUpdate_StopTimeEvent                       `protobuf:"bytes,2,opt,name=arrival" json:"arrival,omitempty"`
+	Departure                    *TripUpdate_StopTimeEvent                       `protobuf:"bytes,3,opt,name=departure" json:"departure,omitempty"`
+	ScheduleRelationship         *TripUpdate_StopTimeUpdate_ScheduleRelationship `protobuf:"varint,5,opt,name=schedule_relationship,json=scheduleRelationship,enum=transit_realtime.TripUpdate_StopTimeUpdate_ScheduleRelationship,def=0" json:"schedule_relationship,omitempty"`
+	proto.XXX_InternalExtensions `json:"-"`
+	XXX_unrecognized             []byte `json:"-"`
 }
 
-func (m *TripUpdate_StopTimeUpdate) Reset()         { *m = TripUpdate_StopTimeUpdate{} }
-func (m *TripUpdate_StopTimeUpdate) String() string { return proto.CompactTextString(m) }
-func (*TripUpdate_StopTimeUpdate) ProtoMessage()    {}
+func (m *TripUpdate_StopTimeUpdate) Reset()                    { *m = TripUpdate_StopTimeUpdate{} }
+func (m *TripUpdate_StopTimeUpdate) String() string            { return proto.CompactTextString(m) }
+func (*TripUpdate_StopTimeUpdate) ProtoMessage()               {}
+func (*TripUpdate_StopTimeUpdate) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{3, 1} }
 
 var extRange_TripUpdate_StopTimeUpdate = []proto.ExtensionRange{
 	{1000, 1999},
@@ -735,12 +857,6 @@ var extRange_TripUpdate_StopTimeUpdate = []proto.ExtensionRange{
 
 func (*TripUpdate_StopTimeUpdate) ExtensionRangeArray() []proto.ExtensionRange {
 	return extRange_TripUpdate_StopTimeUpdate
-}
-func (m *TripUpdate_StopTimeUpdate) ExtensionMap() map[int32]proto.Extension {
-	if m.XXX_extensions == nil {
-		m.XXX_extensions = make(map[int32]proto.Extension)
-	}
-	return m.XXX_extensions
 }
 
 const Default_TripUpdate_StopTimeUpdate_ScheduleRelationship TripUpdate_StopTimeUpdate_ScheduleRelationship = TripUpdate_StopTimeUpdate_SCHEDULED
@@ -794,24 +910,26 @@ type VehiclePosition struct {
 	// current_stop_sequence (i.e., the stop that it refers to) is determined by
 	// current_status.
 	// If current_status is missing IN_TRANSIT_TO is assumed.
-	CurrentStopSequence *uint32 `protobuf:"varint,3,opt,name=current_stop_sequence" json:"current_stop_sequence,omitempty"`
+	CurrentStopSequence *uint32 `protobuf:"varint,3,opt,name=current_stop_sequence,json=currentStopSequence" json:"current_stop_sequence,omitempty"`
 	// Identifies the current stop. The value must be the same as in stops.txt in
 	// the corresponding GTFS feed.
-	StopId *string `protobuf:"bytes,7,opt,name=stop_id" json:"stop_id,omitempty"`
+	StopId *string `protobuf:"bytes,7,opt,name=stop_id,json=stopId" json:"stop_id,omitempty"`
 	// The exact status of the vehicle with respect to the current stop.
 	// Ignored if current_stop_sequence is missing.
-	CurrentStatus *VehiclePosition_VehicleStopStatus `protobuf:"varint,4,opt,name=current_status,enum=transit_realtime.VehiclePosition_VehicleStopStatus,def=2" json:"current_status,omitempty"`
+	CurrentStatus *VehiclePosition_VehicleStopStatus `protobuf:"varint,4,opt,name=current_status,json=currentStatus,enum=transit_realtime.VehiclePosition_VehicleStopStatus,def=2" json:"current_status,omitempty"`
 	// Moment at which the vehicle's position was measured. In POSIX time
 	// (i.e., number of seconds since January 1st 1970 00:00:00 UTC).
-	Timestamp        *uint64                          `protobuf:"varint,5,opt,name=timestamp" json:"timestamp,omitempty"`
-	CongestionLevel  *VehiclePosition_CongestionLevel `protobuf:"varint,6,opt,name=congestion_level,enum=transit_realtime.VehiclePosition_CongestionLevel" json:"congestion_level,omitempty"`
-	XXX_extensions   map[int32]proto.Extension        `json:"-"`
-	XXX_unrecognized []byte                           `json:"-"`
+	Timestamp                    *uint64                          `protobuf:"varint,5,opt,name=timestamp" json:"timestamp,omitempty"`
+	CongestionLevel              *VehiclePosition_CongestionLevel `protobuf:"varint,6,opt,name=congestion_level,json=congestionLevel,enum=transit_realtime.VehiclePosition_CongestionLevel" json:"congestion_level,omitempty"`
+	OccupancyStatus              *VehiclePosition_OccupancyStatus `protobuf:"varint,9,opt,name=occupancy_status,json=occupancyStatus,enum=transit_realtime.VehiclePosition_OccupancyStatus" json:"occupancy_status,omitempty"`
+	proto.XXX_InternalExtensions `json:"-"`
+	XXX_unrecognized             []byte `json:"-"`
 }
 
-func (m *VehiclePosition) Reset()         { *m = VehiclePosition{} }
-func (m *VehiclePosition) String() string { return proto.CompactTextString(m) }
-func (*VehiclePosition) ProtoMessage()    {}
+func (m *VehiclePosition) Reset()                    { *m = VehiclePosition{} }
+func (m *VehiclePosition) String() string            { return proto.CompactTextString(m) }
+func (*VehiclePosition) ProtoMessage()               {}
+func (*VehiclePosition) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{4} }
 
 var extRange_VehiclePosition = []proto.ExtensionRange{
 	{1000, 1999},
@@ -819,12 +937,6 @@ var extRange_VehiclePosition = []proto.ExtensionRange{
 
 func (*VehiclePosition) ExtensionRangeArray() []proto.ExtensionRange {
 	return extRange_VehiclePosition
-}
-func (m *VehiclePosition) ExtensionMap() map[int32]proto.Extension {
-	if m.XXX_extensions == nil {
-		m.XXX_extensions = make(map[int32]proto.Extension)
-	}
-	return m.XXX_extensions
 }
 
 const Default_VehiclePosition_CurrentStatus VehiclePosition_VehicleStopStatus = VehiclePosition_IN_TRANSIT_TO
@@ -885,30 +997,38 @@ func (m *VehiclePosition) GetCongestionLevel() VehiclePosition_CongestionLevel {
 	return VehiclePosition_UNKNOWN_CONGESTION_LEVEL
 }
 
+func (m *VehiclePosition) GetOccupancyStatus() VehiclePosition_OccupancyStatus {
+	if m != nil && m.OccupancyStatus != nil {
+		return *m.OccupancyStatus
+	}
+	return VehiclePosition_EMPTY
+}
+
 // An alert, indicating some sort of incident in the public transit network.
 type Alert struct {
 	// Time when the alert should be shown to the user. If missing, the
 	// alert will be shown as long as it appears in the feed.
 	// If multiple ranges are given, the alert will be shown during all of them.
-	ActivePeriod []*TimeRange `protobuf:"bytes,1,rep,name=active_period" json:"active_period,omitempty"`
+	ActivePeriod []*TimeRange `protobuf:"bytes,1,rep,name=active_period,json=activePeriod" json:"active_period,omitempty"`
 	// Entities whose users we should notify of this alert.
-	InformedEntity []*EntitySelector `protobuf:"bytes,5,rep,name=informed_entity" json:"informed_entity,omitempty"`
+	InformedEntity []*EntitySelector `protobuf:"bytes,5,rep,name=informed_entity,json=informedEntity" json:"informed_entity,omitempty"`
 	Cause          *Alert_Cause      `protobuf:"varint,6,opt,name=cause,enum=transit_realtime.Alert_Cause,def=1" json:"cause,omitempty"`
 	Effect         *Alert_Effect     `protobuf:"varint,7,opt,name=effect,enum=transit_realtime.Alert_Effect,def=8" json:"effect,omitempty"`
 	// The URL which provides additional information about the alert.
 	Url *TranslatedString `protobuf:"bytes,8,opt,name=url" json:"url,omitempty"`
 	// Alert header. Contains a short summary of the alert text as plain-text.
-	HeaderText *TranslatedString `protobuf:"bytes,10,opt,name=header_text" json:"header_text,omitempty"`
+	HeaderText *TranslatedString `protobuf:"bytes,10,opt,name=header_text,json=headerText" json:"header_text,omitempty"`
 	// Full description for the alert as plain-text. The information in the
 	// description should add to the information of the header.
-	DescriptionText  *TranslatedString         `protobuf:"bytes,11,opt,name=description_text" json:"description_text,omitempty"`
-	XXX_extensions   map[int32]proto.Extension `json:"-"`
-	XXX_unrecognized []byte                    `json:"-"`
+	DescriptionText              *TranslatedString `protobuf:"bytes,11,opt,name=description_text,json=descriptionText" json:"description_text,omitempty"`
+	proto.XXX_InternalExtensions `json:"-"`
+	XXX_unrecognized             []byte `json:"-"`
 }
 
-func (m *Alert) Reset()         { *m = Alert{} }
-func (m *Alert) String() string { return proto.CompactTextString(m) }
-func (*Alert) ProtoMessage()    {}
+func (m *Alert) Reset()                    { *m = Alert{} }
+func (m *Alert) String() string            { return proto.CompactTextString(m) }
+func (*Alert) ProtoMessage()               {}
+func (*Alert) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{5} }
 
 var extRange_Alert = []proto.ExtensionRange{
 	{1000, 1999},
@@ -916,12 +1036,6 @@ var extRange_Alert = []proto.ExtensionRange{
 
 func (*Alert) ExtensionRangeArray() []proto.ExtensionRange {
 	return extRange_Alert
-}
-func (m *Alert) ExtensionMap() map[int32]proto.Extension {
-	if m.XXX_extensions == nil {
-		m.XXX_extensions = make(map[int32]proto.Extension)
-	}
-	return m.XXX_extensions
 }
 
 const Default_Alert_Cause Alert_Cause = Alert_UNKNOWN_CAUSE
@@ -986,13 +1100,23 @@ type TimeRange struct {
 	// End time, in POSIX time (i.e., number of seconds since January 1st 1970
 	// 00:00:00 UTC).
 	// If missing, the interval ends at plus infinity.
-	End              *uint64 `protobuf:"varint,2,opt,name=end" json:"end,omitempty"`
-	XXX_unrecognized []byte  `json:"-"`
+	End                          *uint64 `protobuf:"varint,2,opt,name=end" json:"end,omitempty"`
+	proto.XXX_InternalExtensions `json:"-"`
+	XXX_unrecognized             []byte `json:"-"`
 }
 
-func (m *TimeRange) Reset()         { *m = TimeRange{} }
-func (m *TimeRange) String() string { return proto.CompactTextString(m) }
-func (*TimeRange) ProtoMessage()    {}
+func (m *TimeRange) Reset()                    { *m = TimeRange{} }
+func (m *TimeRange) String() string            { return proto.CompactTextString(m) }
+func (*TimeRange) ProtoMessage()               {}
+func (*TimeRange) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{6} }
+
+var extRange_TimeRange = []proto.ExtensionRange{
+	{1000, 1999},
+}
+
+func (*TimeRange) ExtensionRangeArray() []proto.ExtensionRange {
+	return extRange_TimeRange
+}
 
 func (m *TimeRange) GetStart() uint64 {
 	if m != nil && m.Start != nil {
@@ -1023,14 +1147,15 @@ type Position struct {
 	// Odometer value, in meters.
 	Odometer *float64 `protobuf:"fixed64,4,opt,name=odometer" json:"odometer,omitempty"`
 	// Momentary speed measured by the vehicle, in meters per second.
-	Speed            *float32                  `protobuf:"fixed32,5,opt,name=speed" json:"speed,omitempty"`
-	XXX_extensions   map[int32]proto.Extension `json:"-"`
-	XXX_unrecognized []byte                    `json:"-"`
+	Speed                        *float32 `protobuf:"fixed32,5,opt,name=speed" json:"speed,omitempty"`
+	proto.XXX_InternalExtensions `json:"-"`
+	XXX_unrecognized             []byte `json:"-"`
 }
 
-func (m *Position) Reset()         { *m = Position{} }
-func (m *Position) String() string { return proto.CompactTextString(m) }
-func (*Position) ProtoMessage()    {}
+func (m *Position) Reset()                    { *m = Position{} }
+func (m *Position) String() string            { return proto.CompactTextString(m) }
+func (*Position) ProtoMessage()               {}
+func (*Position) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{7} }
 
 var extRange_Position = []proto.ExtensionRange{
 	{1000, 1999},
@@ -1038,12 +1163,6 @@ var extRange_Position = []proto.ExtensionRange{
 
 func (*Position) ExtensionRangeArray() []proto.ExtensionRange {
 	return extRange_Position
-}
-func (m *Position) ExtensionMap() map[int32]proto.Extension {
-	if m.XXX_extensions == nil {
-		m.XXX_extensions = make(map[int32]proto.Extension)
-	}
-	return m.XXX_extensions
 }
 
 func (m *Position) GetLatitude() float32 {
@@ -1092,19 +1211,33 @@ func (m *Position) GetSpeed() float32 {
 //   addition, absolute arrival/departure times must be provided.
 type TripDescriptor struct {
 	// The trip_id from the GTFS feed that this selector refers to.
-	// For non frequency expanded trips, this field is enough to uniquely identify
-	// the trip. For frequency expanded, start_time and start_date might also be
+	// For non frequency-based trips, this field is enough to uniquely identify
+	// the trip. For frequency-based trip, start_time and start_date might also be
 	// necessary.
-	TripId *string `protobuf:"bytes,1,opt,name=trip_id" json:"trip_id,omitempty"`
+	TripId *string `protobuf:"bytes,1,opt,name=trip_id,json=tripId" json:"trip_id,omitempty"`
 	// The route_id from the GTFS that this selector refers to.
-	RouteId *string `protobuf:"bytes,5,opt,name=route_id" json:"route_id,omitempty"`
-	// The scheduled start time of this trip instance.
-	// This field should be given only if the trip is frequency-expanded in the
-	// GTFS feed. The value must precisely correspond to start_time specified for
-	// the route in the GTFS feed plus some multiple of headway_secs.
-	// Format of the field is same as that of GTFS/frequencies.txt/start_time,
-	// e.g., 11:15:35 or 25:15:35.
-	StartTime *string `protobuf:"bytes,2,opt,name=start_time" json:"start_time,omitempty"`
+	RouteId *string `protobuf:"bytes,5,opt,name=route_id,json=routeId" json:"route_id,omitempty"`
+	// The direction_id from the GTFS feed trips.txt file, indicating the
+	// direction of travel for trips this selector refers to. This field is
+	// still experimental, and subject to change. It may be formally adopted in
+	// the future.
+	DirectionId *uint32 `protobuf:"varint,6,opt,name=direction_id,json=directionId" json:"direction_id,omitempty"`
+	// The initially scheduled start time of this trip instance.
+	// When the trip_id corresponds to a non-frequency-based trip, this field
+	// should either be omitted or be equal to the value in the GTFS feed. When
+	// the trip_id correponds to a frequency-based trip, the start_time must be
+	// specified for trip updates and vehicle positions. If the trip corresponds
+	// to exact_times=1 GTFS record, then start_time must be some multiple
+	// (including zero) of headway_secs later than frequencies.txt start_time for
+	// the corresponding time period. If the trip corresponds to exact_times=0,
+	// then its start_time may be arbitrary, and is initially expected to be the
+	// first departure of the trip. Once established, the start_time of this
+	// frequency-based trip should be considered immutable, even if the first
+	// departure time changes -- that time change may instead be reflected in a
+	// StopTimeUpdate.
+	// Format and semantics of the field is same as that of
+	// GTFS/frequencies.txt/start_time, e.g., 11:15:35 or 25:15:35.
+	StartTime *string `protobuf:"bytes,2,opt,name=start_time,json=startTime" json:"start_time,omitempty"`
 	// The scheduled start date of this trip instance.
 	// Must be provided to disambiguate trips that are so late as to collide with
 	// a scheduled trip on a next day. For example, for a train that departs 8:00
@@ -1115,15 +1248,16 @@ type TripDescriptor struct {
 	// schedule where a vehicle that is one hour late is not considered to be
 	// related to schedule anymore.
 	// In YYYYMMDD format.
-	StartDate            *string                              `protobuf:"bytes,3,opt,name=start_date" json:"start_date,omitempty"`
-	ScheduleRelationship *TripDescriptor_ScheduleRelationship `protobuf:"varint,4,opt,name=schedule_relationship,enum=transit_realtime.TripDescriptor_ScheduleRelationship" json:"schedule_relationship,omitempty"`
-	XXX_extensions       map[int32]proto.Extension            `json:"-"`
-	XXX_unrecognized     []byte                               `json:"-"`
+	StartDate                    *string                              `protobuf:"bytes,3,opt,name=start_date,json=startDate" json:"start_date,omitempty"`
+	ScheduleRelationship         *TripDescriptor_ScheduleRelationship `protobuf:"varint,4,opt,name=schedule_relationship,json=scheduleRelationship,enum=transit_realtime.TripDescriptor_ScheduleRelationship" json:"schedule_relationship,omitempty"`
+	proto.XXX_InternalExtensions `json:"-"`
+	XXX_unrecognized             []byte `json:"-"`
 }
 
-func (m *TripDescriptor) Reset()         { *m = TripDescriptor{} }
-func (m *TripDescriptor) String() string { return proto.CompactTextString(m) }
-func (*TripDescriptor) ProtoMessage()    {}
+func (m *TripDescriptor) Reset()                    { *m = TripDescriptor{} }
+func (m *TripDescriptor) String() string            { return proto.CompactTextString(m) }
+func (*TripDescriptor) ProtoMessage()               {}
+func (*TripDescriptor) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{8} }
 
 var extRange_TripDescriptor = []proto.ExtensionRange{
 	{1000, 1999},
@@ -1131,12 +1265,6 @@ var extRange_TripDescriptor = []proto.ExtensionRange{
 
 func (*TripDescriptor) ExtensionRangeArray() []proto.ExtensionRange {
 	return extRange_TripDescriptor
-}
-func (m *TripDescriptor) ExtensionMap() map[int32]proto.Extension {
-	if m.XXX_extensions == nil {
-		m.XXX_extensions = make(map[int32]proto.Extension)
-	}
-	return m.XXX_extensions
 }
 
 func (m *TripDescriptor) GetTripId() string {
@@ -1151,6 +1279,13 @@ func (m *TripDescriptor) GetRouteId() string {
 		return *m.RouteId
 	}
 	return ""
+}
+
+func (m *TripDescriptor) GetDirectionId() uint32 {
+	if m != nil && m.DirectionId != nil {
+		return *m.DirectionId
+	}
+	return 0
 }
 
 func (m *TripDescriptor) GetStartTime() string {
@@ -1184,14 +1319,15 @@ type VehicleDescriptor struct {
 	// help identify the correct vehicle.
 	Label *string `protobuf:"bytes,2,opt,name=label" json:"label,omitempty"`
 	// The license plate of the vehicle.
-	LicensePlate     *string                   `protobuf:"bytes,3,opt,name=license_plate" json:"license_plate,omitempty"`
-	XXX_extensions   map[int32]proto.Extension `json:"-"`
-	XXX_unrecognized []byte                    `json:"-"`
+	LicensePlate                 *string `protobuf:"bytes,3,opt,name=license_plate,json=licensePlate" json:"license_plate,omitempty"`
+	proto.XXX_InternalExtensions `json:"-"`
+	XXX_unrecognized             []byte `json:"-"`
 }
 
-func (m *VehicleDescriptor) Reset()         { *m = VehicleDescriptor{} }
-func (m *VehicleDescriptor) String() string { return proto.CompactTextString(m) }
-func (*VehicleDescriptor) ProtoMessage()    {}
+func (m *VehicleDescriptor) Reset()                    { *m = VehicleDescriptor{} }
+func (m *VehicleDescriptor) String() string            { return proto.CompactTextString(m) }
+func (*VehicleDescriptor) ProtoMessage()               {}
+func (*VehicleDescriptor) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{9} }
 
 var extRange_VehicleDescriptor = []proto.ExtensionRange{
 	{1000, 1999},
@@ -1199,12 +1335,6 @@ var extRange_VehicleDescriptor = []proto.ExtensionRange{
 
 func (*VehicleDescriptor) ExtensionRangeArray() []proto.ExtensionRange {
 	return extRange_VehicleDescriptor
-}
-func (m *VehicleDescriptor) ExtensionMap() map[int32]proto.Extension {
-	if m.XXX_extensions == nil {
-		m.XXX_extensions = make(map[int32]proto.Extension)
-	}
-	return m.XXX_extensions
 }
 
 func (m *VehicleDescriptor) GetId() string {
@@ -1234,19 +1364,20 @@ type EntitySelector struct {
 	// GTFS feed.
 	// At least one specifier must be given. If several are given, then the
 	// matching has to apply to all the given specifiers.
-	AgencyId *string `protobuf:"bytes,1,opt,name=agency_id" json:"agency_id,omitempty"`
-	RouteId  *string `protobuf:"bytes,2,opt,name=route_id" json:"route_id,omitempty"`
+	AgencyId *string `protobuf:"bytes,1,opt,name=agency_id,json=agencyId" json:"agency_id,omitempty"`
+	RouteId  *string `protobuf:"bytes,2,opt,name=route_id,json=routeId" json:"route_id,omitempty"`
 	// corresponds to route_type in GTFS.
-	RouteType        *int32                    `protobuf:"varint,3,opt,name=route_type" json:"route_type,omitempty"`
-	Trip             *TripDescriptor           `protobuf:"bytes,4,opt,name=trip" json:"trip,omitempty"`
-	StopId           *string                   `protobuf:"bytes,5,opt,name=stop_id" json:"stop_id,omitempty"`
-	XXX_extensions   map[int32]proto.Extension `json:"-"`
-	XXX_unrecognized []byte                    `json:"-"`
+	RouteType                    *int32          `protobuf:"varint,3,opt,name=route_type,json=routeType" json:"route_type,omitempty"`
+	Trip                         *TripDescriptor `protobuf:"bytes,4,opt,name=trip" json:"trip,omitempty"`
+	StopId                       *string         `protobuf:"bytes,5,opt,name=stop_id,json=stopId" json:"stop_id,omitempty"`
+	proto.XXX_InternalExtensions `json:"-"`
+	XXX_unrecognized             []byte `json:"-"`
 }
 
-func (m *EntitySelector) Reset()         { *m = EntitySelector{} }
-func (m *EntitySelector) String() string { return proto.CompactTextString(m) }
-func (*EntitySelector) ProtoMessage()    {}
+func (m *EntitySelector) Reset()                    { *m = EntitySelector{} }
+func (m *EntitySelector) String() string            { return proto.CompactTextString(m) }
+func (*EntitySelector) ProtoMessage()               {}
+func (*EntitySelector) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{10} }
 
 var extRange_EntitySelector = []proto.ExtensionRange{
 	{1000, 1999},
@@ -1254,12 +1385,6 @@ var extRange_EntitySelector = []proto.ExtensionRange{
 
 func (*EntitySelector) ExtensionRangeArray() []proto.ExtensionRange {
 	return extRange_EntitySelector
-}
-func (m *EntitySelector) ExtensionMap() map[int32]proto.Extension {
-	if m.XXX_extensions == nil {
-		m.XXX_extensions = make(map[int32]proto.Extension)
-	}
-	return m.XXX_extensions
 }
 
 func (m *EntitySelector) GetAgencyId() string {
@@ -1309,13 +1434,23 @@ func (m *EntitySelector) GetStopId() string {
 //    picked.
 type TranslatedString struct {
 	// At least one translation must be provided.
-	Translation      []*TranslatedString_Translation `protobuf:"bytes,1,rep,name=translation" json:"translation,omitempty"`
-	XXX_unrecognized []byte                          `json:"-"`
+	Translation                  []*TranslatedString_Translation `protobuf:"bytes,1,rep,name=translation" json:"translation,omitempty"`
+	proto.XXX_InternalExtensions `json:"-"`
+	XXX_unrecognized             []byte `json:"-"`
 }
 
-func (m *TranslatedString) Reset()         { *m = TranslatedString{} }
-func (m *TranslatedString) String() string { return proto.CompactTextString(m) }
-func (*TranslatedString) ProtoMessage()    {}
+func (m *TranslatedString) Reset()                    { *m = TranslatedString{} }
+func (m *TranslatedString) String() string            { return proto.CompactTextString(m) }
+func (*TranslatedString) ProtoMessage()               {}
+func (*TranslatedString) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{11} }
+
+var extRange_TranslatedString = []proto.ExtensionRange{
+	{1000, 1999},
+}
+
+func (*TranslatedString) ExtensionRangeArray() []proto.ExtensionRange {
+	return extRange_TranslatedString
+}
 
 func (m *TranslatedString) GetTranslation() []*TranslatedString_Translation {
 	if m != nil {
@@ -1330,13 +1465,25 @@ type TranslatedString_Translation struct {
 	// BCP-47 language code. Can be omitted if the language is unknown or if
 	// no i18n is done at all for the feed. At most one translation is
 	// allowed to have an unspecified language tag.
-	Language         *string `protobuf:"bytes,2,opt,name=language" json:"language,omitempty"`
-	XXX_unrecognized []byte  `json:"-"`
+	Language                     *string `protobuf:"bytes,2,opt,name=language" json:"language,omitempty"`
+	proto.XXX_InternalExtensions `json:"-"`
+	XXX_unrecognized             []byte `json:"-"`
 }
 
 func (m *TranslatedString_Translation) Reset()         { *m = TranslatedString_Translation{} }
 func (m *TranslatedString_Translation) String() string { return proto.CompactTextString(m) }
 func (*TranslatedString_Translation) ProtoMessage()    {}
+func (*TranslatedString_Translation) Descriptor() ([]byte, []int) {
+	return fileDescriptor0, []int{11, 0}
+}
+
+var extRange_TranslatedString_Translation = []proto.ExtensionRange{
+	{1000, 1999},
+}
+
+func (*TranslatedString_Translation) ExtensionRangeArray() []proto.ExtensionRange {
+	return extRange_TranslatedString_Translation
+}
 
 func (m *TranslatedString_Translation) GetText() string {
 	if m != nil && m.Text != nil {
@@ -1353,11 +1500,150 @@ func (m *TranslatedString_Translation) GetLanguage() string {
 }
 
 func init() {
+	proto.RegisterType((*FeedMessage)(nil), "transit_realtime.FeedMessage")
+	proto.RegisterType((*FeedHeader)(nil), "transit_realtime.FeedHeader")
+	proto.RegisterType((*FeedEntity)(nil), "transit_realtime.FeedEntity")
+	proto.RegisterType((*TripUpdate)(nil), "transit_realtime.TripUpdate")
+	proto.RegisterType((*TripUpdate_StopTimeEvent)(nil), "transit_realtime.TripUpdate.StopTimeEvent")
+	proto.RegisterType((*TripUpdate_StopTimeUpdate)(nil), "transit_realtime.TripUpdate.StopTimeUpdate")
+	proto.RegisterType((*VehiclePosition)(nil), "transit_realtime.VehiclePosition")
+	proto.RegisterType((*Alert)(nil), "transit_realtime.Alert")
+	proto.RegisterType((*TimeRange)(nil), "transit_realtime.TimeRange")
+	proto.RegisterType((*Position)(nil), "transit_realtime.Position")
+	proto.RegisterType((*TripDescriptor)(nil), "transit_realtime.TripDescriptor")
+	proto.RegisterType((*VehicleDescriptor)(nil), "transit_realtime.VehicleDescriptor")
+	proto.RegisterType((*EntitySelector)(nil), "transit_realtime.EntitySelector")
+	proto.RegisterType((*TranslatedString)(nil), "transit_realtime.TranslatedString")
+	proto.RegisterType((*TranslatedString_Translation)(nil), "transit_realtime.TranslatedString.Translation")
 	proto.RegisterEnum("transit_realtime.FeedHeader_Incrementality", FeedHeader_Incrementality_name, FeedHeader_Incrementality_value)
 	proto.RegisterEnum("transit_realtime.TripUpdate_StopTimeUpdate_ScheduleRelationship", TripUpdate_StopTimeUpdate_ScheduleRelationship_name, TripUpdate_StopTimeUpdate_ScheduleRelationship_value)
 	proto.RegisterEnum("transit_realtime.VehiclePosition_VehicleStopStatus", VehiclePosition_VehicleStopStatus_name, VehiclePosition_VehicleStopStatus_value)
 	proto.RegisterEnum("transit_realtime.VehiclePosition_CongestionLevel", VehiclePosition_CongestionLevel_name, VehiclePosition_CongestionLevel_value)
+	proto.RegisterEnum("transit_realtime.VehiclePosition_OccupancyStatus", VehiclePosition_OccupancyStatus_name, VehiclePosition_OccupancyStatus_value)
 	proto.RegisterEnum("transit_realtime.Alert_Cause", Alert_Cause_name, Alert_Cause_value)
 	proto.RegisterEnum("transit_realtime.Alert_Effect", Alert_Effect_name, Alert_Effect_value)
 	proto.RegisterEnum("transit_realtime.TripDescriptor_ScheduleRelationship", TripDescriptor_ScheduleRelationship_name, TripDescriptor_ScheduleRelationship_value)
+}
+
+func init() { proto.RegisterFile("gtfs-realtime.proto", fileDescriptor0) }
+
+var fileDescriptor0 = []byte{
+	// 1866 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x09, 0x6e, 0x88, 0x02, 0xff, 0x9c, 0x57, 0xcd, 0x6f, 0xdb, 0xc8,
+	0x15, 0x0f, 0x25, 0x51, 0x1f, 0x4f, 0xb6, 0xc4, 0x4c, 0x9c, 0x46, 0x75, 0x92, 0x85, 0x57, 0xdb,
+	0x43, 0xb0, 0x8b, 0x15, 0x50, 0x37, 0xed, 0xc1, 0x8b, 0x45, 0x97, 0x21, 0x47, 0x36, 0x11, 0x89,
+	0x14, 0x86, 0x94, 0x03, 0x03, 0x05, 0x08, 0x2e, 0x39, 0x56, 0x58, 0xd0, 0xa4, 0x4a, 0x8e, 0x8c,
+	0xf5, 0xa1, 0x40, 0x7b, 0xe8, 0xff, 0xd0, 0xbf, 0xa0, 0x87, 0x5e, 0x7a, 0x28, 0x7a, 0xed, 0xdf,
+	0x50, 0xf4, 0xd4, 0x3f, 0xa1, 0xe8, 0xbd, 0xe7, 0x16, 0x33, 0xfc, 0xd0, 0x87, 0xed, 0x8d, 0xb3,
+	0x37, 0xbe, 0x8f, 0xdf, 0x9b, 0x37, 0x8f, 0xef, 0x6b, 0xe0, 0xc9, 0x82, 0x5d, 0x66, 0x5f, 0xa6,
+	0xd4, 0x8b, 0x58, 0x78, 0x45, 0x47, 0xcb, 0x34, 0x61, 0x09, 0x52, 0x58, 0xea, 0xc5, 0x59, 0xc8,
+	0xdc, 0x92, 0x3f, 0xfc, 0xbd, 0x04, 0xdd, 0x31, 0xa5, 0xc1, 0x94, 0x66, 0x99, 0xb7, 0xa0, 0xe8,
+	0x35, 0x34, 0xdf, 0x53, 0x2f, 0xa0, 0xe9, 0x40, 0x3a, 0xaa, 0xbd, 0xea, 0x1e, 0xbf, 0x18, 0xed,
+	0x42, 0x46, 0x5c, 0xfd, 0x4c, 0xe8, 0x90, 0x42, 0x97, 0xa3, 0x68, 0xcc, 0x42, 0x76, 0x33, 0xa8,
+	0x1d, 0xd5, 0xef, 0x47, 0x61, 0xa1, 0x43, 0x0a, 0xdd, 0xcf, 0x9b, 0xed, 0x7f, 0xb7, 0x94, 0x7f,
+	0xf4, 0x87, 0xff, 0x93, 0x00, 0xd6, 0x46, 0xd1, 0x31, 0x3c, 0xe5, 0xbe, 0x57, 0x50, 0xf7, 0x9a,
+	0xa6, 0x59, 0x98, 0xc4, 0xc2, 0xa3, 0x0e, 0x11, 0x17, 0x23, 0x85, 0xec, 0x3c, 0x17, 0x21, 0x0f,
+	0x7a, 0x61, 0xec, 0xa7, 0xf4, 0x8a, 0xc6, 0xcc, 0x8b, 0x72, 0x47, 0xa4, 0x57, 0xbd, 0xe3, 0x2f,
+	0xbe, 0xcf, 0xfd, 0x91, 0xb1, 0x05, 0x39, 0xd9, 0x1b, 0xcf, 0x27, 0x13, 0x57, 0x57, 0x1d, 0xd5,
+	0xc6, 0x0e, 0xd9, 0x31, 0x88, 0x5e, 0x40, 0x87, 0xe3, 0x33, 0xe6, 0x5d, 0x2d, 0x07, 0xf5, 0x23,
+	0xe9, 0x55, 0x83, 0xac, 0x19, 0xc3, 0xd7, 0xd0, 0xdb, 0xb6, 0x86, 0x14, 0xd8, 0xb2, 0xa7, 0x3c,
+	0xe2, 0x1c, 0xdd, 0x18, 0x8f, 0x31, 0xc1, 0xa6, 0x63, 0xa8, 0x13, 0x45, 0xaa, 0x22, 0xf0, 0xdf,
+	0x22, 0x02, 0x79, 0x80, 0x50, 0x0f, 0x6a, 0x61, 0x50, 0x5c, 0xb7, 0x16, 0x06, 0xe8, 0x27, 0x00,
+	0x61, 0xe6, 0x06, 0x34, 0xa2, 0x8c, 0x06, 0xe2, 0x66, 0xed, 0x13, 0xf9, 0xd2, 0x8b, 0x32, 0x4a,
+	0x3a, 0x61, 0xa6, 0xe7, 0x7c, 0xf4, 0x35, 0x74, 0x59, 0x1a, 0x2e, 0xdd, 0xd5, 0x32, 0xf0, 0x18,
+	0x15, 0x2e, 0xde, 0xf9, 0x27, 0x9c, 0x34, 0x5c, 0xce, 0x85, 0x0e, 0x01, 0x56, 0x7d, 0xa3, 0xaf,
+	0xa0, 0x75, 0x4d, 0xdf, 0x87, 0x7e, 0x44, 0x07, 0x0d, 0x01, 0xfd, 0xf4, 0x36, 0xf4, 0x3c, 0x57,
+	0x98, 0x25, 0x59, 0xc8, 0xc2, 0x24, 0x26, 0x25, 0x02, 0x7d, 0x09, 0xb2, 0x17, 0xd1, 0x94, 0x0d,
+	0x64, 0x01, 0x7d, 0x76, 0x1b, 0xaa, 0x72, 0x31, 0xc9, 0xb5, 0xaa, 0x7b, 0xff, 0xa9, 0x09, 0xb0,
+	0x76, 0x07, 0xbd, 0x86, 0x06, 0x77, 0xa8, 0x48, 0xbd, 0xa3, 0xbb, 0x5d, 0xd7, 0x69, 0xe6, 0xa7,
+	0xe1, 0x92, 0x25, 0x29, 0x11, 0xda, 0xe8, 0xeb, 0xb5, 0xe3, 0xf9, 0x9d, 0x3f, 0xbb, 0xd7, 0xf1,
+	0x0d, 0x6c, 0xe5, 0xfa, 0x1c, 0x94, 0x8c, 0x25, 0x4b, 0x57, 0xa4, 0x5a, 0x11, 0xbb, 0x3c, 0x8b,
+	0xbf, 0xf8, 0xbe, 0xd8, 0x8d, 0x6c, 0x96, 0x2c, 0x9d, 0xf0, 0x8a, 0x16, 0xa1, 0xec, 0x65, 0x5b,
+	0xf4, 0x76, 0xba, 0x34, 0x76, 0xd2, 0x05, 0x1d, 0x80, 0x1c, 0xd0, 0xc8, 0xbb, 0x11, 0xf1, 0x92,
+	0x49, 0x4e, 0x1c, 0xfa, 0xb0, 0x5f, 0x5a, 0xc5, 0xd7, 0x34, 0x66, 0x6b, 0x35, 0x69, 0x43, 0x0d,
+	0x21, 0x68, 0x70, 0x4b, 0x22, 0x11, 0xea, 0x44, 0x7c, 0xa3, 0x23, 0xe8, 0xae, 0x62, 0x9f, 0xa6,
+	0xcc, 0x0b, 0x63, 0x76, 0x23, 0x02, 0x21, 0x93, 0x4d, 0x56, 0x19, 0xf3, 0xc3, 0x3f, 0xd7, 0xa1,
+	0xb7, 0xed, 0x3b, 0xfa, 0x0c, 0xf6, 0x45, 0x08, 0x32, 0xfa, 0x9b, 0x15, 0x8d, 0x7d, 0x2a, 0x8e,
+	0xdb, 0x27, 0x7b, 0x9c, 0x69, 0x17, 0x3c, 0xf4, 0x0c, 0x5a, 0x42, 0x29, 0x0c, 0xc4, 0x75, 0x3a,
+	0xa4, 0xc9, 0x49, 0x23, 0x40, 0x3a, 0xb4, 0xbc, 0x34, 0x0d, 0xaf, 0xbd, 0x48, 0x78, 0xd4, 0x3d,
+	0xfe, 0xfc, 0x41, 0x71, 0x13, 0x37, 0x24, 0x25, 0x14, 0x9d, 0x41, 0x27, 0xa0, 0x4b, 0x2f, 0x65,
+	0xab, 0xb4, 0xfc, 0x8f, 0x1f, 0x63, 0x67, 0x0d, 0x46, 0xbf, 0x93, 0xe0, 0x69, 0xe6, 0xbf, 0xa7,
+	0xc1, 0x2a, 0xa2, 0x6e, 0x4a, 0x23, 0x8f, 0xa7, 0x6a, 0xf6, 0x3e, 0x5c, 0x8a, 0x60, 0xf7, 0x8e,
+	0xbf, 0xf9, 0x88, 0xdf, 0x3a, 0xb2, 0x0b, 0x43, 0x64, 0xc3, 0xce, 0x49, 0xc7, 0xd6, 0xce, 0xb0,
+	0x3e, 0x9f, 0x60, 0x9d, 0x1c, 0x64, 0x77, 0x28, 0x0c, 0x7f, 0x09, 0x07, 0x77, 0x01, 0xd1, 0x3e,
+	0xac, 0xa1, 0xca, 0x23, 0xd4, 0x85, 0x96, 0xfd, 0xd6, 0x98, 0xcd, 0xb0, 0xae, 0x48, 0x9c, 0x30,
+	0x2d, 0xd1, 0x2d, 0x94, 0x5a, 0xf9, 0xb3, 0xaa, 0x42, 0xf9, 0x67, 0x0b, 0xfa, 0x3b, 0xc5, 0xb7,
+	0x51, 0x2d, 0xd2, 0x0f, 0xab, 0x96, 0xf6, 0x0f, 0xa8, 0x96, 0x5f, 0x40, 0x7b, 0x59, 0x38, 0x50,
+	0xfc, 0xed, 0xc3, 0xdb, 0xf8, 0xaa, 0x3f, 0x54, 0xba, 0xbc, 0xa9, 0xfb, 0xab, 0x34, 0xa5, 0x31,
+	0x73, 0xb7, 0x53, 0xad, 0x2e, 0x52, 0xed, 0x49, 0x21, 0xb4, 0xef, 0xc9, 0xb8, 0xd6, 0x56, 0xc6,
+	0x85, 0xd0, 0x5b, 0x1b, 0xf3, 0xd8, 0x2a, 0x13, 0x19, 0xd9, 0x3b, 0xfe, 0xd9, 0x07, 0x3b, 0x56,
+	0x49, 0x8b, 0x73, 0x04, 0xf4, 0x64, 0xdf, 0x30, 0x5d, 0x87, 0xa8, 0xa6, 0x6d, 0x38, 0xae, 0x63,
+	0x91, 0xfd, 0xca, 0x13, 0x2e, 0xdd, 0x2e, 0x63, 0x79, 0xb7, 0x8c, 0x7f, 0x05, 0x8a, 0x9f, 0xc4,
+	0x0b, 0x9a, 0x71, 0xdb, 0x6e, 0x44, 0xaf, 0x69, 0x34, 0x68, 0x0a, 0x57, 0x7e, 0xfa, 0x61, 0x57,
+	0xb4, 0x0a, 0x39, 0xe1, 0x40, 0xd2, 0xf7, 0xb7, 0x19, 0xdc, 0x7a, 0xe2, 0xfb, 0xab, 0xa5, 0x17,
+	0xfb, 0x37, 0xe5, 0x45, 0x3b, 0x0f, 0xb5, 0x6e, 0x95, 0xc8, 0xfc, 0x22, 0xa4, 0x9f, 0x6c, 0x33,
+	0x86, 0xa7, 0xf0, 0xf8, 0x56, 0x30, 0x50, 0x1f, 0xba, 0x86, 0xa9, 0x59, 0x53, 0xc3, 0x3c, 0x75,
+	0x55, 0x3e, 0xb3, 0x7a, 0x00, 0xb6, 0x63, 0xf1, 0x14, 0xe5, 0xb4, 0x84, 0x1e, 0xc3, 0x76, 0xbc,
+	0x94, 0xda, 0xf0, 0xb7, 0xd0, 0xdf, 0xb9, 0x0a, 0x7a, 0x01, 0x83, 0xb9, 0xf9, 0xd6, 0xb4, 0xde,
+	0x99, 0xae, 0x66, 0x99, 0xa7, 0xd8, 0x76, 0x0c, 0xcb, 0x74, 0x27, 0xf8, 0x1c, 0x4f, 0x94, 0x47,
+	0xe8, 0x00, 0x14, 0x32, 0x37, 0x4d, 0x7e, 0x86, 0x3d, 0xb5, 0x2c, 0xe7, 0x6c, 0x72, 0xa1, 0x48,
+	0xfc, 0x68, 0x7e, 0x92, 0xab, 0x9a, 0xba, 0x7b, 0x6a, 0x29, 0x35, 0x7e, 0xf4, 0x1a, 0xac, 0xd4,
+	0xd1, 0x53, 0x78, 0x6c, 0xe3, 0x73, 0x4c, 0xf0, 0x86, 0x4d, 0xa5, 0x31, 0xfc, 0x8b, 0x04, 0xfd,
+	0x9d, 0xcb, 0xa2, 0x0e, 0xc8, 0x78, 0x3a, 0x73, 0x2e, 0x94, 0x47, 0x68, 0x00, 0x07, 0x53, 0xd5,
+	0xbc, 0x70, 0x6d, 0xac, 0x3a, 0xb6, 0xab, 0x9e, 0xab, 0xc6, 0x44, 0x7d, 0x33, 0xc1, 0x8a, 0x84,
+	0x9e, 0xc1, 0x93, 0x31, 0x7e, 0x77, 0x4b, 0x50, 0x43, 0x3f, 0x02, 0x64, 0x3b, 0xaa, 0xa9, 0x73,
+	0x07, 0x89, 0x65, 0x4d, 0x5d, 0xcb, 0x9c, 0x5c, 0x28, 0x75, 0xf4, 0x09, 0x1c, 0x6a, 0x64, 0x6e,
+	0x9f, 0x61, 0xdd, 0xbd, 0x43, 0xde, 0x40, 0x6d, 0x68, 0xf0, 0x89, 0xaf, 0xc8, 0xfc, 0xfe, 0xa6,
+	0xe5, 0xb8, 0xaa, 0xa6, 0xe1, 0x99, 0xc3, 0xd5, 0x66, 0xaa, 0x6d, 0x63, 0xf3, 0x14, 0x13, 0x5b,
+	0x69, 0x56, 0x45, 0xfd, 0x87, 0x16, 0xc8, 0x62, 0x2c, 0xa2, 0x6f, 0x60, 0xdf, 0xf3, 0x59, 0x78,
+	0x4d, 0xdd, 0x25, 0x4d, 0xc3, 0x84, 0xcf, 0x7e, 0x3e, 0x80, 0x9e, 0xdf, 0x51, 0xd3, 0xe1, 0x15,
+	0x25, 0x5e, 0xbc, 0xa0, 0x64, 0x2f, 0x47, 0xcc, 0x04, 0x00, 0x19, 0xd0, 0x0f, 0xe3, 0xcb, 0x24,
+	0xbd, 0xa2, 0x81, 0x5b, 0xac, 0x62, 0xb2, 0xb0, 0x71, 0x47, 0x5f, 0xc8, 0xb7, 0x0c, 0x9b, 0x46,
+	0xd4, 0xe7, 0xb5, 0xdd, 0x2b, 0x81, 0xc5, 0xf6, 0xf1, 0x06, 0x64, 0xdf, 0x5b, 0x65, 0xb4, 0xc8,
+	0xe4, 0x97, 0xf7, 0xcc, 0xf2, 0x91, 0xc6, 0x95, 0x4e, 0xf6, 0xab, 0x1f, 0xad, 0xce, 0x6d, 0x4c,
+	0x72, 0x28, 0x1a, 0x43, 0x93, 0x5e, 0x5e, 0x52, 0x9f, 0x89, 0xca, 0xed, 0x1d, 0x7f, 0x72, 0x9f,
+	0x11, 0x2c, 0xb4, 0x4e, 0x7a, 0xa5, 0x15, 0x3c, 0x1e, 0x63, 0xcd, 0x21, 0x05, 0x1a, 0xbd, 0x86,
+	0xfa, 0x2a, 0x8d, 0x8a, 0x4e, 0x35, 0xbc, 0xab, 0xc5, 0x79, 0x71, 0x16, 0x79, 0x8c, 0x06, 0x36,
+	0x4b, 0xc3, 0x78, 0x41, 0xb8, 0x3a, 0xd2, 0xa0, 0x9b, 0x2f, 0xa6, 0x2e, 0xa3, 0xdf, 0xb1, 0x01,
+	0x3c, 0x18, 0x0d, 0x39, 0xcc, 0xa1, 0xdf, 0x31, 0x34, 0x05, 0x25, 0x28, 0x1a, 0x20, 0x2f, 0x6e,
+	0x61, 0xa9, 0xfb, 0x60, 0x4b, 0xfd, 0x0d, 0x2c, 0x37, 0x37, 0xfc, 0x97, 0x04, 0xb2, 0x88, 0x18,
+	0x2f, 0xa1, 0xad, 0x98, 0xe5, 0xb9, 0x6f, 0x39, 0x67, 0x98, 0x14, 0x8c, 0x1a, 0xcf, 0x75, 0x07,
+	0x6b, 0x67, 0xa6, 0xa1, 0xa9, 0x13, 0x77, 0x46, 0xac, 0x37, 0x13, 0x3c, 0x55, 0xea, 0x08, 0xa0,
+	0x69, 0x3b, 0xc4, 0x78, 0x8b, 0x95, 0x06, 0x37, 0xa3, 0xe3, 0xa9, 0x65, 0xda, 0x0e, 0x51, 0x45,
+	0x29, 0xc8, 0x68, 0x0f, 0xda, 0xaa, 0xa6, 0x19, 0x3a, 0x36, 0x1d, 0xa5, 0xc9, 0x07, 0xca, 0x99,
+	0x35, 0x31, 0x74, 0xf5, 0x42, 0x69, 0x71, 0xe2, 0x1d, 0x56, 0xf9, 0x19, 0x4a, 0x9b, 0x1f, 0x37,
+	0x55, 0x0d, 0xd3, 0xc1, 0xa6, 0x6a, 0x6a, 0x58, 0xe9, 0xf0, 0xcd, 0x54, 0x13, 0x96, 0xe6, 0x9a,
+	0x30, 0x05, 0xe8, 0x09, 0xf4, 0x67, 0xd6, 0xc4, 0xd0, 0xb0, 0xab, 0x6a, 0x8e, 0x71, 0x6e, 0x38,
+	0x17, 0x4a, 0x97, 0x7b, 0x35, 0xc5, 0xba, 0xf0, 0x09, 0x4f, 0x31, 0x39, 0xc5, 0xa6, 0x76, 0xa1,
+	0xec, 0x0d, 0xff, 0x26, 0x41, 0x33, 0xff, 0x8f, 0xbc, 0x66, 0x4d, 0xcb, 0xb5, 0x31, 0x39, 0x37,
+	0x34, 0x7e, 0xb1, 0x27, 0xd0, 0x27, 0x58, 0x9f, 0x6b, 0xbc, 0x64, 0x0a, 0x66, 0x5e, 0x5f, 0xc6,
+	0xa9, 0x69, 0x8c, 0x0d, 0x4d, 0x35, 0x1d, 0x57, 0xc7, 0x13, 0xf5, 0xc2, 0xce, 0x6f, 0xa7, 0x63,
+	0xc7, 0x9a, 0x13, 0xa5, 0xc1, 0x75, 0x54, 0x5d, 0x37, 0xb8, 0x37, 0xea, 0xa4, 0xc2, 0xca, 0xbc,
+	0x77, 0x4c, 0x2d, 0xdd, 0x18, 0x1b, 0x1b, 0x16, 0x9b, 0xdc, 0xff, 0x3c, 0x7e, 0x79, 0xfa, 0x28,
+	0x2d, 0x84, 0x60, 0x27, 0xa5, 0x94, 0x76, 0xd9, 0xcb, 0xdc, 0xa9, 0x75, 0x8e, 0x75, 0xa5, 0x53,
+	0xd5, 0xe1, 0x57, 0xd0, 0xa9, 0xca, 0x8a, 0xaf, 0x5c, 0x19, 0xf3, 0x52, 0x26, 0xc6, 0x6a, 0x83,
+	0xe4, 0x04, 0x52, 0xa0, 0x4e, 0xe3, 0x7c, 0xf5, 0x6e, 0x10, 0xfe, 0x59, 0x81, 0xff, 0x28, 0x41,
+	0xbb, 0x1a, 0xc9, 0x87, 0xd0, 0xe6, 0xd3, 0x9e, 0xad, 0x02, 0x2a, 0x96, 0xd8, 0x1a, 0xa9, 0x68,
+	0x3e, 0x49, 0xa2, 0x24, 0x5e, 0xe4, 0xc2, 0x9a, 0x10, 0xae, 0x19, 0x68, 0x00, 0xad, 0x6f, 0xa9,
+	0xc7, 0x53, 0x47, 0x4c, 0xc4, 0x1a, 0x29, 0x49, 0x6e, 0x33, 0x09, 0x92, 0x2b, 0xca, 0x68, 0x2a,
+	0xc6, 0x9c, 0x44, 0x2a, 0x5a, 0x38, 0xbb, 0xa4, 0x34, 0x10, 0x93, 0xa9, 0x46, 0x72, 0xa2, 0x72,
+	0xed, 0x3f, 0x35, 0xe8, 0x6d, 0xef, 0x00, 0x7c, 0xa4, 0x8a, 0x37, 0x82, 0x78, 0x5e, 0x88, 0x91,
+	0xca, 0x49, 0x23, 0x40, 0x3f, 0x86, 0x76, 0x9a, 0xac, 0x18, 0xe5, 0x12, 0x59, 0x48, 0x5a, 0x82,
+	0x36, 0x02, 0xf4, 0x29, 0xec, 0x05, 0x61, 0x4a, 0x7d, 0x51, 0x06, 0x61, 0x20, 0xda, 0xc2, 0x3e,
+	0xe9, 0x56, 0x3c, 0x23, 0x40, 0x2f, 0x01, 0x44, 0x9c, 0xdc, 0x6a, 0x2f, 0xed, 0x90, 0x8e, 0xe0,
+	0xf0, 0xc0, 0xae, 0xc5, 0xd5, 0xc3, 0xa4, 0x14, 0xeb, 0x7c, 0xfd, 0xfc, 0xf5, 0x7d, 0xfb, 0x5a,
+	0x3e, 0xd5, 0x7f, 0xfe, 0xa1, 0xcd, 0xe6, 0xce, 0x25, 0xed, 0x9e, 0xcd, 0xcc, 0x7a, 0xd8, 0x66,
+	0xd6, 0x01, 0x59, 0xd5, 0x75, 0xb1, 0x97, 0xf5, 0xa1, 0x3b, 0x37, 0xd7, 0xb2, 0x1a, 0xaf, 0x32,
+	0x8d, 0xd7, 0x0d, 0xa7, 0xea, 0x55, 0xb0, 0x2f, 0xab, 0x71, 0xba, 0x11, 0xee, 0xf2, 0x21, 0x27,
+	0x15, 0x0f, 0xb9, 0x03, 0x90, 0x23, 0xef, 0x5b, 0x1a, 0x15, 0x21, 0xca, 0x09, 0xbe, 0x7e, 0x47,
+	0xa1, 0x4f, 0xe3, 0x8c, 0xba, 0xcb, 0x68, 0x1d, 0xa1, 0xbd, 0x82, 0x39, 0xe3, 0xbc, 0xea, 0x9c,
+	0xbf, 0x4b, 0xd0, 0xdb, 0x6e, 0xe0, 0xe8, 0x39, 0x74, 0xbc, 0x05, 0xe5, 0x4b, 0x42, 0x75, 0x58,
+	0x3b, 0x67, 0xec, 0xfc, 0xd8, 0xda, 0xf6, 0x8f, 0x7d, 0x09, 0x90, 0x8b, 0xd8, 0xcd, 0x92, 0x16,
+	0x4f, 0x86, 0x8e, 0xe0, 0x38, 0x37, 0xcb, 0xf5, 0x6b, 0xac, 0xf1, 0x51, 0xfb, 0xe5, 0xc6, 0xd2,
+	0x26, 0x6f, 0x2e, 0x6d, 0xd5, 0x05, 0xfe, 0x2a, 0x81, 0xb2, 0xdb, 0x2e, 0xd1, 0x8c, 0xbf, 0x5d,
+	0x73, 0x5e, 0xfe, 0xd2, 0xe7, 0xa3, 0x6b, 0xf4, 0xe1, 0x3e, 0x5b, 0x31, 0xf8, 0xb6, 0xb9, 0x69,
+	0xe2, 0x10, 0x43, 0x77, 0x43, 0x26, 0xde, 0x4c, 0xbc, 0x83, 0xe7, 0x8f, 0x6a, 0xf1, 0x9d, 0x57,
+	0x6b, 0xbc, 0x58, 0x79, 0x8b, 0x32, 0x67, 0x2b, 0x7a, 0x77, 0x01, 0x7f, 0xf3, 0x12, 0x9e, 0xfb,
+	0xc9, 0xd5, 0x68, 0x91, 0x24, 0x8b, 0x88, 0x96, 0x7e, 0x8d, 0x4a, 0xbf, 0xfe, 0x1f, 0x00, 0x00,
+	0xff, 0xff, 0xd4, 0x82, 0x06, 0xfa, 0x6e, 0x11, 0x00, 0x00,
 }
