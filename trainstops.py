@@ -17,6 +17,7 @@ with open('trips.txt','r') as csvin:
 
 
 sstop_seqs = dict()
+nstop_seqs = dict()
 
 with open('stop_times.txt','r') as csvin:
     reader=csv.DictReader(csvin)
@@ -49,7 +50,7 @@ all_stops = dict()
 with open('stops.txt','r') as csvin:
     reader=csv.DictReader(csvin)
     for line in reader:
-        all_stops[line['stop_id']] = line['stop_name']
+        all_stops[line['stop_id']] = {"name":line['stop_name'],"lat":line['stop_lat'],"long":line['stop_lon']}
 
 for train, stops in train_stops.items():
     for i, stop in enumerate(stops):
