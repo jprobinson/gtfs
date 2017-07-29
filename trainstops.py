@@ -42,7 +42,7 @@ for train in sstop_seqs:
         stops = trips[trip_id]
 
         if len(train_stops[train]) < len(stops):
-            train_stops[train] = stops
+            train_stops[train] = {'stops': stops}
 
 
 all_stops = dict()
@@ -50,11 +50,12 @@ all_stops = dict()
 with open('stops.txt','r') as csvin:
     reader=csv.DictReader(csvin)
     for line in reader:
-        all_stops[line['stop_id']] = {"name":line['stop_name'],"lat":line['stop_lat'],"long":line['stop_lon']}
+        # all_stops[line['stop_id']] = {"name":line['stop_name'],"lat":line['stop_lat'],"long":line['stop_lon']}
+        all_stops[line['stop_id']] = line['stop_name']
 
 for train, stops in train_stops.items():
-    for i, stop in enumerate(stops):
-        train_stops[train][i].append(all_stops[stop[0]])
+    for i, stop in enumerate(stops['stops']):
+        train_stops[train]['stops'][i].append(all_stops[stop[0]])
 
 print json.dumps(train_stops)
 
