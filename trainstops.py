@@ -3,7 +3,7 @@ import json
 from collections import defaultdict
 
 
-trains = ["1","2","3","4","5","5X","6","6X","S","L"]
+trains = ["1","2","3","4","5","5X","6","6X","S","L","B","D","C","N","Q","R","W"]
 
 trips = dict()
 for t in trains:
