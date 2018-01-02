@@ -3,7 +3,34 @@ import json
 from collections import defaultdict
 
 
-trains = ["1","2","3","4","5","5X","6","6X","S","L","B","D","A","G","C","E","N","Q","R","W","J","Z"]
+trains = {
+        "1": {"northbound": "Bronx","southbound": "South&nbsp;Ferry"},
+        "2": {"northbound": "Bronx","southbound": "Brooklyn"},
+        "3": {"northbound": "Harlem","southbound": "Brooklyn"},
+        "4": {"northbound": "Bronx","southbound": "Brooklyn"},
+        "5": {"northbound": "Bronx","southbound": "Brooklyn"},
+        "5X": {"northbound": "Bronx","southbound": "Brooklyn"},
+        "6": {"northbound": "Bronx","southbound": "Brooklyn Brdg"},
+        "6X": {"northbound": "Bronx","southbound": "Brooklyn Brdg"},
+        "S": {"northbound": "","southbound": ""},
+        "L": {"northbound": "Manhattan","southbound": "Brooklyn"},
+        "B": {"northbound": "Bronx","southbound": "Brooklyn"},
+        "D": {"northbound": "Bronx","southbound": "Brooklyn"},
+        "A": {"northbound": "Manhattan","southbound": "Queens"},
+        "G": {"northbound": "Queens","southbound": "Brooklyn"},
+        "C": {"northbound": "Manhattan","southbound": "Brooklyn"},
+        "E": {"northbound": "Queens","southbound": "Manhattan"},
+        "N": {"northbound": "Manhattan","southbound": "Brooklyn"},
+        "Q": {"northbound": "Manhattan","southbound": "Brooklyn"},
+        "R": {"northbound": "Queens","southbound": "Brooklyn"},
+        "W": {"northbound": "Queens","southbound": "Manhattan"},
+        "J": {"northbound": "Queens","southbound": "Manhattan"},
+        "F": {"northbound": "Queens","southbound": "Brooklyn"},
+        "M": {"northbound": "Queens","southbound": "Brooklyn"},
+        "B": {"northbound": "Bronx","southbound": "Brooklyn"},
+        "D": {"northbound": "Bronx","southbound": "Brooklyn"},
+        "Z": {"northbound": "Queens","southbound": "Manhattan"},
+}
 
 trips = dict()
 for t in trains:
@@ -71,8 +98,12 @@ with open('stops.txt','r') as csvin:
 
 out = dict()
 for train, stops in train_stops.items():
+    train_stops[train]["northbound"] = trains[train]["northbound"]
+    train_stops[train]["southbound"] = trains[train]["southbound"]
     for i, stop in enumerate(stops['stops']):
+
         train_stops[train]['stops'][i].append(all_stops[stop[0]])
+        train_stops[train]['stops'][i][0] = train_stops[train]['stops'][i][0][:-1]
         if all_stops[stop[0]]["value"] in out:
             out[all_stops[stop[0]]["value"]][train] = stop[0]
             continue
