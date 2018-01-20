@@ -1,4 +1,5 @@
 import csv
+import re
 import json
 from collections import defaultdict
 
@@ -73,6 +74,10 @@ for train in sstop_seqs:
 
 
 all_stops = dict()
+avenue = re.compile("Av$")
+avenues = re.compile("Avs$")
+street = re.compile("St$")
+streets = re.compile("Sts$")
 
 with open('stops.txt','r') as csvin:
     reader=csv.DictReader(csvin)
@@ -84,17 +89,33 @@ with open('stops.txt','r') as csvin:
         name = name.replace("Hts", "Heights")
         name = name.replace("Sq", "Square")
         name = name.replace("Pkwy", "Parkway")
+        name = name.replace("Blvd", "Boulevard")
+        name = name.replace("Hwy", "Highway")
+        name = name.replace("1 ", "1st ")
+        name = name.replace("2 ", "2nd ")
+        name = name.replace("3 ", "3rd ")
+        name = name.replace("4 ", "4th ")
+        name = name.replace("5 ", "5th ")
+        name = name.replace("6 ", "6th ")
+        name = name.replace("7 ", "7th ")
+        name = name.replace("8 ", "8th ")
+        name = name.replace("9 ", "9th ")
+        name = name.replace("0 ", "0th ")
+        name = avenue.sub("Avenue", name)
+        name = avenues.sub("Avenues", name)
+        name = street.sub("Street", name)
+        name = streets.sub("Streets", name)
         names = set(name.split(","))
         names.add(name)
         all_stops[line['stop_id']] = {"value":name,"synonyms":list(names)}
-        out[name] = {"value":name,"synonyms":list(names)}
+        out[name] = {"synonyms":list(names),"value":name}
 
     outs = []
     for k in out:
         outs.append(out[k])
 
-#     print json.dumps(outs)
- ###   exit(0)
+print json.dumps(outs)
+exit(0)
 
 out = dict()
 for train, stops in train_stops.items():
