@@ -12,6 +12,7 @@ trains = {
         "5": {"northbound": "Bronx","southbound": "Brooklyn"},
         "5X": {"northbound": "Bronx","southbound": "Brooklyn"},
         "6": {"northbound": "Bronx","southbound": "Brooklyn Brdg"},
+        "7": {"northbound": "Queens","southbound": "Manhattan"},
         "6X": {"northbound": "Bronx","southbound": "Brooklyn Brdg"},
         "S": {"northbound": "","southbound": ""},
         "L": {"northbound": "Manhattan","southbound": "Brooklyn"},
@@ -83,8 +84,8 @@ with open('stops.txt','r') as csvin:
     reader=csv.DictReader(csvin)
     out = dict()
     for line in reader:
-        all_stops[line['stop_id']] = {"name":line['stop_name'],"lat":line['stop_lat'],"long":line['stop_lon']}
-        # all_stops[line['stop_id']] = line['stop_name']
+        # all_stops[line['stop_id']] = {"name":line['stop_name'],"lat":line['stop_lat'],"long":line['stop_lon']}
+        all_stops[line['stop_id']] = line['stop_name']
         '''
         name = line['stop_name'].replace("(",",").replace(")","")
         name = name.replace("Hts", "Heights")
@@ -124,10 +125,11 @@ with open('stops.txt','r') as csvin:
     outs = []
     for k in out:
         outs.append(out[k])
+    print json.dumps(outs)
+    exit(0)
 
- print json.dumps(outs)
- exit(0)
         '''
+
 
 out = dict()
 for train, stops in train_stops.items():
@@ -143,7 +145,7 @@ for train, stops in train_stops.items():
             continue
 
         out[all_stops[stop[0]]["value"]] = {train:stop[0]}
-        '''
+      '''
 
 print json.dumps(train_stops)
 # print json.dumps(out)
