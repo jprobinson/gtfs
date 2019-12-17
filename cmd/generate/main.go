@@ -7,7 +7,10 @@ import (
 	"io"
 	"os"
 	"regexp"
+	"sort"
 	"strings"
+
+	"github.com/jprobinson/gtfs"
 )
 
 func main() {
@@ -22,13 +25,21 @@ func main() {
 	writeGoFile("routes", stops)
 	writeJSFile("routes", stops)
 
-	var synsOut []Synonym
+	var synsOut []gtfs.Synonym
+	synsSeen := map[string]bool{}
 	for _, stop := range getStopData() {
-		synsOut = append(synsOut, Synonym{
+		if synsSeen[stop.PhoneticName] {
+			continue
+		}
+		synsOut = append(synsOut, gtfs.Synonym{
 			Value:    stop.PhoneticName,
 			Synonyms: stop.Synonyms,
 		})
+		synsSeen[stop.PhoneticName] = true
 	}
+	sort.SliceStable(synsOut, func(i, j int) bool {
+		return synsOut[i].Value < synsOut[j].Value
+	})
 	writeJSFile("synonyms", synsOut)
 
 	// phono Name => Line => stop ID
@@ -72,37 +83,12 @@ func writeGoFile(name string, data interface{}) {
 	fmt.Fprintf(goFile, "package gtfs\n\nvar %s = %#v", strings.Title(name), data)
 }
 
-type (
-	Route struct {
-		Name string
-
-		Northbound string
-		Southbound string
-
-		Stops []Stop
-	}
-	Stop struct {
-		ID string
-
-		MTAName      string
-		DisplayName  string
-		PhoneticName string
-
-		Synonyms []string
-	}
-
-	Synonym struct {
-		Value    string   `json:"value"`
-		Synonyms []string `json:"synonyms"`
-	}
-)
-
-func addStopData(tripsByRoute map[string][]string) map[string]Route {
+func addStopData(tripsByRoute map[string][]string) map[string]gtfs.Route {
 	stopData := getStopData()
 
-	out := map[string]Route{}
+	out := map[string]gtfs.Route{}
 	for line, route := range tripsByRoute {
-		routeInfo := Route{
+		routeInfo := gtfs.Route{
 			Name:       line,
 			Northbound: routes[line].Northbound,
 			Southbound: routes[line].Southbound,
@@ -123,7 +109,7 @@ func addStopData(tripsByRoute map[string][]string) map[string]Route {
 	return out
 }
 
-func getStopData() map[string]Stop {
+func getStopData() map[string]gtfs.Stop {
 	stopsFile, err := os.Open("../../static_gtfs/stops.txt")
 	if err != nil {
 		fmt.Println("unable to open stops.txt:", err)
@@ -132,7 +118,7 @@ func getStopData() map[string]Stop {
 	defer stopsFile.Close()
 
 	cols := map[string]int{}
-	stopData := map[string]Stop{}
+	stopData := map[string]gtfs.Stop{}
 	r := csv.NewReader(stopsFile)
 	for {
 		record, err := r.Read()
@@ -153,7 +139,7 @@ func getStopData() map[string]Stop {
 		stopID := record[cols["stop_id"]]
 		mtaName := record[cols["stop_name"]]
 		displayName, phonoName, syns := makeStopNames(mtaName)
-		stopData[stopID] = Stop{
+		stopData[stopID] = gtfs.Stop{
 			ID:           stopID,
 			MTAName:      mtaName,
 			DisplayName:  displayName,
@@ -347,7 +333,7 @@ func fixStAve(re *regexp.Regexp, given, want string) string {
 	})
 }
 
-var routes = map[string]Route{
+var routes = map[string]gtfs.Route{
 	"1":  {Northbound: "Bronx", Southbound: "South&nbsp;Ferry"},
 	"2":  {Northbound: "Bronx", Southbound: "Brooklyn"},
 	"3":  {Northbound: "Harlem", Southbound: "Brooklyn"},

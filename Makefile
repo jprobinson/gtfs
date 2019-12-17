@@ -1,6 +1,18 @@
 .DEFAULT_GOAL := build 
 .PHONY: build
-build: fetch-protos protoc fetch-csvs
+build: fetch-protos protoc fetch-csvs generate
+
+.PHONY: generate
+generate: clean-generated
+	@cd cmd/generate; \
+	go run main.go;
+	@sed -i '' -e 's/gtfs\.//g' ./routes.go
+
+.PHONY: clean-generated
+clean-generated:
+	@rm -f routes.go;
+	@rm -f routes.json;
+	@rm -f synonyms.json;
 
 .PHONY: clean
 clean: clean-proto clean-csv
@@ -23,7 +35,7 @@ clean-csv:
 fetch-csvs: clean-csv
 	@curl -s -o ./static_gtfs/google_transit.zip http://web.mta.info/developers/data/nyct/subway/google_transit.zip
 	@cd static_gtfs; \
-	unzip ./google_transit.zip; \
+	unzip -q ./google_transit.zip; \
 	rm -f google_transit.zip
 
 .PHONY: fetch-protos
