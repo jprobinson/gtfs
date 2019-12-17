@@ -47,7 +47,7 @@ func main() {
 }
 
 func writeJSFile(name string, data interface{}) {
-	jsFile, err := os.Create(strings.ToLower(name) + ".json")
+	jsFile, err := os.Create("../../" + strings.ToLower(name) + ".json")
 	if err != nil {
 		fmt.Printf("unable to open %s.json file: %s\n", name, err)
 		os.Exit(1)
@@ -63,7 +63,7 @@ func writeJSFile(name string, data interface{}) {
 	}
 }
 func writeGoFile(name string, data interface{}) {
-	goFile, err := os.Create(strings.ToLower(name) + ".go")
+	goFile, err := os.Create("../../" + strings.ToLower(name) + ".go")
 	if err != nil {
 		fmt.Printf("unable to open %s.go file: %s\n", name, err)
 		os.Exit(1)
@@ -124,7 +124,7 @@ func addStopData(tripsByRoute map[string][]string) map[string]Route {
 }
 
 func getStopData() map[string]Stop {
-	stopsFile, err := os.Open("./static_gtfs/stops.txt")
+	stopsFile, err := os.Open("../../static_gtfs/stops.txt")
 	if err != nil {
 		fmt.Println("unable to open stops.txt:", err)
 		os.Exit(1)
@@ -165,7 +165,7 @@ func getStopData() map[string]Stop {
 }
 
 func getTripStops(trips map[string]string) map[string][]string {
-	stopsFile, err := os.Open("./static_gtfs/stop_times.txt")
+	stopsFile, err := os.Open("../../static_gtfs/stop_times.txt")
 	if err != nil {
 		fmt.Println("unable to open stop_times.txt:", err)
 		os.Exit(1)
@@ -237,7 +237,7 @@ func getTripStops(trips map[string]string) map[string][]string {
 }
 
 func getRoutesByTrip() map[string]string {
-	tripsFile, err := os.Open("./static_gtfs/trips.txt")
+	tripsFile, err := os.Open("../../static_gtfs/trips.txt")
 	if err != nil {
 		fmt.Println("unable to open trips.txt:", err)
 		os.Exit(1)
@@ -343,7 +343,6 @@ func fixStAve(re *regexp.Regexp, given, want string) string {
 			rep += ","
 		}
 		rep += " "
-		fmt.Println(found + "->" + rep)
 		return rep
 	})
 }
