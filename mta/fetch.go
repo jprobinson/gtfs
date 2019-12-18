@@ -28,7 +28,7 @@ const (
 // GetSubwayFeed takes an API key generated from http://datamine.mta.info/user/register
 // and a boolean specifying which feed (1,2,3,4,5,6,S trains OR L train) and
 // it will return a transit_realtime.FeedMessage with NYCT extensions.
-func GetNYCSubwayFeed(ctx context.Context, hc *http.Client, key string, ft FeedType) (*realtime_transit.FeedMessage, error) {
+func GetNYCSubwayFeed(ctx context.Context, hc *http.Client, key string, ft FeedType) (*transit_realtime.FeedMessage, error) {
 	url := "http://datamine.mta.info/mta_esi.php?key=" + key +
 		"&feed_id=" + strconv.Itoa(int(ft))
 	resp, err := http.Get(url)
@@ -43,7 +43,7 @@ func GetNYCSubwayFeed(ctx context.Context, hc *http.Client, key string, ft FeedT
 	}
 
 	var feed transit_realtime.FeedMessage
-	err = proto.Unmarshal(body, &transit)
+	err = proto.Unmarshal(body, &feed)
 	if err != nil {
 		return nil, fmt.Errorf("unable to parse feed: %w", err)
 	}
