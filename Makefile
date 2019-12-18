@@ -19,10 +19,8 @@ clean: clean-proto clean-csv
 
 .PHONY: clean-proto
 clean-proto:
-	@rm -f nyct-subway.proto
-	@rm -rf nyct_subway
-	@mkdir nyct_subway
 	@rm -f gtfs-realtime.proto
+	@rm -f nyct-subway.proto
 	@rm -rf transit_realtime
 	@mkdir transit_realtime
 
@@ -42,10 +40,9 @@ fetch-csvs: clean-csv
 fetch-protos: clean-proto
 	@curl -s -o gtfs-realtime.proto https://developers.google.com/transit/gtfs-realtime/gtfs-realtime.proto
 	@curl -s -o nyct-subway.proto http://datamine.mta.info/sites/all/files/pdfs/nyct-subway.proto.txt
+	@echo '\n\noption go_package = "transit_realtime";' >> nyct-subway.proto;
 
 .PHONY: protoc
 protoc:
 	@protoc --go_out=./transit_realtime gtfs-realtime.proto
-	@protoc --go_out=./nyct_subway nyct-subway.proto
-	@rm -f nyct-subway.proto
-	@rm -f gtfs-realtime.proto
+	@protoc --go_out=./transit_realtime nyct-subway.proto
