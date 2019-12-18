@@ -6,13 +6,13 @@ build: fetch-protos protoc fetch-csvs generate
 generate: clean-generated
 	@cd cmd/generate; \
 	go run main.go;
-	@sed -i '' -e 's/gtfs\.//g' ./routes.go
+	@sed -i '' -e 's/gtfs\.//g' ./nycsubwayroutes.go
 
 .PHONY: clean-generated
 clean-generated:
-	@rm -f routes.go;
-	@rm -f routes.json;
-	@rm -f synonyms.json;
+	@rm -rf ./nycsubwayroutes.go
+	@rm -rf ./nyc-subway-routes.json
+	@rm -rf ./nyc-subway-synonyms.json
 
 .PHONY: clean
 clean: clean-proto clean-csv

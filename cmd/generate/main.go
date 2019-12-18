@@ -22,8 +22,8 @@ func main() {
 	// train -> route -> []stops
 	stops := addStopData(tripsByRoute)
 
-	writeGoFile("routes", stops)
-	writeJSFile("routes", stops)
+	writeGoFile("NYCSubwayRoutes", stops)
+	writeJSFile("nyc-subway-routes", stops)
 
 	var synsOut []gtfs.Synonym
 	synsSeen := map[string]bool{}
@@ -40,7 +40,7 @@ func main() {
 	sort.SliceStable(synsOut, func(i, j int) bool {
 		return synsOut[i].Value < synsOut[j].Value
 	})
-	writeJSFile("synonyms", synsOut)
+	writeJSFile("nyc-subway-synonyms", synsOut)
 
 	// phono Name => Line => stop ID
 	stopsOut := map[string]map[string]string{}
