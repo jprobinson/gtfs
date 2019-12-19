@@ -127,6 +127,57 @@ func addStopData(tripsByRoute map[string][]string) map[string]gtfs.Route {
 
 		out[line] = routeInfo
 	}
+
+	// add transfer datas
+
+	for line, route := range out {
+		for i, stop := range route.Stops {
+			var trans []gtfs.Transfer
+			// find any other lines that also have this stop via same ID
+			// N^2 yall!!! :shruggie:
+			for _, route2 := range out {
+				if route2.Name == route.Name {
+					continue
+				}
+				for _, stop2 := range route2.Stops {
+					if stop2.ID != stop.ID {
+						continue
+					}
+					trans = append(trans, gtfs.Transfer{
+						StopID: stop.ID,
+						Route:  route2.Name,
+					})
+				}
+			}
+			// find any other lines that DO NOT have this stop via same ID
+			// we should already have these ref'd just need to add datas
+			for _, xfer := range stop.Transfers {
+				if xfer.StopID == stop.ID {
+					continue
+				}
+				for _, route2 := range out {
+					if route2.Name == route.Name {
+						continue
+					}
+					for _, stop2 := range route2.Stops {
+						if stop2.ID != xfer.StopID {
+							continue
+						}
+						trans = append(trans, gtfs.Transfer{
+							StopID: xfer.StopID,
+							Route:  route2.Name,
+						})
+					}
+				}
+			}
+
+			sort.Slice(trans, func(i, j int) bool {
+				return trans[i].Route < trans[j].Route
+			})
+			out[line].Stops[i].Transfers = trans
+		}
+	}
+
 	return out
 }
 
@@ -167,6 +218,49 @@ func getStopData() map[string]gtfs.Stop {
 			PhoneticName: phonoName,
 			Synonyms:     syns,
 		}
+	}
+
+	// now add transfers!
+	transFile, err := os.Open("../../static_gtfs/transfers.txt")
+	if err != nil {
+		fmt.Println("unable to open transfers.txt:", err)
+		os.Exit(1)
+	}
+	defer transFile.Close()
+
+	cols = map[string]int{}
+	tr := csv.NewReader(transFile)
+transloop:
+	for {
+		record, err := tr.Read()
+		if err == io.EOF {
+			break
+		}
+		if err != nil {
+			fmt.Println("unable to read transfers.txt:", err)
+			os.Exit(1)
+		}
+		if len(cols) == 0 {
+			for idx, val := range record {
+				cols[val] = idx
+			}
+			continue
+		}
+
+		from := record[cols["from_stop_id"]]
+		to := record[cols["to_stop_id"]]
+		if to == from {
+			continue transloop
+		}
+
+		for _, xfer := range stopData[from].Transfers {
+			if xfer.StopID == to {
+				continue transloop
+			}
+		}
+		fromStop := stopData[from]
+		fromStop.Transfers = append(fromStop.Transfers, gtfs.Transfer{StopID: to})
+		stopData[from] = fromStop
 	}
 	return stopData
 }

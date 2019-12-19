@@ -9,6 +9,7 @@ type (
 
 		Stops []Stop
 	}
+
 	Stop struct {
 		ID string
 
@@ -16,7 +17,13 @@ type (
 		DisplayName  string
 		PhoneticName string
 
-		Synonyms []string
+		Synonyms  []string
+		Transfers []Transfer `json:",omitempty"`
+	}
+
+	Transfer struct {
+		StopID string
+		Route  string
 	}
 
 	Synonym struct {
