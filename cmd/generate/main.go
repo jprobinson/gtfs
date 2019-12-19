@@ -14,6 +14,12 @@ import (
 )
 
 func main() {
+	stops := writeRoutes()
+	writeSynonyms(stops)
+	writeStopLookup(stops)
+}
+
+func writeRoutes() map[string]gtfs.Route {
 	// trip ID => route ID
 	routesByTrip := getRoutesByTrip()
 	// train -> trip -> stop ID
@@ -24,7 +30,10 @@ func main() {
 
 	writeGoFile("NYCSubwayRoutes", stops)
 	writeJSFile("nyc-subway-routes", stops)
+	return stops
+}
 
+func writeSynonyms(stops map[string]gtfs.Route) {
 	var synsOut []gtfs.Synonym
 	synsSeen := map[string]bool{}
 	for _, stop := range getStopData() {
@@ -41,7 +50,9 @@ func main() {
 		return synsOut[i].Value < synsOut[j].Value
 	})
 	writeJSFile("nyc-subway-synonyms", synsOut)
+}
 
+func writeStopLookup(stops map[string]gtfs.Route) {
 	// phono Name => Line => stop ID
 	stopsOut := map[string]map[string]string{}
 	for line, route := range stops {
@@ -53,8 +64,17 @@ func main() {
 
 			stopsOut[stop.PhoneticName][line] = stop.ID
 
+			for _, syn := range stop.Synonyms {
+				_, exists := stopsOut[syn]
+				if !exists {
+					stopsOut[syn] = map[string]string{}
+				}
+				stopsOut[syn][line] = stop.ID
+			}
 		}
 	}
+	writeGoFile("NYCSubwayStopsByName", stopsOut)
+	writeJSFile("nyc-subway-stops-by-name", stopsOut)
 }
 
 func writeJSFile(name string, data interface{}) {
@@ -73,6 +93,7 @@ func writeJSFile(name string, data interface{}) {
 		os.Exit(1)
 	}
 }
+
 func writeGoFile(name string, data interface{}) {
 	goFile, err := os.Create("../../" + strings.ToLower(name) + ".go")
 	if err != nil {
