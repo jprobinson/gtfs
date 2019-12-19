@@ -355,7 +355,7 @@ func fixStAve(re *regexp.Regexp, given, want string) string {
 }
 
 var routes = map[string]gtfs.Route{
-	"1":  {Northbound: "Bronx", Southbound: "South&nbsp;Ferry"},
+	"1":  {Northbound: "Bronx", Southbound: "South Ferry"},
 	"2":  {Northbound: "Bronx", Southbound: "Brooklyn"},
 	"3":  {Northbound: "Harlem", Southbound: "Brooklyn"},
 	"4":  {Northbound: "Bronx", Southbound: "Brooklyn"},
