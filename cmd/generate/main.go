@@ -391,6 +391,7 @@ func makeStopNames(mtaName string) (string, string, []string) {
 		{"Hwy", "Highway"},
 		{"Ctr", "Center"},
 		{"Jct", "Junction"},
+		{"Rd", "Road"},
 		{"1 ", "1st "},
 		{"2 ", "2nd "},
 		{"2-", "2nd "},
