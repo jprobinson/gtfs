@@ -15,8 +15,8 @@ func Trains(f *transit_realtime.FeedMessage, stopId, line string) (alerts []*tra
 		if ent.TripUpdate != nil {
 			for _, upd := range ent.TripUpdate.StopTimeUpdate {
 				if strings.HasPrefix(*upd.StopId, stopId) &&
-					line == *ent.TripUpdate.Trip.RouteId ||
-					line == strings.TrimSuffix(*ent.TripUpdate.Trip.RouteId, "X") {
+					(line == *ent.TripUpdate.Trip.RouteId ||
+						line == strings.TrimSuffix(*ent.TripUpdate.Trip.RouteId, "X")) {
 					if strings.HasSuffix(*upd.StopId, "N") {
 						northbound = append(northbound, upd)
 					} else if strings.HasSuffix(*upd.StopId, "S") {
