@@ -629,10 +629,10 @@
       {
         "ID": "208",
         "MTAName": "Gun Hill Rd",
-        "DisplayName": "Gun Hill Rd",
-        "PhoneticName": "Gun Hill Rd",
+        "DisplayName": "Gun Hill Road",
+        "PhoneticName": "Gun Hill Road",
         "Synonyms": [
-          "Gun Hill Rd"
+          "Gun Hill Road"
         ]
       },
       {
@@ -1667,10 +1667,10 @@
       {
         "ID": "245",
         "MTAName": "Beverly Rd",
-        "DisplayName": "Beverly Rd",
-        "PhoneticName": "Beverly Rd",
+        "DisplayName": "Beverly Road",
+        "PhoneticName": "Beverly Road",
         "Synonyms": [
-          "Beverly Rd"
+          "Beverly Road"
         ],
         "Transfers": [
           {
@@ -2360,12 +2360,12 @@
       {
         "ID": "251",
         "MTAName": "Sutter Av - Rutland Rd",
-        "DisplayName": "Sutter Avenue, Rutland Rd",
-        "PhoneticName": "Sutter Avenue, Rutland Rd",
+        "DisplayName": "Sutter Avenue, Rutland Road",
+        "PhoneticName": "Sutter Avenue, Rutland Road",
         "Synonyms": [
           "Sutter Avenue",
-          "Rutland Rd",
-          "Rutland Rd, Sutter Avenue"
+          "Rutland Road",
+          "Rutland Road, Sutter Avenue"
         ],
         "Transfers": [
           {
@@ -2536,19 +2536,19 @@
       {
         "ID": "406",
         "MTAName": "Kingsbridge Rd",
-        "DisplayName": "Kingsbridge Rd",
-        "PhoneticName": "Kingsbridge Rd",
+        "DisplayName": "Kingsbridge Road",
+        "PhoneticName": "Kingsbridge Road",
         "Synonyms": [
-          "Kingsbridge Rd"
+          "Kingsbridge Road"
         ]
       },
       {
         "ID": "407",
         "MTAName": "Fordham Rd",
-        "DisplayName": "Fordham Rd",
-        "PhoneticName": "Fordham Rd",
+        "DisplayName": "Fordham Road",
+        "PhoneticName": "Fordham Road",
         "Synonyms": [
-          "Fordham Rd"
+          "Fordham Road"
         ]
       },
       {
@@ -3560,12 +3560,12 @@
       {
         "ID": "251",
         "MTAName": "Sutter Av - Rutland Rd",
-        "DisplayName": "Sutter Avenue, Rutland Rd",
-        "PhoneticName": "Sutter Avenue, Rutland Rd",
+        "DisplayName": "Sutter Avenue, Rutland Road",
+        "PhoneticName": "Sutter Avenue, Rutland Road",
         "Synonyms": [
           "Sutter Avenue",
-          "Rutland Rd",
-          "Rutland Rd, Sutter Avenue"
+          "Rutland Road",
+          "Rutland Road, Sutter Avenue"
         ],
         "Transfers": [
           {
@@ -3739,10 +3739,10 @@
       {
         "ID": "503",
         "MTAName": "Gun Hill Rd",
-        "DisplayName": "Gun Hill Rd",
-        "PhoneticName": "Gun Hill Rd",
+        "DisplayName": "Gun Hill Road",
+        "PhoneticName": "Gun Hill Road",
         "Synonyms": [
-          "Gun Hill Rd"
+          "Gun Hill Road"
         ],
         "Transfers": [
           {
@@ -4487,12 +4487,12 @@
       {
         "ID": "251",
         "MTAName": "Sutter Av - Rutland Rd",
-        "DisplayName": "Sutter Avenue, Rutland Rd",
-        "PhoneticName": "Sutter Avenue, Rutland Rd",
+        "DisplayName": "Sutter Avenue, Rutland Road",
+        "PhoneticName": "Sutter Avenue, Rutland Road",
         "Synonyms": [
           "Sutter Avenue",
-          "Rutland Rd",
-          "Rutland Rd, Sutter Avenue"
+          "Rutland Road",
+          "Rutland Road, Sutter Avenue"
         ],
         "Transfers": [
           {
@@ -4666,10 +4666,10 @@
       {
         "ID": "503",
         "MTAName": "Gun Hill Rd",
-        "DisplayName": "Gun Hill Rd",
-        "PhoneticName": "Gun Hill Rd",
+        "DisplayName": "Gun Hill Road",
+        "PhoneticName": "Gun Hill Road",
         "Synonyms": [
-          "Gun Hill Rd"
+          "Gun Hill Road"
         ],
         "Transfers": [
           {
@@ -5306,10 +5306,10 @@
       {
         "ID": "245",
         "MTAName": "Beverly Rd",
-        "DisplayName": "Beverly Rd",
-        "PhoneticName": "Beverly Rd",
+        "DisplayName": "Beverly Road",
+        "PhoneticName": "Beverly Road",
         "Synonyms": [
-          "Beverly Rd"
+          "Beverly Road"
         ],
         "Transfers": [
           {
@@ -5390,10 +5390,10 @@
       {
         "ID": "603",
         "MTAName": "Middletown Rd",
-        "DisplayName": "Middletown Rd",
-        "PhoneticName": "Middletown Rd",
+        "DisplayName": "Middletown Road",
+        "PhoneticName": "Middletown Road",
         "Synonyms": [
-          "Middletown Rd"
+          "Middletown Road"
         ],
         "Transfers": [
           {
@@ -6182,10 +6182,10 @@
       {
         "ID": "603",
         "MTAName": "Middletown Rd",
-        "DisplayName": "Middletown Rd",
-        "PhoneticName": "Middletown Rd",
+        "DisplayName": "Middletown Road",
+        "PhoneticName": "Middletown Road",
         "Synonyms": [
-          "Middletown Rd"
+          "Middletown Road"
         ],
         "Transfers": [
           {
@@ -8318,10 +8318,10 @@
       {
         "ID": "D04",
         "MTAName": "Kingsbridge Rd",
-        "DisplayName": "Kingsbridge Rd",
-        "PhoneticName": "Kingsbridge Rd",
+        "DisplayName": "Kingsbridge Road",
+        "PhoneticName": "Kingsbridge Road",
         "Synonyms": [
-          "Kingsbridge Rd"
+          "Kingsbridge Road"
         ],
         "Transfers": [
           {
@@ -8333,10 +8333,10 @@
       {
         "ID": "D05",
         "MTAName": "Fordham Rd",
-        "DisplayName": "Fordham Rd",
-        "PhoneticName": "Fordham Rd",
+        "DisplayName": "Fordham Road",
+        "PhoneticName": "Fordham Road",
         "Synonyms": [
-          "Fordham Rd"
+          "Fordham Road"
         ],
         "Transfers": [
           {
@@ -9982,10 +9982,10 @@
       {
         "ID": "D04",
         "MTAName": "Kingsbridge Rd",
-        "DisplayName": "Kingsbridge Rd",
-        "PhoneticName": "Kingsbridge Rd",
+        "DisplayName": "Kingsbridge Road",
+        "PhoneticName": "Kingsbridge Road",
         "Synonyms": [
-          "Kingsbridge Rd"
+          "Kingsbridge Road"
         ],
         "Transfers": [
           {
@@ -9997,10 +9997,10 @@
       {
         "ID": "D05",
         "MTAName": "Fordham Rd",
-        "DisplayName": "Fordham Rd",
-        "PhoneticName": "Fordham Rd",
+        "DisplayName": "Fordham Road",
+        "PhoneticName": "Fordham Road",
         "Synonyms": [
-          "Fordham Rd"
+          "Fordham Road"
         ],
         "Transfers": [
           {
@@ -14187,10 +14187,10 @@
       {
         "ID": "M04",
         "MTAName": "Fresh Pond Rd",
-        "DisplayName": "Fresh Pond Rd",
-        "PhoneticName": "Fresh Pond Rd",
+        "DisplayName": "Fresh Pond Road",
+        "PhoneticName": "Fresh Pond Road",
         "Synonyms": [
-          "Fresh Pond Rd"
+          "Fresh Pond Road"
         ]
       },
       {
@@ -15873,19 +15873,19 @@
       {
         "ID": "D29",
         "MTAName": "Beverley Rd",
-        "DisplayName": "Beverley Rd",
-        "PhoneticName": "Beverley Rd",
+        "DisplayName": "Beverley Road",
+        "PhoneticName": "Beverley Road",
         "Synonyms": [
-          "Beverley Rd"
+          "Beverley Road"
         ]
       },
       {
         "ID": "D30",
         "MTAName": "Cortelyou Rd",
-        "DisplayName": "Cortelyou Rd",
-        "PhoneticName": "Cortelyou Rd",
+        "DisplayName": "Cortelyou Road",
+        "PhoneticName": "Cortelyou Road",
         "Synonyms": [
-          "Cortelyou Rd"
+          "Cortelyou Road"
         ]
       },
       {
@@ -15957,10 +15957,10 @@
       {
         "ID": "D38",
         "MTAName": "Neck Rd",
-        "DisplayName": "Neck Rd",
-        "PhoneticName": "Neck Rd",
+        "DisplayName": "Neck Road",
+        "PhoneticName": "Neck Road",
         "Synonyms": [
-          "Neck Rd"
+          "Neck Road"
         ]
       },
       {
