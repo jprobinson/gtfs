@@ -390,7 +390,7 @@ func makeStopNames(mtaName string) (string, string, []string) {
 		{"Blvd", "Boulevard"},
 		{"Hwy", "Highway"},
 		{"Ctr", "Center"},
-		{"Pkwy", "Parkway"},
+		{"Jct", "Junction"},
 		{"1 ", "1st "},
 		{"2 ", "2nd "},
 		{"2-", "2nd "},
