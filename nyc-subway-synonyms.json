@@ -352,11 +352,11 @@
     ]
   },
   {
-    "value": "34th Street, 11st Avenue",
+    "value": "33rd Street, Rawson Street",
     "synonyms": [
-      "34th Street",
-      "11st Avenue",
-      "11st Avenue, 34th Street"
+      "33rd Street",
+      "Rawson Street",
+      "Rawson Street, 33rd Street"
     ]
   },
   {
@@ -365,6 +365,14 @@
       "34th Street",
       "Herald Square",
       "Herald Square, 34th Street"
+    ]
+  },
+  {
+    "value": "34th Street, Hudson Yds",
+    "synonyms": [
+      "34th Street",
+      "Hudson Yds",
+      "Hudson Yds, 34th Street"
     ]
   },
   {
@@ -388,9 +396,11 @@
     ]
   },
   {
-    "value": "39th Avenue",
+    "value": "39th Avenue, Dutch Kills",
     "synonyms": [
-      "39th Avenue"
+      "39th Avenue",
+      "Dutch Kills",
+      "Dutch Kills, 39th Avenue"
     ]
   },
   {
@@ -416,9 +426,11 @@
     ]
   },
   {
-    "value": "40th Street",
+    "value": "40th Street, Lowery Street",
     "synonyms": [
-      "40th Street"
+      "40th Street",
+      "Lowery Street",
+      "Lowery Street, 40th Street"
     ]
   },
   {
@@ -450,6 +462,14 @@
     ]
   },
   {
+    "value": "46th Street, Bliss Street",
+    "synonyms": [
+      "46th Street",
+      "Bliss Street",
+      "Bliss Street, 46th Street"
+    ]
+  },
+  {
     "value": "47th 50th Streets, Rockefeller Center",
     "synonyms": [
       "47th 50th Streets",
@@ -464,9 +484,11 @@
     ]
   },
   {
-    "value": "4th Avenue",
+    "value": "4th Avenue, 9th Street",
     "synonyms": [
-      "4th Avenue"
+      "4th Avenue",
+      "9th Street",
+      "9th Street, 4th Avenue"
     ]
   },
   {
@@ -631,9 +653,11 @@
     ]
   },
   {
-    "value": "75th Street",
+    "value": "75th Street, Elder Ln",
     "synonyms": [
-      "75th Street"
+      "75th Street",
+      "Elder Ln",
+      "Elder Ln, 75th Street"
     ]
   },
   {
@@ -728,12 +752,6 @@
     "value": "9th Avenue",
     "synonyms": [
       "9th Avenue"
-    ]
-  },
-  {
-    "value": "9th Street",
-    "synonyms": [
-      "9th Street"
     ]
   },
   {
@@ -1030,12 +1048,9 @@
     ]
   },
   {
-    "value": "Briarwood, Van Wyck Boulevard",
+    "value": "Briarwood",
     "synonyms": [
-      "Briarwood",
-      "Van Wyck Boulevard",
-      "Van Wyck Boulevard, Briarwood",
-      "Briarwood, Van Wyck Boulevard"
+      "Briarwood"
     ]
   },
   {
@@ -1146,12 +1161,6 @@
     "value": "Castle Hill Avenue",
     "synonyms": [
       "Castle Hill Avenue"
-    ]
-  },
-  {
-    "value": "Cathedral Parkway",
-    "synonyms": [
-      "Cathedral Parkway"
     ]
   },
   {
@@ -1269,6 +1278,15 @@
     ]
   },
   {
+    "value": "Court Square, 23rd Street",
+    "synonyms": [
+      "Court Square",
+      "23rd Street",
+      "23rd Street, Court Square",
+      "Court Square, 23rd Street"
+    ]
+  },
+  {
     "value": "Court Street",
     "synonyms": [
       "Court Street"
@@ -1308,9 +1326,19 @@
     ]
   },
   {
-    "value": "Delancey Street",
+    "value": "Delancey Street, Essex Street",
     "synonyms": [
-      "Delancey Street"
+      "Delancey Street",
+      "Essex Street",
+      "Essex Street, Delancey Street"
+    ]
+  },
+  {
+    "value": "Delancy Street, Essex Street",
+    "synonyms": [
+      "Delancy Street",
+      "Essex Street",
+      "Essex Street, Delancy Street"
     ]
   },
   {
@@ -1397,12 +1425,6 @@
     "value": "Eltingville",
     "synonyms": [
       "Eltingville"
-    ]
-  },
-  {
-    "value": "Essex Street",
-    "synonyms": [
-      "Essex Street"
     ]
   },
   {
@@ -2398,12 +2420,6 @@
     ]
   },
   {
-    "value": "WTC Cortlandt",
-    "synonyms": [
-      "WTC Cortlandt"
-    ]
-  },
-  {
     "value": "Wakefield, 241st Street",
     "synonyms": [
       "Wakefield",
@@ -2419,9 +2435,11 @@
     ]
   },
   {
-    "value": "West 4th Street",
+    "value": "West 4th Street, Wash Square",
     "synonyms": [
-      "West 4th Street"
+      "West 4th Street",
+      "Wash Square",
+      "Wash Square, West 4th Street"
     ]
   },
   {
@@ -2451,9 +2469,11 @@
     ]
   },
   {
-    "value": "Whitehall Street",
+    "value": "Whitehall Street, South Ferry",
     "synonyms": [
-      "Whitehall Street"
+      "Whitehall Street",
+      "South Ferry",
+      "South Ferry, Whitehall Street"
     ]
   },
   {

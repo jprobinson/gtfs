@@ -5,47 +5,51 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
-	"strconv"
 
 	"github.com/golang/protobuf/proto"
 
 	"github.com/jprobinson/gtfs/transit_realtime"
 )
 
-type FeedType int
+type FeedType string
 
 const (
-	NumberedFeed FeedType = 1
-	BlueFeed     FeedType = 26
-	YellowFeed   FeedType = 16
-	OrangeFeed   FeedType = 21
-	LFeed        FeedType = 2
-	GFeed        FeedType = 31
-	SevenFeed    FeedType = 51
-	BrownFeed    FeedType = 36
+	NumberedFeed FeedType = ""
+	BlueFeed     FeedType = "-ace"
+	YellowFeed   FeedType = "-nqrw"
+	OrangeFeed   FeedType = "-bdfm"
+	LFeed        FeedType = "-l"
+	GFeed        FeedType = "-g"
+	SevenFeed    FeedType = "-7"
+	BrownFeed    FeedType = "-jz"
 )
 
-// GetSubwayFeed takes an API key generated from http://datamine.mta.info/user/register
-// and a boolean specifying which feed (1,2,3,4,5,6,S trains OR L train) and
-// it will return a transit_realtime.FeedMessage with NYCT extensions.
+// GetSubwayFeed takes an API key generated from https://api.mta.info and a type
+// specifying which subway feed and it will return a transit_realtime.FeedMessage with
+// NYCT extensions.
 func GetNYCSubwayFeed(ctx context.Context, hc *http.Client, key string, ft FeedType) (*transit_realtime.FeedMessage, error) {
-	url := "http://datamine.mta.info/mta_esi.php?key=" + key +
-		"&feed_id=" + strconv.Itoa(int(ft))
-	resp, err := http.Get(url)
+	r, err := http.NewRequest(http.MethodGet,
+		"https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs"+string(ft), nil)
 	if err != nil {
-		return nil, fmt.Errorf("unable to get feed: %w", err)
+		return nil, fmt.Errorf("%w: unable to build request", err)
+	}
+	r.Header.Set("x-api-key", key)
+
+	resp, err := http.DefaultClient.Do(r)
+	if err != nil {
+		return nil, fmt.Errorf("%w: unable to get feed", err)
 	}
 	defer resp.Body.Close()
 
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		return nil, fmt.Errorf("unable to read feed: %w", err)
+		return nil, fmt.Errorf("%w: unable to read feed", err)
 	}
 
 	var feed transit_realtime.FeedMessage
 	err = proto.Unmarshal(body, &feed)
 	if err != nil {
-		return nil, fmt.Errorf("unable to parse feed: %w", err)
+		return nil, fmt.Errorf("%w: unable to parse feed", err)
 	}
 
 	return &feed, nil
