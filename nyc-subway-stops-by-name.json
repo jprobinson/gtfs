@@ -17,6 +17,7 @@
     "Z": "J14"
   },
   "110th Street": {
+    "1": "118",
     "2": "227",
     "3": "227",
     "4": "623",
@@ -27,6 +28,7 @@
     "C": "A17"
   },
   "110th Street, Cathedral Parkway": {
+    "1": "118",
     "A": "A17",
     "B": "A17",
     "C": "A17"
@@ -52,12 +54,6 @@
   },
   "116th Street, Columbia University": {
     "1": "117"
-  },
-  "11st Avenue": {
-    "7": "726"
-  },
-  "11st Avenue, 34th Street": {
-    "7": "726"
   },
   "121st Street": {
     "J": "J12",
@@ -332,11 +328,15 @@
     "C": "A30",
     "E": "A30",
     "F": "D18",
+    "G": "G22",
     "M": "D18",
     "N": "R19",
     "Q": "R19",
     "R": "R19",
     "W": "R19"
+  },
+  "23rd Street, Court Square": {
+    "G": "G22"
   },
   "241st Street": {
     "2": "201"
@@ -383,6 +383,9 @@
     "6X": "632",
     "7": "716"
   },
+  "33rd Street, Rawson Street": {
+    "7": "716"
+  },
   "34th Street": {
     "1": "128",
     "2": "128",
@@ -400,9 +403,6 @@
     "R": "R17",
     "W": "R17"
   },
-  "34th Street, 11st Avenue": {
-    "7": "726"
-  },
   "34th Street, Herald Square": {
     "B": "D17",
     "D": "D17",
@@ -412,6 +412,9 @@
     "Q": "R17",
     "R": "R17",
     "W": "R17"
+  },
+  "34th Street, Hudson Yds": {
+    "7": "726"
   },
   "34th Street, Penn Station": {
     "1": "128",
@@ -437,6 +440,10 @@
     "N": "R08",
     "W": "R08"
   },
+  "39th Avenue, Dutch Kills": {
+    "N": "R08",
+    "W": "R08"
+  },
   "3rd Avenue": {
     "2": "221",
     "5": "221",
@@ -455,6 +462,9 @@
     "5X": "221"
   },
   "40th Street": {
+    "7": "715"
+  },
+  "40th Street, Lowery Street": {
     "7": "715"
   },
   "42nd Street": {
@@ -519,6 +529,9 @@
     "M": "G18",
     "R": "G18"
   },
+  "46th Street, Bliss Street": {
+    "7": "714"
+  },
   "47th 50th Streets": {
     "B": "D15",
     "D": "D15",
@@ -538,8 +551,20 @@
     "W": "R15"
   },
   "4th Avenue": {
+    "D": "R33",
     "F": "F23",
-    "G": "F23"
+    "G": "F23",
+    "N": "R33",
+    "R": "R33",
+    "W": "R33"
+  },
+  "4th Avenue, 9th Street": {
+    "D": "R33",
+    "F": "F23",
+    "G": "F23",
+    "N": "R33",
+    "R": "R33",
+    "W": "R33"
   },
   "50th Street": {
     "1": "126",
@@ -738,6 +763,10 @@
     "J": "J17",
     "Z": "J17"
   },
+  "75th Street, Elder Ln": {
+    "J": "J17",
+    "Z": "J17"
+  },
   "77th Street": {
     "4": "627",
     "6": "627",
@@ -856,6 +885,16 @@
   },
   "9th Street": {
     "D": "R33",
+    "F": "F23",
+    "G": "F23",
+    "N": "R33",
+    "R": "R33",
+    "W": "R33"
+  },
+  "9th Street, 4th Avenue": {
+    "D": "R33",
+    "F": "F23",
+    "G": "F23",
     "N": "R33",
     "R": "R33",
     "W": "R33"
@@ -1078,6 +1117,12 @@
     "6": "637",
     "6X": "637"
   },
+  "Bliss Street": {
+    "7": "714"
+  },
+  "Bliss Street, 46th Street": {
+    "7": "714"
+  },
   "Borough Hall": {
     "2": "232",
     "3": "232",
@@ -1095,10 +1140,6 @@
     "5X": "420"
   },
   "Briarwood": {
-    "E": "F05",
-    "F": "F05"
-  },
-  "Briarwood, Van Wyck Boulevard": {
     "E": "F05",
     "F": "F05"
   },
@@ -1238,6 +1279,7 @@
     "C": "A17"
   },
   "Cathedral Parkway, 110th Street": {
+    "1": "118",
     "A": "A17",
     "B": "A17",
     "C": "A17"
@@ -1369,6 +1411,7 @@
     "Q": "D30"
   },
   "Cortlandt Street": {
+    "1": "138",
     "N": "R25",
     "R": "R25",
     "W": "R25"
@@ -1378,6 +1421,9 @@
     "E": "F09",
     "G": "G22",
     "M": "F09"
+  },
+  "Court Square, 23rd Street": {
+    "G": "G22"
   },
   "Court Street": {
     "N": "R28",
@@ -1416,6 +1462,19 @@
   "Delancey Street": {
     "F": "F15"
   },
+  "Delancey Street, Essex Street": {
+    "F": "F15"
+  },
+  "Delancy Street": {
+    "J": "M18",
+    "M": "M18",
+    "Z": "M18"
+  },
+  "Delancy Street, Essex Street": {
+    "J": "M18",
+    "M": "M18",
+    "Z": "M18"
+  },
   "Ditmars Boulevard": {
     "N": "R01",
     "W": "R01"
@@ -1426,6 +1485,14 @@
   },
   "Ditmas Avenue": {
     "F": "F29"
+  },
+  "Dutch Kills": {
+    "N": "R08",
+    "W": "R08"
+  },
+  "Dutch Kills, 39th Avenue": {
+    "N": "R08",
+    "W": "R08"
   },
   "Dyckman Street": {
     "1": "109",
@@ -1495,6 +1562,14 @@
     "6": "611",
     "6X": "611"
   },
+  "Elder Ln": {
+    "J": "J17",
+    "Z": "J17"
+  },
+  "Elder Ln, 75th Street": {
+    "J": "J17",
+    "Z": "J17"
+  },
   "Elmhurst Avenue": {
     "7": "708",
     "E": "G13",
@@ -1505,6 +1580,15 @@
     "7": "708"
   },
   "Essex Street": {
+    "F": "F15",
+    "J": "M18",
+    "M": "M18",
+    "Z": "M18"
+  },
+  "Essex Street, Delancey Street": {
+    "F": "F15"
+  },
+  "Essex Street, Delancy Street": {
     "J": "M18",
     "M": "M18",
     "Z": "M18"
@@ -1736,6 +1820,12 @@
     "C": "A42",
     "G": "A42"
   },
+  "Hudson Yds": {
+    "7": "726"
+  },
+  "Hudson Yds, 34th Street": {
+    "7": "726"
+  },
   "Hunter College": {
     "4": "628",
     "6": "628",
@@ -1936,6 +2026,12 @@
     "J": "M13",
     "L": "L10",
     "M": "M13"
+  },
+  "Lowery Street": {
+    "7": "715"
+  },
+  "Lowery Street, 40th Street": {
+    "7": "715"
   },
   "Main Street": {
     "7": "701"
@@ -2257,6 +2353,12 @@
     "A": "A49",
     "C": "A49"
   },
+  "Rawson Street": {
+    "7": "716"
+  },
+  "Rawson Street, 33rd Street": {
+    "7": "716"
+  },
   "Rector Street": {
     "1": "139",
     "N": "R26",
@@ -2373,7 +2475,15 @@
     "G": "F22"
   },
   "South Ferry": {
-    "1": "142"
+    "1": "142",
+    "N": "R27",
+    "R": "R27",
+    "W": "R27"
+  },
+  "South Ferry, Whitehall Street": {
+    "N": "R27",
+    "R": "R27",
+    "W": "R27"
   },
   "Spring Street": {
     "4": "638",
@@ -2536,14 +2646,6 @@
   "Van Wyck": {
     "E": "G07"
   },
-  "Van Wyck Boulevard": {
-    "E": "F05",
-    "F": "F05"
-  },
-  "Van Wyck Boulevard, Briarwood": {
-    "E": "F05",
-    "F": "F05"
-  },
   "Van Wyck, Jamaica": {
     "E": "G07"
   },
@@ -2552,9 +2654,6 @@
   },
   "Vernon Boulevard, Jackson Avenue": {
     "7": "721"
-  },
-  "WTC Cortlandt": {
-    "1": "138"
   },
   "Wakefield": {
     "2": "201"
@@ -2568,6 +2667,24 @@
     "4": "419",
     "5": "419",
     "5X": "419"
+  },
+  "Wash Square": {
+    "A": "A32",
+    "B": "D20",
+    "C": "A32",
+    "D": "D20",
+    "E": "A32",
+    "F": "D20",
+    "M": "D20"
+  },
+  "Wash Square, West 4th Street": {
+    "A": "A32",
+    "B": "D20",
+    "C": "A32",
+    "D": "D20",
+    "E": "A32",
+    "F": "D20",
+    "M": "D20"
   },
   "Washington Avenues": {
     "A": "A44",
@@ -2586,6 +2703,15 @@
     "1": "112"
   },
   "West 4th Street": {
+    "A": "A32",
+    "B": "D20",
+    "C": "A32",
+    "D": "D20",
+    "E": "A32",
+    "F": "D20",
+    "M": "D20"
+  },
+  "West 4th Street, Wash Square": {
     "A": "A32",
     "B": "D20",
     "C": "A32",
@@ -2619,6 +2745,11 @@
     "6X": "604"
   },
   "Whitehall Street": {
+    "N": "R27",
+    "R": "R27",
+    "W": "R27"
+  },
+  "Whitehall Street, South Ferry": {
     "N": "R27",
     "R": "R27",
     "W": "R27"
