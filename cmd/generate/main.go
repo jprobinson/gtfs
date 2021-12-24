@@ -417,23 +417,21 @@ func makeStopNames(mtaName string) (string, string, []string) {
 		displayName = strings.ReplaceAll(displayName, rep[0], rep[1])
 	}
 
-	displayName = fixStAve(reAvenue, displayName, "Avenue")
-	displayName = fixStAve(reAvenues, displayName, "Avenues")
-	displayName = fixStAve(reStreet, displayName, "Street")
-	displayName = fixStAve(reStreets, displayName, "Streets")
-	displayName = fixStAve(rePlace, displayName, "Place")
-	displayName = strings.Join(strings.Fields(displayName), " ")
+	synName := displayName
+	synName = fixStAve(reAvenue, synName, "Avenue")
+	synName = fixStAve(reAvenues, synName, "Avenues")
+	synName = fixStAve(reStreet, synName, "Street")
+	synName = fixStAve(reStreets, synName, "Streets")
+	synName = fixStAve(rePlace, synName, "Place")
+	synName = strings.Join(strings.Fields(synName), " ")
 
-	syn := strings.ReplaceAll(displayName, " - ", ", ")
+	syn := strings.ReplaceAll(synName, "-", ", ")
 	syns := strings.Split(syn, ",")
 	for i, syn := range syns {
 		syns[i] = strings.TrimSpace(syn)
 	}
 	if len(syns) == 2 {
 		syns = append(syns, syns[1]+", "+syns[0])
-	}
-	if syn != displayName {
-		syns = append(syns, syn)
 	}
 	return displayName, syn, syns
 }
@@ -442,7 +440,7 @@ func fixStAve(re *regexp.Regexp, given, want string) string {
 	return re.ReplaceAllStringFunc(given, func(found string) string {
 		rep := want
 		if strings.Contains(found, "-") || strings.Contains(found, ",") {
-			rep += ","
+			rep += ", "
 		}
 		rep += " "
 		return rep
