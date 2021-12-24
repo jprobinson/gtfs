@@ -39,10 +39,10 @@ fetch-csvs: clean-csv
 .PHONY: fetch-protos
 fetch-protos: clean-proto
 	@curl -s -o gtfs-realtime.proto https://developers.google.com/transit/gtfs-realtime/gtfs-realtime.proto
-	@curl -s -o nyct-subway.proto http://datamine.mta.info/sites/all/files/pdfs/nyct-subway.proto.txt
-	@echo '\n\noption go_package = "transit_realtime";' >> nyct-subway.proto;
+	@curl -s -o nyct-subway.proto https://api.mta.info/nyct-subway.proto.txt
+	@echo '\n\noption go_package = "./transit_realtime";' >> nyct-subway.proto
 
 .PHONY: protoc
 protoc:
-	@protoc --go_out=./transit_realtime gtfs-realtime.proto
-	@protoc --go_out=./transit_realtime nyct-subway.proto
+	@protoc -I=. --go_opt=Mgtfs-realtime.proto=./transit_realtime --go_out=./ gtfs-realtime.proto
+	@protoc -I=. --go_opt=Mgtfs-realtime.proto=./transit_realtime --go_out=./ nyct-subway.proto

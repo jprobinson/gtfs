@@ -1,16 +1,18 @@
 {
+  "103rd St": {
+    "7": "706"
+  },
+  "103rd St, Corona Plaza": {
+    "7": "706"
+  },
   "103rd Street": {
     "1": "119",
     "4": "624",
     "6": "624",
     "6X": "624",
-    "7": "706",
     "A": "A18",
     "B": "A18",
     "C": "A18"
-  },
-  "103rd Street, Corona Plaza": {
-    "7": "706"
   },
   "104th Street": {
     "J": "J14",
@@ -41,8 +43,13 @@
     "7": "705",
     "J": "J13"
   },
+  "116th St": {
+    "1": "117"
+  },
+  "116th St, Columbia University": {
+    "1": "117"
+  },
   "116th Street": {
-    "1": "117",
     "2": "226",
     "3": "226",
     "4": "622",
@@ -51,9 +58,6 @@
     "A": "A16",
     "B": "A16",
     "C": "A16"
-  },
-  "116th Street, Columbia University": {
-    "1": "117"
   },
   "121st Street": {
     "J": "J12",
@@ -65,7 +69,6 @@
     "3": "225",
     "4": "621",
     "5": "621",
-    "5X": "621",
     "6": "621",
     "6X": "621",
     "A": "A15",
@@ -80,27 +83,27 @@
     "B": "A14",
     "C": "A14"
   },
-  "137th Street": {
+  "137th St": {
     "1": "115"
   },
-  "137th Street, City College": {
+  "137th St, City College": {
     "1": "115"
+  },
+  "138th St": {
+    "4": "416",
+    "5": "416"
+  },
+  "138th St, Grand Concourse": {
+    "4": "416",
+    "5": "416"
   },
   "138th Street": {
-    "4": "416",
-    "5": "416",
-    "5X": "416",
     "6": "619",
     "6X": "619"
   },
-  "138th Street, 3rd Avenue": {
+  "138th Street, 3rd Av": {
     "6": "619",
     "6X": "619"
-  },
-  "138th Street, Grand Concourse": {
-    "4": "416",
-    "5": "416",
-    "5X": "416"
   },
   "145th Street": {
     "1": "114",
@@ -116,54 +119,55 @@
   "148th Street, Harlem": {
     "3": "301"
   },
+  "149th St": {
+    "2": "222",
+    "4": "415",
+    "5": "222"
+  },
+  "149th St, Grand Concourse": {
+    "2": "222",
+    "4": "415",
+    "5": "222"
+  },
   "149th Street": {
-    "2": "222",
-    "4": "415",
-    "5": "222",
-    "5X": "222"
-  },
-  "149th Street, 3rd Avenue": {
     "2": "221",
-    "5": "221",
-    "5X": "221"
+    "5": "221"
   },
-  "149th Street, Grand Concourse": {
-    "2": "222",
-    "4": "415",
-    "5": "222",
-    "5X": "222"
+  "149th Street, 3rd Av": {
+    "2": "221",
+    "5": "221"
+  },
+  "14th St": {
+    "4": "635",
+    "5": "635",
+    "6": "635",
+    "6X": "635",
+    "L": "L03",
+    "N": "R20",
+    "Q": "R20",
+    "R": "R20",
+    "W": "R20"
+  },
+  "14th St, Union Square": {
+    "4": "635",
+    "5": "635",
+    "6": "635",
+    "6X": "635",
+    "L": "L03",
+    "N": "R20",
+    "Q": "R20",
+    "R": "R20",
+    "W": "R20"
   },
   "14th Street": {
     "1": "132",
     "2": "132",
     "3": "132",
-    "4": "635",
-    "5": "635",
-    "5X": "635",
-    "6": "635",
-    "6X": "635",
     "A": "A31",
     "C": "A31",
     "E": "A31",
     "F": "D19",
-    "L": "L03",
-    "M": "D19",
-    "N": "R20",
-    "Q": "R20",
-    "R": "R20",
-    "W": "R20"
-  },
-  "14th Street, Union Square": {
-    "4": "635",
-    "5": "635",
-    "5X": "635",
-    "6": "635",
-    "6X": "635",
-    "L": "L03",
-    "N": "R20",
-    "Q": "R20",
-    "R": "R20",
-    "W": "R20"
+    "M": "D19"
   },
   "155th Street": {
     "A": "A11",
@@ -174,29 +178,29 @@
   "157th Street": {
     "1": "113"
   },
-  "15th Street": {
+  "15th St": {
     "F": "F25",
     "G": "F25"
   },
-  "15th Street, Prospect Park": {
+  "15th St, Prospect Park": {
     "F": "F25",
     "G": "F25"
   },
-  "161st Street": {
+  "161st St": {
     "4": "414",
     "B": "D11",
     "D": "D11"
   },
-  "161st Street, Yankee Stadium": {
+  "161st St, Yankee Stadium": {
     "4": "414",
     "B": "D11",
     "D": "D11"
   },
-  "163rd Street": {
+  "163rd St": {
     "A": "A10",
     "C": "A10"
   },
-  "163rd Street, Amsterdam Avenue": {
+  "163rd St, Amsterdam Avenue": {
     "A": "A10",
     "C": "A10"
   },
@@ -205,13 +209,15 @@
     "B": "D10",
     "D": "D10"
   },
+  "168th St": {
+    "1": "112"
+  },
+  "168th St, Washington Heights": {
+    "1": "112"
+  },
   "168th Street": {
-    "1": "112",
     "A": "A09",
     "C": "A09"
-  },
-  "168th Street, Washington Heights": {
-    "1": "112"
   },
   "169th Street": {
     "F": "F02"
@@ -295,12 +301,14 @@
   "219th Street": {
     "2": "207"
   },
-  "21st Street": {
-    "F": "B04",
-    "G": "G24"
-  },
-  "21st Street, Queensbridge": {
+  "21st St": {
     "F": "B04"
+  },
+  "21st St, Queensbridge": {
+    "F": "B04"
+  },
+  "21st Street": {
+    "G": "G24"
   },
   "225th Street": {
     "1": "106",
@@ -328,7 +336,6 @@
     "C": "A30",
     "E": "A30",
     "F": "D18",
-    "G": "G22",
     "M": "D18",
     "N": "R19",
     "Q": "R19",
@@ -336,7 +343,8 @@
     "W": "R19"
   },
   "23rd Street, Court Square": {
-    "G": "G22"
+    "E": "F09",
+    "M": "F09"
   },
   "241st Street": {
     "2": "201"
@@ -377,16 +385,18 @@
     "N": "R04",
     "W": "R04"
   },
+  "33rd St": {
+    "7": "716"
+  },
+  "33rd St, Rawson Street": {
+    "7": "716"
+  },
   "33rd Street": {
     "4": "632",
     "6": "632",
-    "6X": "632",
-    "7": "716"
+    "6X": "632"
   },
-  "33rd Street, Rawson Street": {
-    "7": "716"
-  },
-  "34th Street": {
+  "34th St": {
     "1": "128",
     "2": "128",
     "3": "128",
@@ -403,7 +413,7 @@
     "R": "R17",
     "W": "R17"
   },
-  "34th Street, Herald Square": {
+  "34th St, Herald Square": {
     "B": "D17",
     "D": "D17",
     "F": "D17",
@@ -413,10 +423,10 @@
     "R": "R17",
     "W": "R17"
   },
-  "34th Street, Hudson Yds": {
+  "34th St, Hudson Yards": {
     "7": "726"
   },
-  "34th Street, Penn Station": {
+  "34th St, Penn Station": {
     "1": "128",
     "2": "128",
     "3": "128",
@@ -436,36 +446,56 @@
     "R": "R36",
     "W": "R36"
   },
-  "39th Avenue": {
+  "39th Av": {
     "N": "R08",
     "W": "R08"
   },
-  "39th Avenue, Dutch Kills": {
+  "39th Av, Dutch Kills": {
     "N": "R08",
     "W": "R08"
   },
-  "3rd Avenue": {
+  "3rd Av": {
     "2": "221",
     "5": "221",
-    "5X": "221",
-    "6": "619",
-    "6X": "619",
-    "L": "L05"
-  },
-  "3rd Avenue, 138th Street": {
     "6": "619",
     "6X": "619"
   },
-  "3rd Avenue, 149th Street": {
+  "3rd Av, 138th Street": {
+    "6": "619",
+    "6X": "619"
+  },
+  "3rd Av, 149th Street": {
     "2": "221",
-    "5": "221",
-    "5X": "221"
+    "5": "221"
   },
-  "40th Street": {
+  "3rd Avenue": {
+    "L": "L05"
+  },
+  "40th St": {
     "7": "715"
   },
-  "40th Street, Lowery Street": {
+  "40th St, Lowery Street": {
     "7": "715"
+  },
+  "42nd St": {
+    "A": "A27",
+    "B": "D16",
+    "C": "A27",
+    "D": "D16",
+    "E": "A27",
+    "F": "D16",
+    "M": "D16"
+  },
+  "42nd St, Bryant Pk": {
+    "B": "D16",
+    "D": "D16",
+    "F": "D16",
+    "M": "D16"
+  },
+  "42nd St, Port Authority Bus Terminal": {
+    "A": "A27",
+    "C": "A27",
+    "E": "A27"
   },
   "42nd Street": {
     "1": "127",
@@ -473,40 +503,20 @@
     "3": "127",
     "4": "631",
     "5": "631",
-    "5X": "631",
     "6": "631",
     "6X": "631",
     "7": "725",
-    "A": "A27",
-    "B": "D16",
-    "C": "A27",
-    "D": "D16",
-    "E": "A27",
-    "F": "D16",
-    "M": "D16",
     "N": "R16",
     "Q": "R16",
     "R": "R16",
     "W": "R16"
   },
-  "42nd Street, Bryant Pk": {
-    "B": "D16",
-    "D": "D16",
-    "F": "D16",
-    "M": "D16"
-  },
   "42nd Street, Grand Central": {
     "4": "631",
     "5": "631",
-    "5X": "631",
     "6": "631",
     "6X": "631",
     "7": "723"
-  },
-  "42nd Street, Port Authority Bus Terminal": {
-    "A": "A27",
-    "C": "A27",
-    "E": "A27"
   },
   "42nd Street, Times Square": {
     "1": "127",
@@ -523,22 +533,24 @@
     "R": "R39",
     "W": "R39"
   },
+  "46th St": {
+    "7": "714"
+  },
+  "46th St, Bliss Street": {
+    "7": "714"
+  },
   "46th Street": {
-    "7": "714",
     "E": "G18",
     "M": "G18",
     "R": "G18"
   },
-  "46th Street, Bliss Street": {
-    "7": "714"
-  },
-  "47th 50th Streets": {
+  "47th 50th Sts": {
     "B": "D15",
     "D": "D15",
     "F": "D15",
     "M": "D15"
   },
-  "47th 50th Streets, Rockefeller Center": {
+  "47th 50th Sts, Rockefeller Center": {
     "B": "D15",
     "D": "D15",
     "F": "D15",
@@ -550,7 +562,7 @@
     "R": "R15",
     "W": "R15"
   },
-  "4th Avenue": {
+  "4th Av": {
     "D": "R33",
     "F": "F23",
     "G": "F23",
@@ -558,7 +570,7 @@
     "R": "R33",
     "W": "R33"
   },
-  "4th Avenue, 9th Street": {
+  "4th Av, 9th Street": {
     "D": "R33",
     "F": "F23",
     "G": "F23",
@@ -600,31 +612,42 @@
   "55th Street": {
     "D": "B15"
   },
+  "57th St": {
+    "N": "R14",
+    "Q": "R14",
+    "R": "R14",
+    "W": "R14"
+  },
+  "57th St, 7th Avenue": {
+    "N": "R14",
+    "Q": "R14",
+    "R": "R14",
+    "W": "R14"
+  },
   "57th Street": {
-    "F": "B10",
-    "N": "R14",
-    "Q": "R14",
-    "R": "R14",
-    "W": "R14"
+    "F": "B10"
   },
-  "57th Street, 7th Avenue": {
-    "N": "R14",
-    "Q": "R14",
-    "R": "R14",
-    "W": "R14"
-  },
-  "59th Street": {
+  "59th St": {
     "1": "125",
     "2": "125",
-    "4": "629",
-    "5": "629",
-    "5X": "629",
-    "6": "629",
-    "6X": "629",
     "A": "A24",
     "B": "A24",
     "C": "A24",
-    "D": "A24",
+    "D": "A24"
+  },
+  "59th St, Columbus Circle": {
+    "1": "125",
+    "2": "125",
+    "A": "A24",
+    "B": "A24",
+    "C": "A24",
+    "D": "A24"
+  },
+  "59th Street": {
+    "4": "629",
+    "5": "629",
+    "6": "629",
+    "6X": "629",
     "N": "R41",
     "R": "R41",
     "W": "R41"
@@ -633,14 +656,6 @@
     "N": "R13",
     "R": "R13",
     "W": "R13"
-  },
-  "59th Street, Columbus Circle": {
-    "1": "125",
-    "2": "125",
-    "A": "A24",
-    "B": "A24",
-    "C": "A24",
-    "D": "A24"
   },
   "59th Street, Lexington Avenue": {
     "N": "R11",
@@ -664,10 +679,10 @@
     "R": "R13",
     "W": "R13"
   },
-  "61st Street": {
+  "61st St": {
     "7": "712"
   },
-  "61st Street, Woodside": {
+  "61st St, Woodside": {
     "7": "712"
   },
   "62nd Street": {
@@ -696,11 +711,11 @@
     "M": "G15",
     "R": "G15"
   },
-  "66th Street": {
+  "66th St": {
     "1": "124",
     "2": "124"
   },
-  "66th Street, Lincoln Center": {
+  "66th St, Lincoln Center": {
     "1": "124",
     "2": "124"
   },
@@ -709,12 +724,12 @@
     "M": "G09",
     "R": "G09"
   },
-  "68th Street": {
+  "68th St": {
     "4": "628",
     "6": "628",
     "6X": "628"
   },
-  "68th Street, Hunter College": {
+  "68th St, Hunter College": {
     "4": "628",
     "6": "628",
     "6X": "628"
@@ -749,21 +764,21 @@
     "C": "A22",
     "Q": "Q03"
   },
-  "74th Street": {
+  "74th St": {
     "7": "710"
   },
-  "74th Street, Broadway": {
+  "74th St, Broadway": {
     "7": "710"
   },
   "75th Avenue": {
     "E": "F07",
     "F": "F07"
   },
-  "75th Street": {
+  "75th St": {
     "J": "J17",
     "Z": "J17"
   },
-  "75th Street, Elder Ln": {
+  "75th St, Elderts Ln": {
     "J": "J17",
     "Z": "J17"
   },
@@ -789,7 +804,7 @@
     "R": "R14",
     "W": "R14"
   },
-  "7th Avenue, 57th Street": {
+  "7th Avenue, 57th St": {
     "N": "R14",
     "Q": "R14",
     "R": "R14",
@@ -798,26 +813,26 @@
   "80th Street": {
     "A": "A59"
   },
-  "81st Street": {
+  "81st St": {
     "A": "A21",
     "B": "A21",
     "C": "A21"
   },
-  "81st Street, Museum of Natural History": {
+  "81st St, Museum of Natural History": {
     "A": "A21",
     "B": "A21",
     "C": "A21"
   },
-  "82nd Street": {
+  "82nd St": {
     "7": "709"
   },
-  "82nd Street, Jackson Heights": {
+  "82nd St, Jackson Heights": {
     "7": "709"
   },
-  "85th Street": {
+  "85th St": {
     "J": "J16"
   },
-  "85th Street, Forest Parkway": {
+  "85th St, Forest Parkway": {
     "J": "J16"
   },
   "86th Street": {
@@ -825,7 +840,6 @@
     "2": "121",
     "4": "626",
     "5": "626",
-    "5X": "626",
     "6": "626",
     "6X": "626",
     "A": "A20",
@@ -844,22 +858,22 @@
     "N": "N02",
     "W": "N02"
   },
-  "8th Street": {
+  "8th St": {
     "N": "R21",
     "Q": "R21",
     "R": "R21",
     "W": "R21"
   },
-  "8th Street, NYU": {
+  "8th St, NYU": {
     "N": "R21",
     "Q": "R21",
     "R": "R21",
     "W": "R21"
   },
-  "90th Street": {
+  "90th St": {
     "7": "708"
   },
-  "90th Street, Elmhurst Avenue": {
+  "90th St, Elmhurst Avenue": {
     "7": "708"
   },
   "95th Street": {
@@ -891,7 +905,7 @@
     "R": "R33",
     "W": "R33"
   },
-  "9th Street, 4th Avenue": {
+  "9th Street, 4th Av": {
     "D": "R33",
     "F": "F23",
     "G": "F23",
@@ -910,7 +924,7 @@
   "Aberdeen Street": {
     "L": "L21"
   },
-  "Aberdeen Street, Bushwick Avenue": {
+  "Aberdeen Street, Bushwick Av": {
     "L": "L21"
   },
   "Alabama Avenue": {
@@ -924,7 +938,7 @@
     "A": "A10",
     "C": "A10"
   },
-  "Amsterdam Avenue, 163rd Street": {
+  "Amsterdam Avenue, 163rd St": {
     "A": "A10",
     "C": "A10"
   },
@@ -942,7 +956,7 @@
     "J": "G05",
     "Z": "G05"
   },
-  "Archer Avenue": {
+  "Archer Av": {
     "E": "G06",
     "J": "G06",
     "Z": "G06"
@@ -964,32 +978,32 @@
     "N": "R01",
     "W": "R01"
   },
-  "Atlantic Avenue": {
+  "Atlantic Av": {
     "2": "235",
     "3": "235",
     "4": "235",
     "5": "235",
-    "5X": "235",
     "B": "D24",
     "D": "R31",
-    "L": "L24",
     "N": "R31",
     "Q": "D24",
     "R": "R31",
     "W": "R31"
   },
-  "Atlantic Avenue, Barclays Center": {
+  "Atlantic Av, Barclays Center": {
     "2": "235",
     "3": "235",
     "4": "235",
     "5": "235",
-    "5X": "235",
     "B": "D24",
     "D": "R31",
     "N": "R31",
     "Q": "D24",
     "R": "R31",
     "W": "R31"
+  },
+  "Atlantic Avenue": {
+    "L": "L24"
   },
   "Avenue H": {
     "Q": "D32"
@@ -1023,7 +1037,6 @@
     "3": "235",
     "4": "235",
     "5": "235",
-    "5X": "235",
     "B": "D24",
     "D": "R31",
     "N": "R31",
@@ -1031,12 +1044,11 @@
     "R": "R31",
     "W": "R31"
   },
-  "Barclays Center, Atlantic Avenue": {
+  "Barclays Center, Atlantic Av": {
     "2": "235",
     "3": "235",
     "4": "235",
     "5": "235",
-    "5X": "235",
     "B": "D24",
     "D": "R31",
     "N": "R31",
@@ -1063,8 +1075,7 @@
     "R": "R45"
   },
   "Baychester Avenue": {
-    "5": "502",
-    "5X": "502"
+    "5": "502"
   },
   "Beach 25th Street": {
     "A": "H10"
@@ -1109,8 +1120,7 @@
     "Q": "D29"
   },
   "Beverly Road": {
-    "2": "245",
-    "5X": "245"
+    "2": "245"
   },
   "Bleecker Street": {
     "4": "637",
@@ -1120,15 +1130,14 @@
   "Bliss Street": {
     "7": "714"
   },
-  "Bliss Street, 46th Street": {
+  "Bliss Street, 46th St": {
     "7": "714"
   },
   "Borough Hall": {
     "2": "232",
     "3": "232",
     "4": "423",
-    "5": "423",
-    "5X": "423"
+    "5": "423"
   },
   "Bowery": {
     "J": "M19",
@@ -1136,8 +1145,7 @@
   },
   "Bowling Green": {
     "4": "420",
-    "5": "420",
-    "5X": "420"
+    "5": "420"
   },
   "Briarwood": {
     "E": "F05",
@@ -1156,7 +1164,11 @@
   },
   "Broadway": {
     "7": "710",
+    "B": "D21",
+    "D": "D21",
+    "F": "D21",
     "G": "G30",
+    "M": "D21",
     "N": "R05",
     "W": "R05"
   },
@@ -1167,10 +1179,10 @@
     "L": "L22",
     "Z": "J27"
   },
-  "Broadway, 74th Street": {
+  "Broadway, 74th St": {
     "7": "710"
   },
-  "Broadway-Lafayette Street": {
+  "Broadway, Lafayette Street": {
     "B": "D21",
     "D": "D21",
     "F": "D21",
@@ -1185,24 +1197,20 @@
   "Brooklyn Bridge": {
     "4": "640",
     "5": "640",
-    "5X": "640",
     "6": "640",
     "6X": "640"
   },
   "Brooklyn Bridge, City Hall": {
     "4": "640",
     "5": "640",
-    "5X": "640",
     "6": "640",
     "6X": "640"
   },
   "Brooklyn College": {
-    "2": "247",
-    "5X": "247"
+    "2": "247"
   },
-  "Brooklyn College, Flatbush Avenue": {
-    "2": "247",
-    "5X": "247"
+  "Brooklyn College, Flatbush Av": {
+    "2": "247"
   },
   "Brooklyn Museum": {
     "2": "238",
@@ -1220,7 +1228,7 @@
     "F": "D16",
     "M": "D16"
   },
-  "Bryant Pk, 42nd Street": {
+  "Bryant Pk, 42nd St": {
     "B": "D16",
     "D": "D16",
     "F": "D16",
@@ -1236,10 +1244,10 @@
   "Burnside Avenue": {
     "4": "409"
   },
-  "Bushwick Avenue": {
+  "Bushwick Av": {
     "L": "L21"
   },
-  "Bushwick Avenue, Aberdeen Street": {
+  "Bushwick Av, Aberdeen Street": {
     "L": "L21"
   },
   "Canal Street": {
@@ -1308,17 +1316,16 @@
     "J": "J28",
     "Z": "J28"
   },
-  "Christopher Street": {
+  "Christopher St": {
     "1": "133",
     "2": "133"
   },
-  "Christopher Street, Sheridan Square": {
+  "Christopher St, Sheridan Square": {
     "1": "133",
     "2": "133"
   },
   "Church Avenue": {
     "2": "244",
-    "5X": "244",
     "B": "D28",
     "F": "F27",
     "G": "F27",
@@ -1327,13 +1334,12 @@
   "City College": {
     "1": "115"
   },
-  "City College, 137th Street": {
+  "City College, 137th St": {
     "1": "115"
   },
   "City Hall": {
     "4": "640",
     "5": "640",
-    "5X": "640",
     "6": "640",
     "6X": "640",
     "N": "R24",
@@ -1343,7 +1349,6 @@
   "City Hall, Brooklyn Bridge": {
     "4": "640",
     "5": "640",
-    "5X": "640",
     "6": "640",
     "6X": "640"
   },
@@ -1370,7 +1375,7 @@
   "Columbia University": {
     "1": "117"
   },
-  "Columbia University, 116th Street": {
+  "Columbia University, 116th St": {
     "1": "117"
   },
   "Columbus Circle": {
@@ -1381,7 +1386,7 @@
     "C": "A24",
     "D": "A24"
   },
-  "Columbus Circle, 59th Street": {
+  "Columbus Circle, 59th St": {
     "1": "125",
     "2": "125",
     "A": "A24",
@@ -1404,14 +1409,13 @@
   "Corona Plaza": {
     "7": "706"
   },
-  "Corona Plaza, 103rd Street": {
+  "Corona Plaza, 103rd St": {
     "7": "706"
   },
   "Cortelyou Road": {
     "Q": "D30"
   },
   "Cortlandt Street": {
-    "1": "138",
     "N": "R25",
     "R": "R25",
     "W": "R25"
@@ -1423,7 +1427,8 @@
     "M": "F09"
   },
   "Court Square, 23rd Street": {
-    "G": "G22"
+    "E": "F09",
+    "M": "F09"
   },
   "Court Street": {
     "N": "R28",
@@ -1459,18 +1464,14 @@
     "R": "R30",
     "W": "R30"
   },
-  "Delancey Street": {
-    "F": "F15"
-  },
-  "Delancey Street, Essex Street": {
-    "F": "F15"
-  },
-  "Delancy Street": {
+  "Delancey St": {
+    "F": "F15",
     "J": "M18",
     "M": "M18",
     "Z": "M18"
   },
-  "Delancy Street, Essex Street": {
+  "Delancey St, Essex Street": {
+    "F": "F15",
     "J": "M18",
     "M": "M18",
     "Z": "M18"
@@ -1490,7 +1491,7 @@
     "N": "R08",
     "W": "R08"
   },
-  "Dutch Kills, 39th Avenue": {
+  "Dutch Kills, 39th Av": {
     "N": "R08",
     "W": "R08"
   },
@@ -1499,20 +1500,18 @@
     "A": "A03"
   },
   "Dyre Avenue": {
-    "5": "501",
-    "5X": "501"
+    "5": "501"
   },
   "Dyre Avenue, Eastchester": {
-    "5": "501",
-    "5X": "501"
+    "5": "501"
   },
   "East 105th Street": {
     "L": "L28"
   },
-  "East 143rd Street": {
+  "East 143rd St": {
     "6": "616"
   },
-  "East 143rd Street, Street Mary's Street": {
+  "East 143rd St, Street Mary's Street": {
     "6": "616"
   },
   "East 149th Street": {
@@ -1520,8 +1519,7 @@
   },
   "East 180th Street": {
     "2": "213",
-    "5": "213",
-    "5X": "213"
+    "5": "213"
   },
   "East Broadway": {
     "F": "F16"
@@ -1541,12 +1539,10 @@
     "6X": "604"
   },
   "Eastchester": {
-    "5": "501",
-    "5X": "501"
+    "5": "501"
   },
   "Eastchester, Dyre Avenue": {
-    "5": "501",
-    "5X": "501"
+    "5": "501"
   },
   "Eastern Parkway": {
     "2": "238",
@@ -1562,11 +1558,11 @@
     "6": "611",
     "6X": "611"
   },
-  "Elder Ln": {
+  "Elderts Ln": {
     "J": "J17",
     "Z": "J17"
   },
-  "Elder Ln, 75th Street": {
+  "Elderts Ln, 75th St": {
     "J": "J17",
     "Z": "J17"
   },
@@ -1576,7 +1572,7 @@
     "M": "G13",
     "R": "G13"
   },
-  "Elmhurst Avenue, 90th Street": {
+  "Elmhurst Avenue, 90th St": {
     "7": "708"
   },
   "Essex Street": {
@@ -1585,10 +1581,8 @@
     "M": "M18",
     "Z": "M18"
   },
-  "Essex Street, Delancey Street": {
-    "F": "F15"
-  },
-  "Essex Street, Delancy Street": {
+  "Essex Street, Delancey St": {
+    "F": "F15",
     "J": "M18",
     "M": "M18",
     "Z": "M18"
@@ -1603,13 +1597,11 @@
   "Far Rockaway, Mott Avenue": {
     "A": "H11"
   },
-  "Flatbush Avenue": {
-    "2": "247",
-    "5X": "247"
+  "Flatbush Av": {
+    "2": "247"
   },
-  "Flatbush Avenue, Brooklyn College": {
-    "2": "247",
-    "5X": "247"
+  "Flatbush Av, Brooklyn College": {
+    "2": "247"
   },
   "Flushing": {
     "7": "701"
@@ -1645,7 +1637,7 @@
   "Forest Parkway": {
     "J": "J16"
   },
-  "Forest Parkway, 85th Street": {
+  "Forest Parkway, 85th St": {
     "J": "J16"
   },
   "Fort Hamilton Parkway": {
@@ -1655,12 +1647,19 @@
     "N": "N03",
     "W": "N03"
   },
-  "Franklin Avenue": {
+  "Franklin Av": {
     "2": "239",
     "3": "239",
     "4": "239",
-    "5": "239",
-    "5X": "239",
+    "5": "239"
+  },
+  "Franklin Av, Medgar Evers College": {
+    "2": "239",
+    "3": "239",
+    "4": "239",
+    "5": "239"
+  },
+  "Franklin Avenue": {
     "A": "A45",
     "C": "A45"
   },
@@ -1680,7 +1679,6 @@
     "3": "229",
     "4": "418",
     "5": "418",
-    "5X": "418",
     "A": "A38",
     "C": "A38",
     "G": "G36",
@@ -1699,12 +1697,12 @@
     "3": "237",
     "4": "237"
   },
-  "Grand Avenue": {
+  "Grand Av": {
     "E": "G12",
     "M": "G12",
     "R": "G12"
   },
-  "Grand Avenue, Newtown": {
+  "Grand Av, Newtown": {
     "E": "G12",
     "M": "G12",
     "R": "G12"
@@ -1712,7 +1710,6 @@
   "Grand Central": {
     "4": "631",
     "5": "631",
-    "5X": "631",
     "6": "631",
     "6X": "631",
     "7": "723"
@@ -1720,7 +1717,6 @@
   "Grand Central, 42nd Street": {
     "4": "631",
     "5": "631",
-    "5X": "631",
     "6": "631",
     "6X": "631",
     "7": "723"
@@ -1728,19 +1724,16 @@
   "Grand Concourse": {
     "2": "222",
     "4": "416",
-    "5": "416",
-    "5X": "416"
+    "5": "416"
   },
-  "Grand Concourse, 138th Street": {
+  "Grand Concourse, 138th St": {
     "4": "416",
-    "5": "416",
-    "5X": "416"
+    "5": "416"
   },
-  "Grand Concourse, 149th Street": {
+  "Grand Concourse, 149th St": {
     "2": "222",
     "4": "415",
-    "5": "222",
-    "5X": "222"
+    "5": "222"
   },
   "Grand Street": {
     "B": "D22",
@@ -1755,8 +1748,7 @@
   },
   "Gun Hill Road": {
     "2": "208",
-    "5": "503",
-    "5X": "503"
+    "5": "503"
   },
   "Halsey Street": {
     "J": "J29",
@@ -1778,7 +1770,7 @@
     "R": "R17",
     "W": "R17"
   },
-  "Herald Square, 34th Street": {
+  "Herald Square, 34th St": {
     "B": "D17",
     "D": "D17",
     "F": "D17",
@@ -1820,10 +1812,10 @@
     "C": "A42",
     "G": "A42"
   },
-  "Hudson Yds": {
+  "Hudson Yards": {
     "7": "726"
   },
-  "Hudson Yds, 34th Street": {
+  "Hudson Yards, 34th St": {
     "7": "726"
   },
   "Hunter College": {
@@ -1831,7 +1823,7 @@
     "6": "628",
     "6X": "628"
   },
-  "Hunter College, 68th Street": {
+  "Hunter College, 68th St": {
     "4": "628",
     "6": "628",
     "6X": "628"
@@ -1877,7 +1869,7 @@
     "M": "G14",
     "R": "G14"
   },
-  "Jackson Heights, 82nd Street": {
+  "Jackson Heights, 82nd St": {
     "7": "709"
   },
   "Jackson Heights, Roosevelt Avenue": {
@@ -1906,7 +1898,7 @@
   "Jamaica, Van Wyck": {
     "E": "G07"
   },
-  "Jay Street": {
+  "Jay St": {
     "A": "A41",
     "C": "A41",
     "F": "A41",
@@ -1914,7 +1906,7 @@
     "R": "R29",
     "W": "R29"
   },
-  "Jay Street, MetroTech": {
+  "Jay St, MetroTech": {
     "A": "A41",
     "C": "A41",
     "F": "A41",
@@ -1976,6 +1968,18 @@
     "A": "A43",
     "C": "A43"
   },
+  "Lafayette Street": {
+    "B": "D21",
+    "D": "D21",
+    "F": "D21",
+    "M": "D21"
+  },
+  "Lafayette Street, Broadway": {
+    "B": "D21",
+    "D": "D21",
+    "F": "D21",
+    "M": "D21"
+  },
   "Lehman College": {
     "4": "405"
   },
@@ -2012,9 +2016,15 @@
     "1": "124",
     "2": "124"
   },
-  "Lincoln Center, 66th Street": {
+  "Lincoln Center, 66th St": {
     "1": "124",
     "2": "124"
+  },
+  "Little Haiti": {
+    "2": "246"
+  },
+  "Little Haiti, Newkirk Av": {
+    "2": "246"
   },
   "Livonia Avenue": {
     "L": "L26"
@@ -2030,7 +2040,7 @@
   "Lowery Street": {
     "7": "715"
   },
-  "Lowery Street, 40th Street": {
+  "Lowery Street, 40th St": {
     "7": "715"
   },
   "Main Street": {
@@ -2050,6 +2060,21 @@
     "M": "M16",
     "Z": "M16"
   },
+  "Medgar Evers College": {
+    "2": "241",
+    "3": "239",
+    "4": "239",
+    "5": "239"
+  },
+  "Medgar Evers College, Franklin Av": {
+    "2": "239",
+    "3": "239",
+    "4": "239",
+    "5": "239"
+  },
+  "Medgar Evers College, President St": {
+    "2": "241"
+  },
   "MetroTech": {
     "A": "A41",
     "C": "A41",
@@ -2058,7 +2083,7 @@
     "R": "R29",
     "W": "R29"
   },
-  "MetroTech, Jay Street": {
+  "MetroTech, Jay St": {
     "A": "A41",
     "C": "A41",
     "F": "A41",
@@ -2096,10 +2121,13 @@
     "L": "L14"
   },
   "Morris Park": {
-    "5": "505",
-    "5X": "505"
+    "5": "505"
   },
-  "Morrison Av- Sound View": {
+  "Morrison Av": {
+    "6": "610",
+    "6X": "610"
+  },
+  "Morrison Av, Soundview": {
     "6": "610",
     "6X": "610"
   },
@@ -2120,7 +2148,7 @@
     "B": "A21",
     "C": "A21"
   },
-  "Museum of Natural History, 81st Street": {
+  "Museum of Natural History, 81st St": {
     "A": "A21",
     "B": "A21",
     "C": "A21"
@@ -2146,7 +2174,7 @@
     "F": "D42",
     "Q": "D42"
   },
-  "NY Aquarium, West 8th Street": {
+  "NY Aquarium, West 8th St": {
     "F": "D42",
     "Q": "D42"
   },
@@ -2156,7 +2184,7 @@
     "R": "R21",
     "W": "R21"
   },
-  "NYU, 8th Street": {
+  "NYU, 8th St": {
     "N": "R21",
     "Q": "R21",
     "R": "R21",
@@ -2178,8 +2206,7 @@
     "2": "234",
     "3": "234",
     "4": "234",
-    "5": "234",
-    "5X": "234"
+    "5": "234"
   },
   "New Lots Avenue": {
     "3": "257",
@@ -2191,9 +2218,11 @@
     "N": "N04",
     "W": "N04"
   },
-  "Newkirk Avenue": {
-    "2": "246",
-    "5X": "246"
+  "Newkirk Av": {
+    "2": "246"
+  },
+  "Newkirk Av, Little Haiti": {
+    "2": "246"
   },
   "Newkirk Plaza": {
     "B": "D31",
@@ -2204,7 +2233,7 @@
     "M": "G12",
     "R": "G12"
   },
-  "Newtown, Grand Avenue": {
+  "Newtown, Grand Av": {
     "E": "G12",
     "M": "G12",
     "R": "G12"
@@ -2271,8 +2300,7 @@
   },
   "Pelham Parkway": {
     "2": "211",
-    "5": "504",
-    "5X": "504"
+    "5": "504"
   },
   "Penn Station": {
     "1": "128",
@@ -2282,7 +2310,7 @@
     "C": "A28",
     "E": "A28"
   },
-  "Penn Station, 34th Street": {
+  "Penn Station, 34th St": {
     "1": "128",
     "2": "128",
     "3": "128",
@@ -2300,14 +2328,16 @@
     "C": "A27",
     "E": "A27"
   },
-  "Port Authority Bus Terminal, 42nd Street": {
+  "Port Authority Bus Terminal, 42nd St": {
     "A": "A27",
     "C": "A27",
     "E": "A27"
   },
-  "President Street": {
-    "2": "241",
-    "5X": "241"
+  "President St": {
+    "2": "241"
+  },
+  "President St, Medgar Evers College": {
+    "2": "241"
   },
   "Prince Street": {
     "N": "R22",
@@ -2329,7 +2359,7 @@
     "G": "F25",
     "Q": "D26"
   },
-  "Prospect Park, 15th Street": {
+  "Prospect Park, 15th St": {
     "F": "F25",
     "G": "F25"
   },
@@ -2346,7 +2376,7 @@
   "Queensbridge": {
     "F": "B04"
   },
-  "Queensbridge, 21st Street": {
+  "Queensbridge, 21st St": {
     "F": "B04"
   },
   "Ralph Avenue": {
@@ -2356,7 +2386,7 @@
   "Rawson Street": {
     "7": "716"
   },
-  "Rawson Street, 33rd Street": {
+  "Rawson Street, 33rd St": {
     "7": "716"
   },
   "Rector Street": {
@@ -2397,7 +2427,7 @@
     "F": "D15",
     "M": "D15"
   },
-  "Rockefeller Center, 47th 50th Streets": {
+  "Rockefeller Center, 47th 50th Sts": {
     "B": "D15",
     "D": "D15",
     "F": "D15",
@@ -2423,7 +2453,7 @@
     "4": "251",
     "5": "251"
   },
-  "Rutland Road, Sutter Avenue": {
+  "Rutland Road, Sutter Av": {
     "3": "251",
     "4": "251",
     "5": "251"
@@ -2458,7 +2488,7 @@
     "1": "133",
     "2": "133"
   },
-  "Sheridan Square, Christopher Street": {
+  "Sheridan Square, Christopher St": {
     "1": "133",
     "2": "133"
   },
@@ -2474,13 +2504,21 @@
     "F": "F22",
     "G": "F22"
   },
+  "Soundview": {
+    "6": "610",
+    "6X": "610"
+  },
+  "Soundview, Morrison Av": {
+    "6": "610",
+    "6X": "610"
+  },
   "South Ferry": {
     "1": "142",
     "N": "R27",
     "R": "R27",
     "W": "R27"
   },
-  "South Ferry, Whitehall Street": {
+  "South Ferry, Whitehall St": {
     "N": "R27",
     "R": "R27",
     "W": "R27"
@@ -2499,8 +2537,7 @@
     "R": "G19"
   },
   "Sterling Street": {
-    "2": "242",
-    "5X": "242"
+    "2": "242"
   },
   "Stillwell Avenue": {
     "D": "D43",
@@ -2521,7 +2558,7 @@
   "Street Mary's Street": {
     "6": "616"
   },
-  "Street Mary's Street, East 143rd Street": {
+  "Street Mary's Street, East 143rd St": {
     "6": "616"
   },
   "Sutphin Boulevard": {
@@ -2530,21 +2567,23 @@
     "J": "G06",
     "Z": "G06"
   },
-  "Sutphin Boulevard, Archer Avenue, JFK Airport": {
+  "Sutphin Boulevard, Archer Av, JFK Airport": {
     "E": "G06",
     "J": "G06",
     "Z": "G06"
   },
-  "Sutter Avenue": {
-    "3": "251",
-    "4": "251",
-    "5": "251",
-    "L": "L25"
-  },
-  "Sutter Avenue, Rutland Road": {
+  "Sutter Av": {
     "3": "251",
     "4": "251",
     "5": "251"
+  },
+  "Sutter Av, Rutland Road": {
+    "3": "251",
+    "4": "251",
+    "5": "251"
+  },
+  "Sutter Avenue": {
+    "L": "L25"
   },
   "Throop Avenues": {
     "A": "A47",
@@ -2581,7 +2620,6 @@
   "Union Square": {
     "4": "635",
     "5": "635",
-    "5X": "635",
     "6": "635",
     "6X": "635",
     "L": "L03",
@@ -2590,10 +2628,9 @@
     "R": "R20",
     "W": "R20"
   },
-  "Union Square, 14th Street": {
+  "Union Square, 14th St": {
     "4": "635",
     "5": "635",
-    "5X": "635",
     "6": "635",
     "6X": "635",
     "L": "L03",
@@ -2655,6 +2692,9 @@
   "Vernon Boulevard, Jackson Avenue": {
     "7": "721"
   },
+  "WTC Cortlandt": {
+    "1": "138"
+  },
   "Wakefield": {
     "2": "201"
   },
@@ -2665,8 +2705,7 @@
     "2": "230",
     "3": "230",
     "4": "419",
-    "5": "419",
-    "5X": "419"
+    "5": "419"
   },
   "Wash Square": {
     "A": "A32",
@@ -2677,7 +2716,7 @@
     "F": "D20",
     "M": "D20"
   },
-  "Wash Square, West 4th Street": {
+  "Wash Square, West 4th St": {
     "A": "A32",
     "B": "D20",
     "C": "A32",
@@ -2699,10 +2738,10 @@
   "Washington Heights": {
     "1": "112"
   },
-  "Washington Heights, 168th Street": {
+  "Washington Heights, 168th St": {
     "1": "112"
   },
-  "West 4th Street": {
+  "West 4th St": {
     "A": "A32",
     "B": "D20",
     "C": "A32",
@@ -2711,7 +2750,7 @@
     "F": "D20",
     "M": "D20"
   },
-  "West 4th Street, Wash Square": {
+  "West 4th St, Wash Square": {
     "A": "A32",
     "B": "D20",
     "C": "A32",
@@ -2720,11 +2759,11 @@
     "F": "D20",
     "M": "D20"
   },
-  "West 8th Street": {
+  "West 8th St": {
     "F": "D42",
     "Q": "D42"
   },
-  "West 8th Street, NY Aquarium": {
+  "West 8th St, NY Aquarium": {
     "F": "D42",
     "Q": "D42"
   },
@@ -2744,12 +2783,12 @@
     "6": "604",
     "6X": "604"
   },
-  "Whitehall Street": {
+  "Whitehall St": {
     "N": "R27",
     "R": "R27",
     "W": "R27"
   },
-  "Whitehall Street, South Ferry": {
+  "Whitehall St, South Ferry": {
     "N": "R27",
     "R": "R27",
     "W": "R27"
@@ -2774,8 +2813,7 @@
     "L": "L20"
   },
   "Winthrop Street": {
-    "2": "243",
-    "5X": "243"
+    "2": "243"
   },
   "Woodhaven Boulevard": {
     "E": "G11",
@@ -2790,7 +2828,7 @@
   "Woodside": {
     "7": "712"
   },
-  "Woodside, 61st Street": {
+  "Woodside, 61st St": {
     "7": "712"
   },
   "World Trade Center": {
@@ -2809,7 +2847,7 @@
     "B": "D11",
     "D": "D11"
   },
-  "Yankee Stadium, 161st Street": {
+  "Yankee Stadium, 161st St": {
     "4": "414",
     "B": "D11",
     "D": "D11"
