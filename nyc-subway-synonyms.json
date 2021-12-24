@@ -1,16 +1,16 @@
 [
   {
-    "value": "103rd Street",
+    "value": "103rd St, Corona Plaza",
     "synonyms": [
-      "103rd Street"
+      "103rd St",
+      "Corona Plaza",
+      "Corona Plaza, 103rd St"
     ]
   },
   {
-    "value": "103rd Street, Corona Plaza",
+    "value": "103rd Street",
     "synonyms": [
-      "103rd Street",
-      "Corona Plaza",
-      "Corona Plaza, 103rd Street"
+      "103rd Street"
     ]
   },
   {
@@ -32,17 +32,17 @@
     ]
   },
   {
-    "value": "116th Street",
+    "value": "116th St, Columbia University",
     "synonyms": [
-      "116th Street"
+      "116th St",
+      "Columbia University",
+      "Columbia University, 116th St"
     ]
   },
   {
-    "value": "116th Street, Columbia University",
+    "value": "116th Street",
     "synonyms": [
-      "116th Street",
-      "Columbia University",
-      "Columbia University, 116th Street"
+      "116th Street"
     ]
   },
   {
@@ -64,19 +64,19 @@
     ]
   },
   {
-    "value": "137th Street, City College",
+    "value": "137th St, City College",
     "synonyms": [
-      "137th Street",
+      "137th St",
       "City College",
-      "City College, 137th Street"
+      "City College, 137th St"
     ]
   },
   {
-    "value": "138th Street, Grand Concourse",
+    "value": "138th St, Grand Concourse",
     "synonyms": [
-      "138th Street",
+      "138th St",
       "Grand Concourse",
-      "Grand Concourse, 138th Street"
+      "Grand Concourse, 138th St"
     ]
   },
   {
@@ -86,25 +86,25 @@
     ]
   },
   {
-    "value": "149th Street, Grand Concourse",
+    "value": "149th St, Grand Concourse",
     "synonyms": [
-      "149th Street",
+      "149th St",
       "Grand Concourse",
-      "Grand Concourse, 149th Street"
+      "Grand Concourse, 149th St"
+    ]
+  },
+  {
+    "value": "14th St, Union Square",
+    "synonyms": [
+      "14th St",
+      "Union Square",
+      "Union Square, 14th St"
     ]
   },
   {
     "value": "14th Street",
     "synonyms": [
       "14th Street"
-    ]
-  },
-  {
-    "value": "14th Street, Union Square",
-    "synonyms": [
-      "14th Street",
-      "Union Square",
-      "Union Square, 14th Street"
     ]
   },
   {
@@ -120,27 +120,27 @@
     ]
   },
   {
-    "value": "15th Street, Prospect Park",
+    "value": "15th St, Prospect Park",
     "synonyms": [
-      "15th Street",
+      "15th St",
       "Prospect Park",
-      "Prospect Park, 15th Street"
+      "Prospect Park, 15th St"
     ]
   },
   {
-    "value": "161st Street, Yankee Stadium",
+    "value": "161st St, Yankee Stadium",
     "synonyms": [
-      "161st Street",
+      "161st St",
       "Yankee Stadium",
-      "Yankee Stadium, 161st Street"
+      "Yankee Stadium, 161st St"
     ]
   },
   {
-    "value": "163rd Street, Amsterdam Avenue",
+    "value": "163rd St, Amsterdam Avenue",
     "synonyms": [
-      "163rd Street",
+      "163rd St",
       "Amsterdam Avenue",
-      "Amsterdam Avenue, 163rd Street"
+      "Amsterdam Avenue, 163rd St"
     ]
   },
   {
@@ -150,17 +150,17 @@
     ]
   },
   {
-    "value": "168th Street",
+    "value": "168th St, Washington Heights",
     "synonyms": [
-      "168th Street"
+      "168th St",
+      "Washington Heights",
+      "Washington Heights, 168th St"
     ]
   },
   {
-    "value": "168th Street, Washington Heights",
+    "value": "168th Street",
     "synonyms": [
-      "168th Street",
-      "Washington Heights",
-      "Washington Heights, 168th Street"
+      "168th Street"
     ]
   },
   {
@@ -272,17 +272,17 @@
     ]
   },
   {
-    "value": "21st Street",
+    "value": "21st St, Queensbridge",
     "synonyms": [
-      "21st Street"
+      "21st St",
+      "Queensbridge",
+      "Queensbridge, 21st St"
     ]
   },
   {
-    "value": "21st Street, Queensbridge",
+    "value": "21st Street",
     "synonyms": [
-      "21st Street",
-      "Queensbridge",
-      "Queensbridge, 21st Street"
+      "21st Street"
     ]
   },
   {
@@ -346,41 +346,41 @@
     ]
   },
   {
+    "value": "33rd St, Rawson Street",
+    "synonyms": [
+      "33rd St",
+      "Rawson Street",
+      "Rawson Street, 33rd St"
+    ]
+  },
+  {
     "value": "33rd Street",
     "synonyms": [
       "33rd Street"
     ]
   },
   {
-    "value": "33rd Street, Rawson Street",
+    "value": "34th St, Herald Square",
     "synonyms": [
-      "33rd Street",
-      "Rawson Street",
-      "Rawson Street, 33rd Street"
-    ]
-  },
-  {
-    "value": "34th Street, Herald Square",
-    "synonyms": [
-      "34th Street",
+      "34th St",
       "Herald Square",
-      "Herald Square, 34th Street"
+      "Herald Square, 34th St"
     ]
   },
   {
-    "value": "34th Street, Hudson Yds",
+    "value": "34th St, Hudson Yards",
     "synonyms": [
-      "34th Street",
-      "Hudson Yds",
-      "Hudson Yds, 34th Street"
+      "34th St",
+      "Hudson Yards",
+      "Hudson Yards, 34th St"
     ]
   },
   {
-    "value": "34th Street, Penn Station",
+    "value": "34th St, Penn Station",
     "synonyms": [
-      "34th Street",
+      "34th St",
       "Penn Station",
-      "Penn Station, 34th Street"
+      "Penn Station, 34th St"
     ]
   },
   {
@@ -396,11 +396,27 @@
     ]
   },
   {
-    "value": "39th Avenue, Dutch Kills",
+    "value": "39th Av, Dutch Kills",
     "synonyms": [
-      "39th Avenue",
+      "39th Av",
       "Dutch Kills",
-      "Dutch Kills, 39th Avenue"
+      "Dutch Kills, 39th Av"
+    ]
+  },
+  {
+    "value": "3rd Av, 138th Street",
+    "synonyms": [
+      "3rd Av",
+      "138th Street",
+      "138th Street, 3rd Av"
+    ]
+  },
+  {
+    "value": "3rd Av, 149th Street",
+    "synonyms": [
+      "3rd Av",
+      "149th Street",
+      "149th Street, 3rd Av"
     ]
   },
   {
@@ -410,43 +426,27 @@
     ]
   },
   {
-    "value": "3rd Avenue, 138th Street",
+    "value": "40th St, Lowery Street",
     "synonyms": [
-      "3rd Avenue",
-      "138th Street",
-      "138th Street, 3rd Avenue"
-    ]
-  },
-  {
-    "value": "3rd Avenue, 149th Street",
-    "synonyms": [
-      "3rd Avenue",
-      "149th Street",
-      "149th Street, 3rd Avenue"
-    ]
-  },
-  {
-    "value": "40th Street, Lowery Street",
-    "synonyms": [
-      "40th Street",
+      "40th St",
       "Lowery Street",
-      "Lowery Street, 40th Street"
+      "Lowery Street, 40th St"
     ]
   },
   {
-    "value": "42nd Street, Bryant Pk",
+    "value": "42nd St, Bryant Pk",
     "synonyms": [
-      "42nd Street",
+      "42nd St",
       "Bryant Pk",
-      "Bryant Pk, 42nd Street"
+      "Bryant Pk, 42nd St"
     ]
   },
   {
-    "value": "42nd Street, Port Authority Bus Terminal",
+    "value": "42nd St, Port Authority Bus Terminal",
     "synonyms": [
-      "42nd Street",
+      "42nd St",
       "Port Authority Bus Terminal",
-      "Port Authority Bus Terminal, 42nd Street"
+      "Port Authority Bus Terminal, 42nd St"
     ]
   },
   {
@@ -456,25 +456,25 @@
     ]
   },
   {
+    "value": "46th St, Bliss Street",
+    "synonyms": [
+      "46th St",
+      "Bliss Street",
+      "Bliss Street, 46th St"
+    ]
+  },
+  {
     "value": "46th Street",
     "synonyms": [
       "46th Street"
     ]
   },
   {
-    "value": "46th Street, Bliss Street",
+    "value": "47th 50th Sts, Rockefeller Center",
     "synonyms": [
-      "46th Street",
-      "Bliss Street",
-      "Bliss Street, 46th Street"
-    ]
-  },
-  {
-    "value": "47th 50th Streets, Rockefeller Center",
-    "synonyms": [
-      "47th 50th Streets",
+      "47th 50th Sts",
       "Rockefeller Center",
-      "Rockefeller Center, 47th 50th Streets"
+      "Rockefeller Center, 47th 50th Sts"
     ]
   },
   {
@@ -484,11 +484,11 @@
     ]
   },
   {
-    "value": "4th Avenue, 9th Street",
+    "value": "4th Av, 9th Street",
     "synonyms": [
-      "4th Avenue",
+      "4th Av",
       "9th Street",
-      "9th Street, 4th Avenue"
+      "9th Street, 4th Av"
     ]
   },
   {
@@ -522,31 +522,31 @@
     ]
   },
   {
+    "value": "57th St, 7th Avenue",
+    "synonyms": [
+      "57th St",
+      "7th Avenue",
+      "7th Avenue, 57th St"
+    ]
+  },
+  {
     "value": "57th Street",
     "synonyms": [
       "57th Street"
     ]
   },
   {
-    "value": "57th Street, 7th Avenue",
+    "value": "59th St, Columbus Circle",
     "synonyms": [
-      "57th Street",
-      "7th Avenue",
-      "7th Avenue, 57th Street"
+      "59th St",
+      "Columbus Circle",
+      "Columbus Circle, 59th St"
     ]
   },
   {
     "value": "59th Street",
     "synonyms": [
       "59th Street"
-    ]
-  },
-  {
-    "value": "59th Street, Columbus Circle",
-    "synonyms": [
-      "59th Street",
-      "Columbus Circle",
-      "Columbus Circle, 59th Street"
     ]
   },
   {
@@ -572,6 +572,14 @@
     ]
   },
   {
+    "value": "61st St, Woodside",
+    "synonyms": [
+      "61st St",
+      "Woodside",
+      "Woodside, 61st St"
+    ]
+  },
+  {
     "value": "62nd Street",
     "synonyms": [
       "62nd Street"
@@ -582,8 +590,7 @@
     "synonyms": [
       "63rd Dr",
       "Rego Park",
-      "Rego Park, 63rd Dr",
-      "63rd Dr, Rego Park"
+      "Rego Park, 63rd Dr"
     ]
   },
   {
@@ -593,11 +600,11 @@
     ]
   },
   {
-    "value": "66th Street, Lincoln Center",
+    "value": "66th St, Lincoln Center",
     "synonyms": [
-      "66th Street",
+      "66th St",
       "Lincoln Center",
-      "Lincoln Center, 66th Street"
+      "Lincoln Center, 66th St"
     ]
   },
   {
@@ -607,11 +614,11 @@
     ]
   },
   {
-    "value": "68th Street, Hunter College",
+    "value": "68th St, Hunter College",
     "synonyms": [
-      "68th Street",
+      "68th St",
       "Hunter College",
-      "Hunter College, 68th Street"
+      "Hunter College, 68th St"
     ]
   },
   {
@@ -639,11 +646,11 @@
     ]
   },
   {
-    "value": "74th Street, Broadway",
+    "value": "74th St, Broadway",
     "synonyms": [
-      "74th Street",
+      "74th St",
       "Broadway",
-      "Broadway, 74th Street"
+      "Broadway, 74th St"
     ]
   },
   {
@@ -653,11 +660,11 @@
     ]
   },
   {
-    "value": "75th Street, Elder Ln",
+    "value": "75th St, Elderts Ln",
     "synonyms": [
-      "75th Street",
-      "Elder Ln",
-      "Elder Ln, 75th Street"
+      "75th St",
+      "Elderts Ln",
+      "Elderts Ln, 75th St"
     ]
   },
   {
@@ -685,27 +692,27 @@
     ]
   },
   {
-    "value": "81st Street, Museum of Natural History",
+    "value": "81st St, Museum of Natural History",
     "synonyms": [
-      "81st Street",
+      "81st St",
       "Museum of Natural History",
-      "Museum of Natural History, 81st Street"
+      "Museum of Natural History, 81st St"
     ]
   },
   {
-    "value": "82nd Street, Jackson Heights",
+    "value": "82nd St, Jackson Heights",
     "synonyms": [
-      "82nd Street",
+      "82nd St",
       "Jackson Heights",
-      "Jackson Heights, 82nd Street"
+      "Jackson Heights, 82nd St"
     ]
   },
   {
-    "value": "85th Street, Forest Parkway",
+    "value": "85th St, Forest Parkway",
     "synonyms": [
-      "85th Street",
+      "85th St",
       "Forest Parkway",
-      "Forest Parkway, 85th Street"
+      "Forest Parkway, 85th St"
     ]
   },
   {
@@ -727,19 +734,19 @@
     ]
   },
   {
-    "value": "8th Street, NYU",
+    "value": "8th St, NYU",
     "synonyms": [
-      "8th Street",
+      "8th St",
       "NYU",
-      "NYU, 8th Street"
+      "NYU, 8th St"
     ]
   },
   {
-    "value": "90th Street, Elmhurst Avenue",
+    "value": "90th St, Elmhurst Avenue",
     "synonyms": [
-      "90th Street",
+      "90th St",
       "Elmhurst Avenue",
-      "Elmhurst Avenue, 90th Street"
+      "Elmhurst Avenue, 90th St"
     ]
   },
   {
@@ -783,8 +790,7 @@
     "synonyms": [
       "Aqueduct",
       "North Conduit Avenue",
-      "North Conduit Avenue, Aqueduct",
-      "Aqueduct, North Conduit Avenue"
+      "North Conduit Avenue, Aqueduct"
     ]
   },
   {
@@ -810,28 +816,21 @@
     "synonyms": [
       "Astoria",
       "Ditmars Boulevard",
-      "Ditmars Boulevard, Astoria",
-      "Astoria, Ditmars Boulevard"
+      "Ditmars Boulevard, Astoria"
     ]
   },
   {
-    "value": "Atlantic",
+    "value": "Atlantic Av, Barclays Center",
     "synonyms": [
-      "Atlantic"
+      "Atlantic Av",
+      "Barclays Center",
+      "Barclays Center, Atlantic Av"
     ]
   },
   {
     "value": "Atlantic Avenue",
     "synonyms": [
       "Atlantic Avenue"
-    ]
-  },
-  {
-    "value": "Atlantic Avenue, Barclays Center",
-    "synonyms": [
-      "Atlantic Avenue",
-      "Barclays Center",
-      "Barclays Center, Atlantic Avenue"
     ]
   },
   {
@@ -905,8 +904,7 @@
     "synonyms": [
       "Bay Ridge",
       "95th Street",
-      "95th Street, Bay Ridge",
-      "Bay Ridge, 95th Street"
+      "95th Street, Bay Ridge"
     ]
   },
   {
@@ -986,8 +984,7 @@
     "synonyms": [
       "Bedford Park Boulevard",
       "Lehman College",
-      "Lehman College, Bedford Park Boulevard",
-      "Bedford Park Boulevard, Lehman College"
+      "Lehman College, Bedford Park Boulevard"
     ]
   },
   {
@@ -995,8 +992,7 @@
     "synonyms": [
       "Bedford",
       "Nostrand Avenues",
-      "Nostrand Avenues, Bedford",
-      "Bedford, Nostrand Avenues"
+      "Nostrand Avenues, Bedford"
     ]
   },
   {
@@ -1084,9 +1080,11 @@
     ]
   },
   {
-    "value": "Broadway-Lafayette Street",
+    "value": "Broadway, Lafayette Street",
     "synonyms": [
-      "Broadway-Lafayette Street"
+      "Broadway",
+      "Lafayette Street",
+      "Lafayette Street, Broadway"
     ]
   },
   {
@@ -1106,8 +1104,7 @@
     "synonyms": [
       "Brooklyn Bridge",
       "City Hall",
-      "City Hall, Brooklyn Bridge",
-      "Brooklyn Bridge, City Hall"
+      "City Hall, Brooklyn Bridge"
     ]
   },
   {
@@ -1129,11 +1126,11 @@
     ]
   },
   {
-    "value": "Bushwick Avenue, Aberdeen Street",
+    "value": "Bushwick Av, Aberdeen Street",
     "synonyms": [
-      "Bushwick Avenue",
+      "Bushwick Av",
       "Aberdeen Street",
-      "Aberdeen Street, Bushwick Avenue"
+      "Aberdeen Street, Bushwick Av"
     ]
   },
   {
@@ -1147,8 +1144,7 @@
     "synonyms": [
       "Canarsie",
       "Rockaway Parkway",
-      "Rockaway Parkway, Canarsie",
-      "Canarsie, Rockaway Parkway"
+      "Rockaway Parkway, Canarsie"
     ]
   },
   {
@@ -1198,11 +1194,11 @@
     ]
   },
   {
-    "value": "Christopher Street, Sheridan Square",
+    "value": "Christopher St, Sheridan Square",
     "synonyms": [
-      "Christopher Street",
+      "Christopher St",
       "Sheridan Square",
-      "Sheridan Square, Christopher Street"
+      "Sheridan Square, Christopher St"
     ]
   },
   {
@@ -1246,8 +1242,7 @@
     "synonyms": [
       "Clinton",
       "Washington Avenues",
-      "Washington Avenues, Clinton",
-      "Clinton, Washington Avenues"
+      "Washington Avenues, Clinton"
     ]
   },
   {
@@ -1255,8 +1250,7 @@
     "synonyms": [
       "Coney Island",
       "Stillwell Avenue",
-      "Stillwell Avenue, Coney Island",
-      "Coney Island, Stillwell Avenue"
+      "Stillwell Avenue, Coney Island"
     ]
   },
   {
@@ -1282,8 +1276,7 @@
     "synonyms": [
       "Court Square",
       "23rd Street",
-      "23rd Street, Court Square",
-      "Court Square, 23rd Street"
+      "23rd Street, Court Square"
     ]
   },
   {
@@ -1303,8 +1296,7 @@
     "synonyms": [
       "Crown Heights",
       "Utica Avenue",
-      "Utica Avenue, Crown Heights",
-      "Crown Heights, Utica Avenue"
+      "Utica Avenue, Crown Heights"
     ]
   },
   {
@@ -1326,19 +1318,11 @@
     ]
   },
   {
-    "value": "Delancey Street, Essex Street",
+    "value": "Delancey St, Essex Street",
     "synonyms": [
-      "Delancey Street",
+      "Delancey St",
       "Essex Street",
-      "Essex Street, Delancey Street"
-    ]
-  },
-  {
-    "value": "Delancy Street, Essex Street",
-    "synonyms": [
-      "Delancy Street",
-      "Essex Street",
-      "Essex Street, Delancy Street"
+      "Essex Street, Delancey St"
     ]
   },
   {
@@ -1366,11 +1350,11 @@
     ]
   },
   {
-    "value": "East 143rd Street, Street Mary's Street",
+    "value": "East 143rd St, Street Mary's Street",
     "synonyms": [
-      "East 143rd Street",
+      "East 143rd St",
       "Street Mary's Street",
-      "Street Mary's Street, East 143rd Street"
+      "Street Mary's Street, East 143rd St"
     ]
   },
   {
@@ -1396,8 +1380,7 @@
     "synonyms": [
       "Eastchester",
       "Dyre Avenue",
-      "Dyre Avenue, Eastchester",
-      "Eastchester, Dyre Avenue"
+      "Dyre Avenue, Eastchester"
     ]
   },
   {
@@ -1405,8 +1388,7 @@
     "synonyms": [
       "Eastern Parkway",
       "Brooklyn Museum",
-      "Brooklyn Museum, Eastern Parkway",
-      "Eastern Parkway, Brooklyn Museum"
+      "Brooklyn Museum, Eastern Parkway"
     ]
   },
   {
@@ -1438,16 +1420,15 @@
     "synonyms": [
       "Far Rockaway",
       "Mott Avenue",
-      "Mott Avenue, Far Rockaway",
-      "Far Rockaway, Mott Avenue"
+      "Mott Avenue, Far Rockaway"
     ]
   },
   {
-    "value": "Flatbush Avenue, Brooklyn College",
+    "value": "Flatbush Av, Brooklyn College",
     "synonyms": [
-      "Flatbush Avenue",
+      "Flatbush Av",
       "Brooklyn College",
-      "Brooklyn College, Flatbush Avenue"
+      "Brooklyn College, Flatbush Av"
     ]
   },
   {
@@ -1461,8 +1442,7 @@
     "synonyms": [
       "Flushing",
       "Main Street",
-      "Main Street, Flushing",
-      "Flushing, Main Street"
+      "Main Street, Flushing"
     ]
   },
   {
@@ -1482,14 +1462,21 @@
     "synonyms": [
       "Forest Hills",
       "71st Avenue",
-      "71st Avenue, Forest Hills",
-      "Forest Hills, 71st Avenue"
+      "71st Avenue, Forest Hills"
     ]
   },
   {
     "value": "Fort Hamilton Parkway",
     "synonyms": [
       "Fort Hamilton Parkway"
+    ]
+  },
+  {
+    "value": "Franklin Av, Medgar Evers College",
+    "synonyms": [
+      "Franklin Av",
+      "Medgar Evers College",
+      "Medgar Evers College, Franklin Av"
     ]
   },
   {
@@ -1541,11 +1528,11 @@
     ]
   },
   {
-    "value": "Grand Avenue, Newtown",
+    "value": "Grand Av, Newtown",
     "synonyms": [
-      "Grand Avenue",
+      "Grand Av",
       "Newtown",
-      "Newtown, Grand Avenue"
+      "Newtown, Grand Av"
     ]
   },
   {
@@ -1553,8 +1540,7 @@
     "synonyms": [
       "Grand Central",
       "42nd Street",
-      "42nd Street, Grand Central",
-      "Grand Central, 42nd Street"
+      "42nd Street, Grand Central"
     ]
   },
   {
@@ -1610,8 +1596,7 @@
     "synonyms": [
       "Harlem",
       "148th Street",
-      "148th Street, Harlem",
-      "Harlem, 148th Street"
+      "148th Street, Harlem"
     ]
   },
   {
@@ -1637,8 +1622,7 @@
     "synonyms": [
       "Howard Beach",
       "JFK Airport",
-      "JFK Airport, Howard Beach",
-      "Howard Beach, JFK Airport"
+      "JFK Airport, Howard Beach"
     ]
   },
   {
@@ -1652,8 +1636,7 @@
     "synonyms": [
       "Hoyt",
       "Schermerhorn Streets",
-      "Schermerhorn Streets, Hoyt",
-      "Hoyt, Schermerhorn Streets"
+      "Schermerhorn Streets, Hoyt"
     ]
   },
   {
@@ -1685,8 +1668,7 @@
     "synonyms": [
       "Inwood",
       "207th Street",
-      "207th Street, Inwood",
-      "Inwood, 207th Street"
+      "207th Street, Inwood"
     ]
   },
   {
@@ -1700,8 +1682,7 @@
     "synonyms": [
       "Jackson Heights",
       "Roosevelt Avenue",
-      "Roosevelt Avenue, Jackson Heights",
-      "Jackson Heights, Roosevelt Avenue"
+      "Roosevelt Avenue, Jackson Heights"
     ]
   },
   {
@@ -1709,8 +1690,7 @@
     "synonyms": [
       "Jamaica Center",
       "Parsons",
-      "Archer",
-      "Jamaica Center, Parsons, Archer"
+      "Archer"
     ]
   },
   {
@@ -1718,8 +1698,7 @@
     "synonyms": [
       "Jamaica",
       "179th Street",
-      "179th Street, Jamaica",
-      "Jamaica, 179th Street"
+      "179th Street, Jamaica"
     ]
   },
   {
@@ -1727,16 +1706,15 @@
     "synonyms": [
       "Jamaica",
       "Van Wyck",
-      "Van Wyck, Jamaica",
-      "Jamaica, Van Wyck"
+      "Van Wyck, Jamaica"
     ]
   },
   {
-    "value": "Jay Street, MetroTech",
+    "value": "Jay St, MetroTech",
     "synonyms": [
-      "Jay Street",
+      "Jay St",
       "MetroTech",
-      "MetroTech, Jay Street"
+      "MetroTech, Jay St"
     ]
   },
   {
@@ -1768,8 +1746,7 @@
     "synonyms": [
       "Kew Gardens",
       "Union Tpke",
-      "Union Tpke, Kew Gardens",
-      "Kew Gardens, Union Tpke"
+      "Union Tpke, Kew Gardens"
     ]
   },
   {
@@ -1795,8 +1772,7 @@
     "synonyms": [
       "Kingston",
       "Throop Avenues",
-      "Throop Avenues, Kingston",
-      "Kingston, Throop Avenues"
+      "Throop Avenues, Kingston"
     ]
   },
   {
@@ -1870,8 +1846,7 @@
     "synonyms": [
       "Marble Hill",
       "225th Street",
-      "225th Street, Marble Hill",
-      "Marble Hill, 225th Street"
+      "225th Street, Marble Hill"
     ]
   },
   {
@@ -1891,8 +1866,7 @@
     "synonyms": [
       "Mets",
       "Willets Point",
-      "Willets Point, Mets",
-      "Mets, Willets Point"
+      "Willets Point, Mets"
     ]
   },
   {
@@ -1900,8 +1874,7 @@
     "synonyms": [
       "Middle Village",
       "Metropolitan Avenue",
-      "Metropolitan Avenue, Middle Village",
-      "Middle Village, Metropolitan Avenue"
+      "Metropolitan Avenue, Middle Village"
     ]
   },
   {
@@ -1929,9 +1902,11 @@
     ]
   },
   {
-    "value": "Morrison Av- Sound View",
+    "value": "Morrison Av, Soundview",
     "synonyms": [
-      "Morrison Av- Sound View"
+      "Morrison Av",
+      "Soundview",
+      "Soundview, Morrison Av"
     ]
   },
   {
@@ -1957,8 +1932,7 @@
     "synonyms": [
       "Myrtle",
       "Willoughby Avenues",
-      "Willoughby Avenues, Myrtle",
-      "Myrtle, Willoughby Avenues"
+      "Willoughby Avenues, Myrtle"
     ]
   },
   {
@@ -1966,14 +1940,7 @@
     "synonyms": [
       "Myrtle",
       "Wyckoff Avenues",
-      "Wyckoff Avenues, Myrtle",
-      "Myrtle, Wyckoff Avenues"
-    ]
-  },
-  {
-    "value": "Nassau",
-    "synonyms": [
-      "Nassau"
+      "Wyckoff Avenues, Myrtle"
     ]
   },
   {
@@ -2025,9 +1992,11 @@
     ]
   },
   {
-    "value": "Newkirk Avenue",
+    "value": "Newkirk Av, Little Haiti",
     "synonyms": [
-      "Newkirk Avenue"
+      "Newkirk Av",
+      "Little Haiti",
+      "Little Haiti, Newkirk Av"
     ]
   },
   {
@@ -2053,8 +2022,7 @@
     "synonyms": [
       "Norwood",
       "205th Street",
-      "205th Street, Norwood",
-      "Norwood, 205th Street"
+      "205th Street, Norwood"
     ]
   },
   {
@@ -2086,8 +2054,7 @@
     "synonyms": [
       "Ozone Park",
       "Lefferts Boulevard",
-      "Lefferts Boulevard, Ozone Park",
-      "Ozone Park, Lefferts Boulevard"
+      "Lefferts Boulevard, Ozone Park"
     ]
   },
   {
@@ -2139,9 +2106,11 @@
     ]
   },
   {
-    "value": "President Street",
+    "value": "President St, Medgar Evers College",
     "synonyms": [
-      "President Street"
+      "President St",
+      "Medgar Evers College",
+      "Medgar Evers College, President St"
     ]
   },
   {
@@ -2215,8 +2184,7 @@
     "synonyms": [
       "Rockaway Park",
       "Beach 116th Street",
-      "Beach 116th Street, Rockaway Park",
-      "Rockaway Park, Beach 116th Street"
+      "Beach 116th Street, Rockaway Park"
     ]
   },
   {
@@ -2266,8 +2234,7 @@
     "synonyms": [
       "Smith",
       "9th Streets",
-      "9th Streets, Smith",
-      "Smith, 9th Streets"
+      "9th Streets, Smith"
     ]
   },
   {
@@ -2325,12 +2292,19 @@
     ]
   },
   {
-    "value": "Sutphin Boulevard, Archer Avenue, JFK Airport",
+    "value": "Sutphin Boulevard, Archer Av, JFK Airport",
     "synonyms": [
       "Sutphin Boulevard",
-      "Archer Avenue",
-      "JFK Airport",
-      "Sutphin Boulevard, Archer Avenue, JFK Airport"
+      "Archer Av",
+      "JFK Airport"
+    ]
+  },
+  {
+    "value": "Sutter Av, Rutland Road",
+    "synonyms": [
+      "Sutter Av",
+      "Rutland Road",
+      "Rutland Road, Sutter Av"
     ]
   },
   {
@@ -2340,20 +2314,11 @@
     ]
   },
   {
-    "value": "Sutter Avenue, Rutland Road",
-    "synonyms": [
-      "Sutter Avenue",
-      "Rutland Road",
-      "Rutland Road, Sutter Avenue"
-    ]
-  },
-  {
     "value": "Times Square, 42nd Street",
     "synonyms": [
       "Times Square",
       "42nd Street",
-      "42nd Street, Times Square",
-      "Times Square, 42nd Street"
+      "42nd Street, Times Square"
     ]
   },
   {
@@ -2375,15 +2340,6 @@
     ]
   },
   {
-    "value": "Union Square, 14th Street",
-    "synonyms": [
-      "Union Square",
-      "14th Street",
-      "14th Street, Union Square",
-      "Union Square, 14th Street"
-    ]
-  },
-  {
     "value": "Union Street",
     "synonyms": [
       "Union Street"
@@ -2400,8 +2356,7 @@
     "synonyms": [
       "Van Cortlandt Park",
       "242nd Street",
-      "242nd Street, Van Cortlandt Park",
-      "Van Cortlandt Park, 242nd Street"
+      "242nd Street, Van Cortlandt Park"
     ]
   },
   {
@@ -2415,8 +2370,13 @@
     "synonyms": [
       "Vernon Boulevard",
       "Jackson Avenue",
-      "Jackson Avenue, Vernon Boulevard",
-      "Vernon Boulevard, Jackson Avenue"
+      "Jackson Avenue, Vernon Boulevard"
+    ]
+  },
+  {
+    "value": "WTC Cortlandt",
+    "synonyms": [
+      "WTC Cortlandt"
     ]
   },
   {
@@ -2424,8 +2384,7 @@
     "synonyms": [
       "Wakefield",
       "241st Street",
-      "241st Street, Wakefield",
-      "Wakefield, 241st Street"
+      "241st Street, Wakefield"
     ]
   },
   {
@@ -2435,19 +2394,19 @@
     ]
   },
   {
-    "value": "West 4th Street, Wash Square",
+    "value": "West 4th St, Wash Square",
     "synonyms": [
-      "West 4th Street",
+      "West 4th St",
       "Wash Square",
-      "Wash Square, West 4th Street"
+      "Wash Square, West 4th St"
     ]
   },
   {
-    "value": "West 8th Street, NY Aquarium",
+    "value": "West 8th St, NY Aquarium",
     "synonyms": [
-      "West 8th Street",
+      "West 8th St",
       "NY Aquarium",
-      "NY Aquarium, West 8th Street"
+      "NY Aquarium, West 8th St"
     ]
   },
   {
@@ -2455,8 +2414,7 @@
     "synonyms": [
       "West Farms Square",
       "East Tremont Avenue",
-      "East Tremont Avenue, West Farms Square",
-      "West Farms Square, East Tremont Avenue"
+      "East Tremont Avenue, West Farms Square"
     ]
   },
   {
@@ -2464,16 +2422,15 @@
     "synonyms": [
       "Westchester Square",
       "East Tremont Avenue",
-      "East Tremont Avenue, Westchester Square",
-      "Westchester Square, East Tremont Avenue"
+      "East Tremont Avenue, Westchester Square"
     ]
   },
   {
-    "value": "Whitehall Street, South Ferry",
+    "value": "Whitehall St, South Ferry",
     "synonyms": [
-      "Whitehall Street",
+      "Whitehall St",
       "South Ferry",
-      "South Ferry, Whitehall Street"
+      "South Ferry, Whitehall St"
     ]
   },
   {
@@ -2504,15 +2461,6 @@
     "value": "Woodlawn",
     "synonyms": [
       "Woodlawn"
-    ]
-  },
-  {
-    "value": "Woodside, 61st Street",
-    "synonyms": [
-      "Woodside",
-      "61st Street",
-      "61st Street, Woodside",
-      "Woodside, 61st Street"
     ]
   },
   {

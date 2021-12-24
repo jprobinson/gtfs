@@ -134,4 +134,4 @@ extend transit_realtime.TripUpdate.StopTimeUpdate {
 }
 
 
-option go_package = "transit_realtime";
+option go_package = "./transit_realtime";
